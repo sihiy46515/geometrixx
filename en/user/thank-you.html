@@ -126,7 +126,7 @@
                 <div class="page-systemnav">
                     <div class="sys-nav-wrapper">
                         <div class="search">
-                            <form class="search-form" action="../../content/geometrixx-outdoors/en/toolbar/search.html" method="get">
+                            <form class="search-form" action="../../en/toolbar/search.html" method="get">
                                 <p class="search-field">
                                     <label for="search-field" style="display: none">
                                         Search:
@@ -149,7 +149,7 @@
                                  <div class="cq-hovercart-border">
                                     <div class="cq-hovercart-inner">
                                        <h1>{{title}}</h1> {{#unless cartEmpty}}
-                                       <a class="cq-hovercart-checkout" href="../../content/geometrixx-outdoors/en/user/checkout.html">Checkout ➙</a>
+                                       <a class="cq-hovercart-checkout" href="../../en/user/checkout.html">Checkout ➙</a>
                                        <table>
                                           {{#each entries}}
                                           <tr data-product-page="{{this.page}}">
@@ -201,8 +201,8 @@
                                                                 <div class="text section">
                                                                     If you already have an account you can sign in below.
                                                                 </div>
-                                                                <form method="POST" action="../../content/geometrixx-outdoors/en/user/checkout/j_security_check" id="sociallogin" name="sociallogin" enctype="multipart/form-data" onsubmit="return cq5forms_validate_sociallogin();">
-                                                                    <input type="hidden" name="resource" value="/content/geometrixx-outdoors/en/user/checkout.html">
+                                                                <form method="POST" action="../../en/user/checkout/j_security_check" id="sociallogin" name="sociallogin" enctype="multipart/form-data" onsubmit="return cq5forms_validate_sociallogin();">
+                                                                    <input type="hidden" name="resource" value="../../en/user/checkout.html">
                                                                     <input type="hidden" name="_charset_" value="UTF-8">
                                                                     </input>
                                                                     <p class="login_username_group">
@@ -389,17 +389,17 @@
                     <div class="breadcrumb">
                         <ul>
                             <li class="breadcrumb-item-2 breadcrumb-first">
-                                <a href="../../content/geometrixx-outdoors/en.html">
+                                <a href="../../en.html">
                                     English
                                 </a>
                             </li>
                             <li class="breadcrumb-item-4">
-                                <a href="../../content/geometrixx-outdoors/en/user/checkout.html">
+                                <a href="../../en/user/checkout.html">
                                     Checkout
                                 </a>
                             </li>
                             <li class="breadcrumb-item-5 breadcrumb-last">
-                                <a href="../../content/geometrixx-outdoors/en/user/checkout/order.html">
+                                <a href="../../en/user/checkout/order.html">
                                     Order
                                 </a>
                             </li>
@@ -417,9 +417,9 @@
                                     Your order has been submitted.
                                 </h2>
                             </div>
-                            <form enctype="multipart/form-data" name="order" id="order" action="../../content/geometrixx-outdoors/en/user/checkout/order.html" method="POST">
+                            <form enctype="multipart/form-data" name="order" id="order" action="../../en/user/checkout/order.html" method="POST">
                                 <input type="hidden" value="order" name=":formid">
-                                <input type="hidden" value="/content/geometrixx-outdoors/en/user/checkout/order/jcr:content/par/order_form" name=":formstart">
+                                <input type="hidden" value="../../en/user/checkout/order/jcr:content/par/order_form" name=":formstart">
                                 <input type="hidden" value="UTF-8" name="_charset_">
                                 <input type="hidden" value="order/thank-you.html" name=":redirect">
                                 <div class="form">
@@ -432,7 +432,7 @@
                                             </h3>
                                         </div>
                                         <div class="addressbook section">
-                                            <div data-resource-path="/content/geometrixx-outdoors/en/user/checkout/order/jcr:content/par/addressbook_0" class="addressbook">
+                                            <div data-resource-path="/en/user/checkout/order/jcr:content/par/addressbook_0" class="addressbook">
                                                 <div class="addressbook-title">
                                                 </div>
                                                 <div data-address-path="" class="address">
@@ -513,12 +513,12 @@
                                                 </tr>
                                                 <tr class="entry" id="sc-item">
                                                     <td class="thumbnail">
-                                                        <a href="../../content/geometrixx-outdoors/en/equipment/hiking/interlaken-trek.html#eqsmit-11">
+                                                        <a href="../../en/equipment/hiking/interlaken-trek.html#eqsmit-11">
                                                             <img width="150" alt="Interlaken Trek" src="../../en/equipment/hiking/interlaken-trek/_jcr_content/par/product/image.nav.jpg">
                                                         </a>
                                                     </td>
                                                     <td colspan="1" class="name">
-                                                        <a href="../../content/geometrixx-outdoors/en/equipment/hiking/interlaken-trek.html#eqsmit-11">
+                                                        <a href="../../en/equipment/hiking/interlaken-trek.html#eqsmit-11">
                                                             Interlaken Trek
                                                         </a>
                                                         <span class="description">
@@ -615,13 +615,13 @@
                     <footer>
                         <nav>
                             <div class="toolbar">
-                                <a class="first" href="../../content/geometrixx-outdoors/en/toolbar/about-us.html">
+                                <a class="first" href="../../en/toolbar/about-us.html">
                                     About Us
                                 </a>
-                                <a href="../../content/geometrixx-outdoors/en/toolbar/privacy-policy.html">
+                                <a href="../../en/toolbar/privacy-policy.html">
                                     Privacy Policy
                                 </a>
-                                <a href="../../content/geometrixx-outdoors/en/toolbar/terms-of-use.html">
+                                <a href="../../en/toolbar/terms-of-use.html">
                                     Terms of Use
                                 </a>
                             </div>

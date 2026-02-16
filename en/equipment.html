@@ -84,7 +84,7 @@
             <div class="page-systemnav">
                 <div class="sys-nav-wrapper">
                     <div class="search">
-                        <form class="search-form" action="../content/geometrixx-outdoors/en/toolbar/search.html"
+                        <form class="search-form" action="../en/toolbar/search.html"
                             method="get">
                             <p class="search-field">
                                 <label for="search-field" style="display: none">
@@ -109,7 +109,7 @@
         <div class="cq-hovercart-inner">
             <h1>{{title}}</h1>
             {{#unless cartEmpty}}
-                <a class="cq-hovercart-checkout" href="../content/geometrixx-outdoors/en/user/checkout.html">Checkout ➙</a>
+                <a class="cq-hovercart-checkout" href="../en/user/checkout.html">Checkout ➙</a>
             <table>
                 {{#each entries}}
                 <tr data-product-page="{{this.page}}">
@@ -170,12 +170,12 @@
                                                                 If you already have an account you can sign in below.
                                                             </div>
                                                             <form method="POST"
-                                                                action="../content/geometrixx-outdoors/en/equipment/j_security_check"
+                                                                action="../en/equipment/j_security_check"
                                                                 id="sociallogin" name="sociallogin"
                                                                 enctype="multipart/form-data"
                                                                 onsubmit="return cq5forms_validate_sociallogin();">
                                                                 <input type="hidden" name="resource"
-                                                                    value="/content/geometrixx-outdoors/en/equipment.html">
+                                                                    value="../en/equipment.html">
                                                                 <input type="hidden" name="_charset_" value="UTF-8">
                                                                 </input>
                                                                 <p class="login_username_group">
@@ -388,14 +388,14 @@
             <section class="page-par">
                 <div class="par parsys">
                     <div class="parbase image section">
-                        <div id="cq-image-jsp-/content/geometrixx-outdoors/en/equipment/jcr:content/par/banner">
+                        <div id="cq-image-jsp-/en/equipment/jcr:content/par/banner">
                             <img title="snowboard-action" alt="snowboard-action" class="cq-dd-image"
                                 src="equipment/_jcr_content/par/banner.img.jpg/1354278209455.jpg">
                         </div>
                         <script type="text/javascript">
                             (function () {
                                 var imageDiv = document.getElementById("cq\x2Dimage\x2Djsp\x2D\x2Fcontent\x2Fgeometrixx\x2Doutdoors\x2Fen\x2Fequipment\x2Fjcr\x3Acontent\x2Fpar\x2Fbanner");
-                                var imageEvars = '{ imageLink: "", imageAsset: "/content/dam/geometrixx-outdoors/banners/snowboard-action.jpg", imageTitle: "snowboard\x2Daction" }';
+                                var imageEvars = '{ imageLink: "", imageAsset: "/dam/geometrixx-outdoors/banners/snowboard-action.jpg", imageTitle: "snowboard\x2Daction" }';
                                 var tagNodes = imageDiv.getElementsByTagName('A');
                                 for (var i = 0; i < tagNodes.length; i++) {
                                     var link = tagNodes.item(i);

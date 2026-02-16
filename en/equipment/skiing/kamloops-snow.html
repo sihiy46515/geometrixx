@@ -46,7 +46,7 @@ var category = url.substring(url.indexOf("en")+3,url.lastIndexOf("/")).replace(/
 // targetPageParams helper function goes here
 // 
 function openShoppingCart(){
-    window.location='/en/user/cart.html?productId='+entityId;
+    window.location='../../../en/user/cart.html?productId='+entityId;
 }
         </script>
         <!--Preconnect and DNS-Prefetch to improve page load time-->
@@ -107,7 +107,7 @@ function openShoppingCart(){
                 <div class="page-systemnav">
                     <div class="sys-nav-wrapper">
                         <div class="search">
-                            <form class="search-form" action="../../../content/geometrixx-outdoors/en/toolbar/search.html" method="get">
+                            <form class="search-form" action="../../../en/toolbar/search.html" method="get">
                                 <p class="search-field">
                                     <label for="search-field" style="display: none">
                                         Search:
@@ -131,7 +131,7 @@ function openShoppingCart(){
         <div class="cq-hovercart-inner">
             <h1>{{title}}</h1>
             {{#unless cartEmpty}}
-                <a class="cq-hovercart-checkout" href="../../../content/geometrixx-outdoors/en/user/checkout.html">Checkout ➙</a>
+                <a class="cq-hovercart-checkout" href="../../../en/user/checkout.html">Checkout ➙</a>
             <table>
                 {{#each entries}}
                 <tr data-product-page="{{this.page}}">
@@ -222,8 +222,8 @@ function openShoppingCart(){
                                                                 <div class="text section">
                                                                     If you already have an account you can sign in below.
                                                                 </div>
-                                                                <form method="POST" action="../../../content/geometrixx-outdoors/en/equipment/skiing/kamloops-snow/j_security_check" id="sociallogin" name="sociallogin" enctype="multipart/form-data" onsubmit="return cq5forms_validate_sociallogin();">
-                                                                    <input type="hidden" name="resource" value="/content/geometrixx-outdoors/en/equipment/skiing/kamloops-snow.html">
+                                                                <form method="POST" action="../../../en/equipment/skiing/kamloops-snow/j_security_check" id="sociallogin" name="sociallogin" enctype="multipart/form-data" onsubmit="return cq5forms_validate_sociallogin();">
+                                                                    <input type="hidden" name="resource" value="../../../en/equipment/skiing/kamloops-snow.html">
                                                                     <input type="hidden" name="_charset_" value="UTF-8">
                                                                     </input>
                                                                     <p class="login_username_group">
@@ -493,13 +493,13 @@ function openShoppingCart(){
                         <article class="product cq-dd-product-data-reference " itemscope itemtype="http://schema.org/Product" data-sku="eqwnkm">
                             <div class="product-viewer" itemprop="image">
                                 <div class="parbase image">
-                                    <div id="cq-image-jsp-/content/geometrixx-outdoors/en/equipment/skiing/kamloops-snow/jcr:content/par/product/image">
+                                    <div id="cq-image-jsp-/en/equipment/skiing/kamloops-snow/jcr:content/par/product/image">
                                         <img title="Kamloops" alt="Kamloops" class="cq-dd-image" src="kamloops-snow/_jcr_content/par/product/image.img.jpg/geometrixx-outdoors/-/page_product/par/product/image/cq_ck_1370955439570.jpg">
                                     </div>
                                     <script type="text/javascript">
     (function() {
         var imageDiv = document.getElementById("cq\x2Dimage\x2Djsp\x2D\x2Fcontent\x2Fgeometrixx\x2Doutdoors\x2Fen\x2Fequipment\x2Fskiing\x2Fkamloops\x2Dsnow\x2Fjcr\x3Acontent\x2Fpar\x2Fproduct\x2Fimage");
-        var imageEvars = '{ imageLink: "", imageAsset: "/content/dam/geometrixx-outdoors/products/footwear/Kamloops.jpg", imageTitle: "Kamloops" }';
+        var imageEvars = '{ imageLink: "", imageAsset: "/dam/geometrixx-outdoors/products/footwear/Kamloops.jpg", imageTitle: "Kamloops" }';
         var tagNodes = imageDiv.getElementsByTagName('A');
         for (var i = 0; i < tagNodes.length; i++) {
             var link = tagNodes.item(i); 
@@ -528,7 +528,7 @@ function openShoppingCart(){
                                     Item #eqwnkm
                                 </p>
                             </div>
-                            <form class="product-form" method="POST" alt="/content/geometrixx-outdoors/en/equipment/skiing/kamloops-snow.commerce.addcartentry.html-onsubmit=return validateProductQuantity('product-quantity-1423875312708') &amp;&amp; trackCartAdd(this)">
+                            <form class="product-form" method="POST" alt="/en/equipment/skiing/kamloops-snow.commerce.addcartentry.html-onsubmit=return validateProductQuantity('product-quantity-1423875312708') &amp;&amp; trackCartAdd(this)">
                                 <div class="product-size-quantity">
                                     <section class="product-size">
                                         <h3>
@@ -541,7 +541,7 @@ function openShoppingCart(){
                                                         7
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-7-1423875312708" value="7" data-price="$190.00" data-sku="eqwnkm-7" data-path="/content/geometrixx-outdoors/en/equipment/skiing/kamloops-snow/jcr:content/par/product/eqwnkm-7" data-title="Kamloops Snow" data-description="Snowboarding Boots">
+                                                <input type="radio" name="product-size" id="size-7-1423875312708" value="7" data-price="$190.00" data-sku="eqwnkm-7" data-path="/en/equipment/skiing/kamloops-snow/jcr:content/par/product/eqwnkm-7" data-title="Kamloops Snow" data-description="Snowboarding Boots">
                                                 </input>
                                             </li>
                                             <li>
@@ -550,7 +550,7 @@ function openShoppingCart(){
                                                         8
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-8-1423875312708" value="8" data-price="$190.00" data-sku="eqwnkm-8" data-path="/content/geometrixx-outdoors/en/equipment/skiing/kamloops-snow/jcr:content/par/product/eqwnkm-8" data-title="Kamloops Snow" data-description="Snowboarding Boots">
+                                                <input type="radio" name="product-size" id="size-8-1423875312708" value="8" data-price="$190.00" data-sku="eqwnkm-8" data-path="/en/equipment/skiing/kamloops-snow/jcr:content/par/product/eqwnkm-8" data-title="Kamloops Snow" data-description="Snowboarding Boots">
                                                 </input>
                                             </li>
                                             <li>
@@ -559,7 +559,7 @@ function openShoppingCart(){
                                                         9
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-9-1423875312708" value="9" data-price="$190.00" data-sku="eqwnkm-9" data-path="/content/geometrixx-outdoors/en/equipment/skiing/kamloops-snow/jcr:content/par/product/eqwnkm-9" data-title="Kamloops Snow" data-description="Snowboarding Boots">
+                                                <input type="radio" name="product-size" id="size-9-1423875312708" value="9" data-price="$190.00" data-sku="eqwnkm-9" data-path="/en/equipment/skiing/kamloops-snow/jcr:content/par/product/eqwnkm-9" data-title="Kamloops Snow" data-description="Snowboarding Boots">
                                                 </input>
                                             </li>
                                             <li>
@@ -568,7 +568,7 @@ function openShoppingCart(){
                                                         10
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-10-1423875312708" value="10" data-price="$190.00" data-sku="eqwnkm-10" data-path="/content/geometrixx-outdoors/en/equipment/skiing/kamloops-snow/jcr:content/par/product/eqwnkm-10" data-title="Kamloops Snow" data-description="Snowboarding Boots">
+                                                <input type="radio" name="product-size" id="size-10-1423875312708" value="10" data-price="$190.00" data-sku="eqwnkm-10" data-path="/en/equipment/skiing/kamloops-snow/jcr:content/par/product/eqwnkm-10" data-title="Kamloops Snow" data-description="Snowboarding Boots">
                                                 </input>
                                             </li>
                                             <li>
@@ -577,7 +577,7 @@ function openShoppingCart(){
                                                         11
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-11-1423875312708" value="11" data-price="$190.00" data-sku="eqwnkm-11" data-path="/content/geometrixx-outdoors/en/equipment/skiing/kamloops-snow/jcr:content/par/product/eqwnkm-11" data-title="Kamloops Snow" data-description="Snowboarding Boots">
+                                                <input type="radio" name="product-size" id="size-11-1423875312708" value="11" data-price="$190.00" data-sku="eqwnkm-11" data-path="/en/equipment/skiing/kamloops-snow/jcr:content/par/product/eqwnkm-11" data-title="Kamloops Snow" data-description="Snowboarding Boots">
                                                 </input>
                                             </li>
                                             <li>
@@ -586,7 +586,7 @@ function openShoppingCart(){
                                                         12
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-12-1423875312724" value="12" data-price="$190.00" data-sku="eqwnkm-12" data-path="/content/geometrixx-outdoors/en/equipment/skiing/kamloops-snow/jcr:content/par/product/eqwnkm-12" data-title="Kamloops Snow" data-description="Snowboarding Boots">
+                                                <input type="radio" name="product-size" id="size-12-1423875312724" value="12" data-price="$190.00" data-sku="eqwnkm-12" data-path="/en/equipment/skiing/kamloops-snow/jcr:content/par/product/eqwnkm-12" data-title="Kamloops Snow" data-description="Snowboarding Boots">
                                                 </input>
                                             </li>
                                             <li>
@@ -595,7 +595,7 @@ function openShoppingCart(){
                                                         13
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-13-1423875312724" value="13" data-price="$190.00" data-sku="eqwnkm-13" data-path="/content/geometrixx-outdoors/en/equipment/skiing/kamloops-snow/jcr:content/par/product/eqwnkm-13" data-title="Kamloops Snow" data-description="Snowboarding Boots">
+                                                <input type="radio" name="product-size" id="size-13-1423875312724" value="13" data-price="$190.00" data-sku="eqwnkm-13" data-path="/en/equipment/skiing/kamloops-snow/jcr:content/par/product/eqwnkm-13" data-title="Kamloops Snow" data-description="Snowboarding Boots">
                                                 </input>
                                             </li>
                                         </ul>
@@ -610,11 +610,11 @@ function openShoppingCart(){
                                     </section>
                                 </div>
                                 <section class="product-submit">
-                                    <input type="hidden" name="redirect" value="/content/geometrixx-outdoors/en/user/cart.html">
+                                    <input type="hidden" name="redirect" value="../../../en/user/cart.html">
                                     </input>
-                                    <input type="hidden" name="redirect-product-not-found" value="/content/geometrixx-outdoors/en/user/cart/product-not-found.html">
+                                    <input type="hidden" name="redirect-product-not-found" value="../../../en/user/cart/product-not-found.html">
                                     </input>
-                                    <input type="hidden" name="product-path" value="/content/geometrixx-outdoors/en/equipment/skiing/kamloops-snow/jcr:content/par/product">
+                                    <input type="hidden" name="product-path" value="../../../en/equipment/skiing/kamloops-snow/jcr:content/par/product">
                                     </input>
                                     <span class="button-group">
                                         <input type="submit" value="Add to Cart" onclick="openShoppingCart(); return false;">
@@ -674,7 +674,7 @@ function openShoppingCart(){
     });
                                     </script>
                                     <div id="twitter-share-content-geometrixx-outdoors-en-equipment-skiing-kamloops-snow-twitter_share" class="cq-social-twitter-widgets-div">
-                                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://localhost:4503/content/geometrixx-outdoors/en/equipment/skiing/kamloops-snow.html" data-count="none">
+                                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://localhost:4503/en/equipment/skiing/kamloops-snow.html" data-count="none">
                                             Tweet
                                         </a>
                                     </div>
@@ -703,13 +703,13 @@ function openShoppingCart(){
                             </ul>
                         </header>
                         <div class="tabctrl-container">
-                            <section id="par_tabs-0" class="tabctrl-content" data-path="/content/geometrixx-outdoors/en/equipment/skiing/kamloops-snow/_jcr_content/par/tabs/tab-0">
+                            <section id="par_tabs-0" class="tabctrl-content" data-path="/en/equipment/skiing/kamloops-snow/_jcr_content/par/tabs/tab-0">
                                 <h2 class="tabctrl-title">
                                     Product Summary
                                 </h2>
                                 ...
                             </section>
-                            <section id="par_tabs-1" class="tabctrl-content" data-path="/content/geometrixx-outdoors/en/equipment/skiing/kamloops-snow/_jcr_content/par/tabs/tab-1">
+                            <section id="par_tabs-1" class="tabctrl-content" data-path="/en/equipment/skiing/kamloops-snow/_jcr_content/par/tabs/tab-1">
                                 <h2 class="tabctrl-title">
                                     Features
                                 </h2>

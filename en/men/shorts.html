@@ -45,7 +45,7 @@ var categoryId="men,men:shorts"
 		// targetPageParams helper function goes here
 		//	
 function openShoppingCart(){
-    window.location='/en/user/cart.html?productId='+entityId;
+    window.location='../../en/user/cart.html?productId='+entityId;
 }
         </script>
         <!--Preconnect and DNS-Prefetch to improve page load time-->
@@ -106,7 +106,7 @@ function openShoppingCart(){
                 <div class="page-systemnav">
                     <div class="sys-nav-wrapper">
                         <div class="search">
-                            <form class="search-form" action="../../content/geometrixx-outdoors/en/toolbar/search.html" method="get">
+                            <form class="search-form" action="../../en/toolbar/search.html" method="get">
                                 <p class="search-field">
                                     <label for="search-field" style="display: none">
                                         Search:
@@ -130,7 +130,7 @@ function openShoppingCart(){
         <div class="cq-hovercart-inner">
             <h1>{{title}}</h1>
             {{#unless cartEmpty}}
-                <a class="cq-hovercart-checkout" href="../../content/geometrixx-outdoors/en/user/checkout.html">Checkout ➙</a>
+                <a class="cq-hovercart-checkout" href="../../en/user/checkout.html">Checkout ➙</a>
             <table>
                 {{#each entries}}
                 <tr data-product-page="{{this.page}}">
@@ -221,8 +221,8 @@ function openShoppingCart(){
                                                                 <div class="text section">
                                                                     If you already have an account you can sign in below.
                                                                 </div>
-                                                                <form method="POST" action="../../content/geometrixx-outdoors/en/men/shorts/j_security_check" id="sociallogin" name="sociallogin" enctype="multipart/form-data" onsubmit="return cq5forms_validate_sociallogin();">
-                                                                    <input type="hidden" name="resource" value="/content/geometrixx-outdoors/en/men/shorts.html">
+                                                                <form method="POST" action="../../en/men/shorts/j_security_check" id="sociallogin" name="sociallogin" enctype="multipart/form-data" onsubmit="return cq5forms_validate_sociallogin();">
+                                                                    <input type="hidden" name="resource" value="../../en/men/shorts.html">
                                                                     <input type="hidden" name="_charset_" value="UTF-8">
                                                                     </input>
                                                                     <p class="login_username_group">
@@ -427,13 +427,13 @@ function openShoppingCart(){
                 <section class="page-par">
                     <div class="par parsys">
                         <div class="parbase image section">
-                            <div id="cq-image-jsp-/content/geometrixx-outdoors/en/men/shorts/jcr:content/par/banner">
+                            <div id="cq-image-jsp-/en/men/shorts/jcr:content/par/banner">
                                 <img title="Hit The Ground Running. – Our annual 50% sale means you can gear up for you run from head to toe. See what's on sale." alt="Hit The Ground Running. – Our annual 50% sale means you can gear up for you run from head to toe. See what's on sale." class="cq-dd-image" src="shorts/_jcr_content/par/banner.img.jpg/1324039352364.jpg">
                             </div>
                             <script type="text/javascript">
     (function() {
         var imageDiv = document.getElementById("cq\x2Dimage\x2Djsp\x2D\x2Fcontent\x2Fgeometrixx\x2Doutdoors\x2Fen\x2Fmen\x2Fshorts\x2Fjcr\x3Acontent\x2Fpar\x2Fbanner");
-        var imageEvars = '{ imageLink: "", imageAsset: "/content/dam/geometrixx-outdoors/banners/runner.jpg", imageTitle: "Hit\x20The\x20Ground\x20Running.\x20\u2013\x20Our\x20annual\x2050\x25\x20sale\x20means\x20you\x20can\x20gear\x20up\x20for\x20you\x20run\x20from\x20head\x20to\x20toe.\x20See\x20what\x27s\x20on\x20sale." }';
+        var imageEvars = '{ imageLink: "", imageAsset: "/dam/geometrixx-outdoors/banners/runner.jpg", imageTitle: "Hit\x20The\x20Ground\x20Running.\x20\u2013\x20Our\x20annual\x2050\x25\x20sale\x20means\x20you\x20can\x20gear\x20up\x20for\x20you\x20run\x20from\x20head\x20to\x20toe.\x20See\x20what\x27s\x20on\x20sale." }';
         var tagNodes = imageDiv.getElementsByTagName('A');
         for (var i = 0; i < tagNodes.length; i++) {
             var link = tagNodes.item(i); 

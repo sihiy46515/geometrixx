@@ -46,7 +46,7 @@ var category = url.substring(url.indexOf("en")+3,url.lastIndexOf("/")).replace(/
 // targetPageParams helper function goes here
 // 
 function openShoppingCart(){
-    window.location='/en/user/cart.html?productId='+entityId;
+    window.location='../../../en/user/cart.html?productId='+entityId;
 }
         </script>
         <!--Preconnect and DNS-Prefetch to improve page load time-->
@@ -107,7 +107,7 @@ function openShoppingCart(){
                 <div class="page-systemnav">
                     <div class="sys-nav-wrapper">
                         <div class="search">
-                            <form class="search-form" action="../../../content/geometrixx-outdoors/en/toolbar/search.html" method="get">
+                            <form class="search-form" action="../../../en/toolbar/search.html" method="get">
                                 <p class="search-field">
                                     <label for="search-field" style="display: none">
                                         Search:
@@ -131,7 +131,7 @@ function openShoppingCart(){
         <div class="cq-hovercart-inner">
             <h1>{{title}}</h1>
             {{#unless cartEmpty}}
-                <a class="cq-hovercart-checkout" href="../../../content/geometrixx-outdoors/en/user/checkout.html">Checkout ➙</a>
+                <a class="cq-hovercart-checkout" href="../../../en/user/checkout.html">Checkout ➙</a>
             <table>
                 {{#each entries}}
                 <tr data-product-page="{{this.page}}">
@@ -222,8 +222,8 @@ function openShoppingCart(){
                                                                 <div class="text section">
                                                                     If you already have an account you can sign in below.
                                                                 </div>
-                                                                <form method="POST" action="../../../content/geometrixx-outdoors/en/equipment/surfing/lagos-mini-longboard/j_security_check" id="sociallogin" name="sociallogin" enctype="multipart/form-data" onsubmit="return cq5forms_validate_sociallogin();">
-                                                                    <input type="hidden" name="resource" value="/content/geometrixx-outdoors/en/equipment/surfing/lagos-mini-longboard.html">
+                                                                <form method="POST" action="../../../en/equipment/surfing/lagos-mini-longboard/j_security_check" id="sociallogin" name="sociallogin" enctype="multipart/form-data" onsubmit="return cq5forms_validate_sociallogin();">
+                                                                    <input type="hidden" name="resource" value="../../../en/equipment/surfing/lagos-mini-longboard.html">
                                                                     <input type="hidden" name="_charset_" value="UTF-8">
                                                                     </input>
                                                                     <p class="login_username_group">
@@ -493,13 +493,13 @@ function openShoppingCart(){
                         <article class="product cq-dd-product-data-reference " itemscope itemtype="http://schema.org/Product" data-sku="eqsmlg">
                             <div class="product-viewer" itemprop="image">
                                 <div class="parbase image">
-                                    <div id="cq-image-jsp-/content/geometrixx-outdoors/en/equipment/surfing/lagos-mini-longboard/jcr:content/par/product/image">
+                                    <div id="cq-image-jsp-/en/equipment/surfing/lagos-mini-longboard/jcr:content/par/product/image">
                                         <img title="Lagos Mini Longboard" alt="Lagos Mini Longboard" class="cq-dd-image" src="lagos-mini-longboard/_jcr_content/par/product/image.img.jpg/geometrixx-outdoors/-/page_product/par/product/image/cq_ck_1370955439577.jpg">
                                     </div>
                                     <script type="text/javascript">
     (function() {
         var imageDiv = document.getElementById("cq\x2Dimage\x2Djsp\x2D\x2Fcontent\x2Fgeometrixx\x2Doutdoors\x2Fen\x2Fequipment\x2Fsurfing\x2Flagos\x2Dmini\x2Dlongboard\x2Fjcr\x3Acontent\x2Fpar\x2Fproduct\x2Fimage");
-        var imageEvars = '{ imageLink: "", imageAsset: "/content/dam/geometrixx-outdoors/products/equipment/Lagos.jpg", imageTitle: "Lagos\x20Mini\x20Longboard" }';
+        var imageEvars = '{ imageLink: "", imageAsset: "/dam/geometrixx-outdoors/products/equipment/Lagos.jpg", imageTitle: "Lagos\x20Mini\x20Longboard" }';
         var tagNodes = imageDiv.getElementsByTagName('A');
         for (var i = 0; i < tagNodes.length; i++) {
             var link = tagNodes.item(i); 
@@ -528,7 +528,7 @@ function openShoppingCart(){
                                     Item #eqsmlg
                                 </p>
                             </div>
-                            <form class="product-form" method="POST" alt="/content/geometrixx-outdoors/en/equipment/surfing/lagos-mini-longboard.commerce.addcartentry.html-onsubmit=return validateProductQuantity('product-quantity-1423875313335') &amp;&amp; trackCartAdd(this)">
+                            <form class="product-form" method="POST" alt="/en/equipment/surfing/lagos-mini-longboard.commerce.addcartentry.html-onsubmit=return validateProductQuantity('product-quantity-1423875313335') &amp;&amp; trackCartAdd(this)">
                                 <div class="product-size-quantity">
                                     <section class="product-size">
                                         <h3>
@@ -541,7 +541,7 @@ function openShoppingCart(){
                                                         9'2"
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-9'2&quot;-1423875313340" value="9'2&quot;" data-price="$319.90" data-sku="eqsmlg-9'2&quot;" data-path="/content/geometrixx-outdoors/en/equipment/surfing/lagos-mini-longboard/jcr:content/par/product/eqsmlg-9_2_" data-title="Lagos Mini Longboard" data-description="Fiberglass Surfboard">
+                                                <input type="radio" name="product-size" id="size-9'2&quot;-1423875313340" value="9'2&quot;" data-price="$319.90" data-sku="eqsmlg-9'2&quot;" data-path="/en/equipment/surfing/lagos-mini-longboard/jcr:content/par/product/eqsmlg-9_2_" data-title="Lagos Mini Longboard" data-description="Fiberglass Surfboard">
                                                 </input>
                                             </li>
                                             <li>
@@ -550,7 +550,7 @@ function openShoppingCart(){
                                                         9'4"
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-9'4&quot;-1423875313341" value="9'4&quot;" data-price="$319.90" data-sku="eqsmlg-9'4&quot;" data-path="/content/geometrixx-outdoors/en/equipment/surfing/lagos-mini-longboard/jcr:content/par/product/eqsmlg-9_4_" data-title="Lagos Mini Longboard" data-description="Fiberglass Surfboard">
+                                                <input type="radio" name="product-size" id="size-9'4&quot;-1423875313341" value="9'4&quot;" data-price="$319.90" data-sku="eqsmlg-9'4&quot;" data-path="/en/equipment/surfing/lagos-mini-longboard/jcr:content/par/product/eqsmlg-9_4_" data-title="Lagos Mini Longboard" data-description="Fiberglass Surfboard">
                                                 </input>
                                             </li>
                                             <li>
@@ -559,7 +559,7 @@ function openShoppingCart(){
                                                         9'6"
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-9'6&quot;-1423875313342" value="9'6&quot;" data-price="$319.90" data-sku="eqsmlg-9'6&quot;" data-path="/content/geometrixx-outdoors/en/equipment/surfing/lagos-mini-longboard/jcr:content/par/product/eqsmlg-9_6_" data-title="Lagos Mini Longboard" data-description="Fiberglass Surfboard">
+                                                <input type="radio" name="product-size" id="size-9'6&quot;-1423875313342" value="9'6&quot;" data-price="$319.90" data-sku="eqsmlg-9'6&quot;" data-path="/en/equipment/surfing/lagos-mini-longboard/jcr:content/par/product/eqsmlg-9_6_" data-title="Lagos Mini Longboard" data-description="Fiberglass Surfboard">
                                                 </input>
                                             </li>
                                             <li>
@@ -568,7 +568,7 @@ function openShoppingCart(){
                                                         9'8"
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-9'8&quot;-1423875313345" value="9'8&quot;" data-price="$319.90" data-sku="eqsmlg-9'8&quot;" data-path="/content/geometrixx-outdoors/en/equipment/surfing/lagos-mini-longboard/jcr:content/par/product/eqsmlg-9_8_" data-title="Lagos Mini Longboard" data-description="Fiberglass Surfboard">
+                                                <input type="radio" name="product-size" id="size-9'8&quot;-1423875313345" value="9'8&quot;" data-price="$319.90" data-sku="eqsmlg-9'8&quot;" data-path="/en/equipment/surfing/lagos-mini-longboard/jcr:content/par/product/eqsmlg-9_8_" data-title="Lagos Mini Longboard" data-description="Fiberglass Surfboard">
                                                 </input>
                                             </li>
                                             <li>
@@ -577,7 +577,7 @@ function openShoppingCart(){
                                                         10'
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-10'-1423875313345" value="10'" data-price="$319.90" data-sku="eqsmlg-10'" data-path="/content/geometrixx-outdoors/en/equipment/surfing/lagos-mini-longboard/jcr:content/par/product/eqsmlg-10'" data-title="Lagos Mini Longboard" data-description="Fiberglass Surfboard">
+                                                <input type="radio" name="product-size" id="size-10'-1423875313345" value="10'" data-price="$319.90" data-sku="eqsmlg-10'" data-path="/en/equipment/surfing/lagos-mini-longboard/jcr:content/par/product/eqsmlg-10'" data-title="Lagos Mini Longboard" data-description="Fiberglass Surfboard">
                                                 </input>
                                             </li>
                                             <li>
@@ -586,7 +586,7 @@ function openShoppingCart(){
                                                         10'3"
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-10'3&quot;-1423875313346" value="10'3&quot;" data-price="$319.90" data-sku="eqsmlg-10'3&quot;" data-path="/content/geometrixx-outdoors/en/equipment/surfing/lagos-mini-longboard/jcr:content/par/product/eqsmlg-10_3_" data-title="Lagos Mini Longboard" data-description="Fiberglass Surfboard">
+                                                <input type="radio" name="product-size" id="size-10'3&quot;-1423875313346" value="10'3&quot;" data-price="$319.90" data-sku="eqsmlg-10'3&quot;" data-path="/en/equipment/surfing/lagos-mini-longboard/jcr:content/par/product/eqsmlg-10_3_" data-title="Lagos Mini Longboard" data-description="Fiberglass Surfboard">
                                                 </input>
                                             </li>
                                         </ul>
@@ -601,11 +601,11 @@ function openShoppingCart(){
                                     </section>
                                 </div>
                                 <section class="product-submit">
-                                    <input type="hidden" name="redirect" value="/content/geometrixx-outdoors/en/user/cart.html">
+                                    <input type="hidden" name="redirect" value="../../../en/user/cart.html">
                                     </input>
-                                    <input type="hidden" name="redirect-product-not-found" value="/content/geometrixx-outdoors/en/user/cart/product-not-found.html">
+                                    <input type="hidden" name="redirect-product-not-found" value="../../../en/user/cart/product-not-found.html">
                                     </input>
-                                    <input type="hidden" name="product-path" value="/content/geometrixx-outdoors/en/equipment/surfing/lagos-mini-longboard/jcr:content/par/product">
+                                    <input type="hidden" name="product-path" value="../../../en/equipment/surfing/lagos-mini-longboard/jcr:content/par/product">
                                     </input>
                                     <span class="button-group">
                                         <input type="submit" value="Add to Cart" onclick="openShoppingCart(); return false;">
@@ -665,7 +665,7 @@ function openShoppingCart(){
     });
                                     </script>
                                     <div id="twitter-share-content-geometrixx-outdoors-en-equipment-surfing-lagos-mini-longboard-twitter_share" class="cq-social-twitter-widgets-div">
-                                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://localhost:4503/content/geometrixx-outdoors/en/equipment/surfing/lagos-mini-longboard.html" data-count="none">
+                                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://localhost:4503/en/equipment/surfing/lagos-mini-longboard.html" data-count="none">
                                             Tweet
                                         </a>
                                     </div>
@@ -694,13 +694,13 @@ function openShoppingCart(){
                             </ul>
                         </header>
                         <div class="tabctrl-container">
-                            <section id="par_tabs-0" class="tabctrl-content" data-path="/content/geometrixx-outdoors/en/equipment/surfing/lagos-mini-longboard/_jcr_content/par/tabs/tab-0">
+                            <section id="par_tabs-0" class="tabctrl-content" data-path="/en/equipment/surfing/lagos-mini-longboard/_jcr_content/par/tabs/tab-0">
                                 <h2 class="tabctrl-title">
                                     Product Summary
                                 </h2>
                                 ...
                             </section>
-                            <section id="par_tabs-1" class="tabctrl-content" data-path="/content/geometrixx-outdoors/en/equipment/surfing/lagos-mini-longboard/_jcr_content/par/tabs/tab-1">
+                            <section id="par_tabs-1" class="tabctrl-content" data-path="/en/equipment/surfing/lagos-mini-longboard/_jcr_content/par/tabs/tab-1">
                                 <h2 class="tabctrl-title">
                                     Features
                                 </h2>

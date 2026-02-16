@@ -32,7 +32,7 @@ var category = url.substring(url.indexOf("en")+3,url.lastIndexOf("/")).replace(/
 // targetPageParams helper function goes here
 // 
 function openShoppingCart(){
-    window.location='/en/user/cart.html?productId='+entityId;
+    window.location='../../../en/user/cart.html?productId='+entityId;
 }
         </script>
         <!--Preconnect and DNS-Prefetch to improve page load time-->
@@ -88,7 +88,7 @@ function openShoppingCart(){
                 <div class="page-systemnav">
                     <div class="sys-nav-wrapper">
                         <div class="search">
-                            <form class="search-form" action="../../../content/geometrixx-outdoors/en/toolbar/search.html" method="get">
+                            <form class="search-form" action="../../../en/toolbar/search.html" method="get">
                                 <p class="search-field">
                                     <label for="search-field" style="display: none">
                                         Search:
@@ -137,8 +137,8 @@ function openShoppingCart(){
                                                                 <div class="text section">
                                                                     If you already have an account you can sign in below.
                                                                 </div>
-                                                                <form method="POST" action="../../../content/geometrixx-outdoors/en/equipment/biking/tacna/j_security_check" id="sociallogin" name="sociallogin" enctype="multipart/form-data" onsubmit="return cq5forms_validate_sociallogin();">
-                                                                    <input type="hidden" name="resource" value="/content/geometrixx-outdoors/en/equipment/biking/tacna.html">
+                                                                <form method="POST" action="../../../en/equipment/biking/tacna/j_security_check" id="sociallogin" name="sociallogin" enctype="multipart/form-data" onsubmit="return cq5forms_validate_sociallogin();">
+                                                                    <input type="hidden" name="resource" value="../../../en/equipment/biking/tacna.html">
                                                                     <input type="hidden" name="_charset_" value="UTF-8">
                                                                     </input>
                                                                     <p class="login_username_group">
@@ -350,7 +350,7 @@ function openShoppingCart(){
                         <article class="product cq-dd-product-data-reference " itemscope itemtype="http://schema.org/Product" data-sku="eqsmtc">
                             <div class="product-viewer" itemprop="image">
                                 <div class="parbase image">
-                                    <div id="cq-image-jsp-/content/geometrixx-outdoors/en/equipment/biking/tacna/jcr:content/par/product/image">
+                                    <div id="cq-image-jsp-/en/equipment/biking/tacna/jcr:content/par/product/image">
                                         <img title="Tacna" alt="Tacna" class="cq-dd-image" src="tacna/_jcr_content/par/product/image.img.jpg/geometrixx-outdoors/-/page_product/par/product/image/cq_ck_1370955439550.jpg">
                                     </div>
                                 </div>
@@ -374,7 +374,7 @@ function openShoppingCart(){
                                     Item #eqsmtc
                                 </p>
                             </div>
-                            <form class="product-form" method="POST" alt="/content/geometrixx-outdoors/en/equipment/biking/tacna.commerce.addcartentry.html-onsubmit=return validateProductQuantity('product-quantity-1423875314686') &amp;&amp; trackCartAdd(this)">
+                            <form class="product-form" method="POST" alt="/en/equipment/biking/tacna.commerce.addcartentry.html-onsubmit=return validateProductQuantity('product-quantity-1423875314686') &amp;&amp; trackCartAdd(this)">
                                 <div class="product-size-quantity">
                                     <section class="product-size">
                                         <h3>
@@ -387,7 +387,7 @@ function openShoppingCart(){
                                                         M
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-M-1423875314702" value="M" data-price="$62.00" data-sku="eqsmtc-M" data-path="/content/geometrixx-outdoors/en/equipment/biking/tacna/jcr:content/par/product/eqsmtc-M" data-title="Tacna" data-description="Biking Helmet">
+                                                <input type="radio" name="product-size" id="size-M-1423875314702" value="M" data-price="$62.00" data-sku="eqsmtc-M" data-path="/en/equipment/biking/tacna/jcr:content/par/product/eqsmtc-M" data-title="Tacna" data-description="Biking Helmet">
                                                 </input>
                                             </li>
                                             <li>
@@ -396,7 +396,7 @@ function openShoppingCart(){
                                                         L
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-L-1423875314702" value="L" data-price="$64.00" data-sku="eqsmtc-L" data-path="/content/geometrixx-outdoors/en/equipment/biking/tacna/jcr:content/par/product/eqsmtc-L" data-title="Tacna" data-description="Biking Helmet">
+                                                <input type="radio" name="product-size" id="size-L-1423875314702" value="L" data-price="$64.00" data-sku="eqsmtc-L" data-path="/en/equipment/biking/tacna/jcr:content/par/product/eqsmtc-L" data-title="Tacna" data-description="Biking Helmet">
                                                 </input>
                                             </li>
                                         </ul>
@@ -411,11 +411,11 @@ function openShoppingCart(){
                                     </section>
                                 </div>
                                 <section class="product-submit">
-                                    <input type="hidden" name="redirect" value="/content/geometrixx-outdoors/en/user/cart.html">
+                                    <input type="hidden" name="redirect" value="../../../en/user/cart.html">
                                     </input>
-                                    <input type="hidden" name="redirect-product-not-found" value="/content/geometrixx-outdoors/en/user/cart/product-not-found.html">
+                                    <input type="hidden" name="redirect-product-not-found" value="../../../en/user/cart/product-not-found.html">
                                     </input>
-                                    <input type="hidden" name="product-path" value="/content/geometrixx-outdoors/en/equipment/biking/tacna/jcr:content/par/product">
+                                    <input type="hidden" name="product-path" value="../../../en/equipment/biking/tacna/jcr:content/par/product">
                                     </input>
                                     <span class="button-group">
                                         <input type="submit" value="Add to Cart" onclick="openShoppingCart(); return false;">
@@ -454,7 +454,7 @@ function openShoppingCart(){
                                 <div class="parbase twittershare twitter_share">
                                     <link rel="stylesheet" href="../../../clientlibs/social/plugins/twitter.css" type="text/css">
                                     <div id="twitter-share-content-geometrixx-outdoors-en-equipment-biking-tacna-twitter_share" class="cq-social-twitter-widgets-div">
-                                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://localhost:4503/content/geometrixx-outdoors/en/equipment/biking/tacna.html" data-count="none">
+                                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://localhost:4503/en/equipment/biking/tacna.html" data-count="none">
                                             Tweet
                                         </a>
                                     </div>
@@ -483,13 +483,13 @@ function openShoppingCart(){
                             </ul>
                         </header>
                         <div class="tabctrl-container">
-                            <section id="par_tabs-0" class="tabctrl-content" data-path="/content/geometrixx-outdoors/en/equipment/biking/tacna/_jcr_content/par/tabs/tab-0">
+                            <section id="par_tabs-0" class="tabctrl-content" data-path="/en/equipment/biking/tacna/_jcr_content/par/tabs/tab-0">
                                 <h2 class="tabctrl-title">
                                     Product Summary
                                 </h2>
                                 ...
                             </section>
-                            <section id="par_tabs-1" class="tabctrl-content" data-path="/content/geometrixx-outdoors/en/equipment/biking/tacna/_jcr_content/par/tabs/tab-1">
+                            <section id="par_tabs-1" class="tabctrl-content" data-path="/en/equipment/biking/tacna/_jcr_content/par/tabs/tab-1">
                                 <h2 class="tabctrl-title">
                                     Features
                                 </h2>

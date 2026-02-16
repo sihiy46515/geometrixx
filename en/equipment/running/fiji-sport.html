@@ -46,7 +46,7 @@ var category = url.substring(url.indexOf("en")+3,url.lastIndexOf("/")).replace(/
 // targetPageParams helper function goes here
 // 
 function openShoppingCart(){
-    window.location='/en/user/cart.html?productId='+entityId;
+    window.location='../../../en/user/cart.html?productId='+entityId;
 }
         </script>
         <!--Preconnect and DNS-Prefetch to improve page load time-->
@@ -107,7 +107,7 @@ function openShoppingCart(){
                 <div class="page-systemnav">
                     <div class="sys-nav-wrapper">
                         <div class="search">
-                            <form class="search-form" action="../../../content/geometrixx-outdoors/en/toolbar/search.html" method="get">
+                            <form class="search-form" action="../../../en/toolbar/search.html" method="get">
                                 <p class="search-field">
                                     <label for="search-field" style="display: none">
                                         Search:
@@ -131,7 +131,7 @@ function openShoppingCart(){
         <div class="cq-hovercart-inner">
             <h1>{{title}}</h1>
             {{#unless cartEmpty}}
-                <a class="cq-hovercart-checkout" href="../../../content/geometrixx-outdoors/en/user/checkout.html">Checkout ➙</a>
+                <a class="cq-hovercart-checkout" href="../../../en/user/checkout.html">Checkout ➙</a>
             <table>
                 {{#each entries}}
                 <tr data-product-page="{{this.page}}">
@@ -222,8 +222,8 @@ function openShoppingCart(){
                                                                 <div class="text section">
                                                                     If you already have an account you can sign in below.
                                                                 </div>
-                                                                <form method="POST" action="../../../content/geometrixx-outdoors/en/equipment/running/fiji-sport/j_security_check" id="sociallogin" name="sociallogin" enctype="multipart/form-data" onsubmit="return cq5forms_validate_sociallogin();">
-                                                                    <input type="hidden" name="resource" value="/content/geometrixx-outdoors/en/equipment/running/fiji-sport.html">
+                                                                <form method="POST" action="../../../en/equipment/running/fiji-sport/j_security_check" id="sociallogin" name="sociallogin" enctype="multipart/form-data" onsubmit="return cq5forms_validate_sociallogin();">
+                                                                    <input type="hidden" name="resource" value="../../../en/equipment/running/fiji-sport.html">
                                                                     <input type="hidden" name="_charset_" value="UTF-8">
                                                                     </input>
                                                                     <p class="login_username_group">
@@ -493,13 +493,13 @@ function openShoppingCart(){
                         <article class="product cq-dd-product-data-reference " itemscope itemtype="http://schema.org/Product" data-sku="wmapfs.b-XS">
                             <div class="product-viewer" itemprop="image">
                                 <div class="parbase image">
-                                    <div id="cq-image-jsp-/content/geometrixx-outdoors/en/equipment/running/fiji-sport/jcr:content/par/product/wmapfs_b-xs/image">
+                                    <div id="cq-image-jsp-/en/equipment/running/fiji-sport/jcr:content/par/product/wmapfs_b-xs/image">
                                         <img title="Fiji Blue" alt="Fiji Blue" class="cq-dd-image" src="fiji-sport/_jcr_content/par/product/wmapfs_b-xs/image.img.jpg/geometrixx-outdoors/-/page_product/par/product/image/cq_ck_1370955439602.jpg">
                                     </div>
                                     <script type="text/javascript">
     (function() {
         var imageDiv = document.getElementById("cq\x2Dimage\x2Djsp\x2D\x2Fcontent\x2Fgeometrixx\x2Doutdoors\x2Fen\x2Fequipment\x2Frunning\x2Ffiji\x2Dsport\x2Fjcr\x3Acontent\x2Fpar\x2Fproduct\x2Fwmapfs_b\x2Dxs\x2Fimage");
-        var imageEvars = '{ imageLink: "", imageAsset: "/content/dam/geometrixx-outdoors/products/shorts/Fiji Blue.jpg", imageTitle: "Fiji\x20Blue" }';
+        var imageEvars = '{ imageLink: "", imageAsset: "/dam/geometrixx-outdoors/products/shorts/Fiji Blue.jpg", imageTitle: "Fiji\x20Blue" }';
         var tagNodes = imageDiv.getElementsByTagName('A');
         for (var i = 0; i < tagNodes.length; i++) {
             var link = tagNodes.item(i); 
@@ -543,7 +543,7 @@ function openShoppingCart(){
                                     </li>
                                 </ul>
                             </section>
-                            <form class="product-form" method="POST" alt="/content/geometrixx-outdoors/en/equipment/running/fiji-sport.commerce.addcartentry.html-onsubmit=return validateProductQuantity('product-quantity-1423875310212') &amp;&amp; trackCartAdd(this)">
+                            <form class="product-form" method="POST" alt="/en/equipment/running/fiji-sport.commerce.addcartentry.html-onsubmit=return validateProductQuantity('product-quantity-1423875310212') &amp;&amp; trackCartAdd(this)">
                                 <div class="product-size-quantity">
                                     <section class="product-size">
                                         <h3>
@@ -556,7 +556,7 @@ function openShoppingCart(){
                                                         XS
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-XS-1423875310228" value="XS" checked="checked" data-price="$32.00" data-sku="wmapfs.b-XS" data-path="/content/geometrixx-outdoors/en/equipment/running/fiji-sport/jcr:content/par/product/wmapfs_b-xs" data-title="Fiji Sport Blue" data-description="Women's Running Shorts">
+                                                <input type="radio" name="product-size" id="size-XS-1423875310228" value="XS" checked="checked" data-price="$32.00" data-sku="wmapfs.b-XS" data-path="/en/equipment/running/fiji-sport/jcr:content/par/product/wmapfs_b-xs" data-title="Fiji Sport Blue" data-description="Women's Running Shorts">
                                                 </input>
                                             </li>
                                             <li>
@@ -565,7 +565,7 @@ function openShoppingCart(){
                                                         S
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-S-1423875310228" value="S" data-price="$32.00" data-sku="wmapfs.b-S" data-path="/content/geometrixx-outdoors/en/equipment/running/fiji-sport/jcr:content/par/product/wmapfs_b-s" data-title="Fiji Sport Blue" data-description="Women's Running Shorts">
+                                                <input type="radio" name="product-size" id="size-S-1423875310228" value="S" data-price="$32.00" data-sku="wmapfs.b-S" data-path="/en/equipment/running/fiji-sport/jcr:content/par/product/wmapfs_b-s" data-title="Fiji Sport Blue" data-description="Women's Running Shorts">
                                                 </input>
                                             </li>
                                             <li>
@@ -574,7 +574,7 @@ function openShoppingCart(){
                                                         M
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-M-1423875310228" value="M" data-price="$32.00" data-sku="wmapfs.b-M" data-path="/content/geometrixx-outdoors/en/equipment/running/fiji-sport/jcr:content/par/product/wmapfs_b-m" data-title="Fiji Sport Blue" data-description="Women's Running Shorts">
+                                                <input type="radio" name="product-size" id="size-M-1423875310228" value="M" data-price="$32.00" data-sku="wmapfs.b-M" data-path="/en/equipment/running/fiji-sport/jcr:content/par/product/wmapfs_b-m" data-title="Fiji Sport Blue" data-description="Women's Running Shorts">
                                                 </input>
                                             </li>
                                             <li>
@@ -583,7 +583,7 @@ function openShoppingCart(){
                                                         L
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-L-1423875310228" value="L" data-price="$32.00" data-sku="wmapfs.b-L" data-path="/content/geometrixx-outdoors/en/equipment/running/fiji-sport/jcr:content/par/product/wmapfs_b-l" data-title="Fiji Sport Blue" data-description="Women's Running Shorts">
+                                                <input type="radio" name="product-size" id="size-L-1423875310228" value="L" data-price="$32.00" data-sku="wmapfs.b-L" data-path="/en/equipment/running/fiji-sport/jcr:content/par/product/wmapfs_b-l" data-title="Fiji Sport Blue" data-description="Women's Running Shorts">
                                                 </input>
                                             </li>
                                             <li>
@@ -592,7 +592,7 @@ function openShoppingCart(){
                                                         XL
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-XL-1423875310228" value="XL" data-price="$32.00" data-sku="wmapfs.b-XL" data-path="/content/geometrixx-outdoors/en/equipment/running/fiji-sport/jcr:content/par/product/wmapfs_b-xl" data-title="Fiji Sport Blue" data-description="Women's Running Shorts">
+                                                <input type="radio" name="product-size" id="size-XL-1423875310228" value="XL" data-price="$32.00" data-sku="wmapfs.b-XL" data-path="/en/equipment/running/fiji-sport/jcr:content/par/product/wmapfs_b-xl" data-title="Fiji Sport Blue" data-description="Women's Running Shorts">
                                                 </input>
                                             </li>
                                         </ul>
@@ -607,11 +607,11 @@ function openShoppingCart(){
                                     </section>
                                 </div>
                                 <section class="product-submit">
-                                    <input type="hidden" name="redirect" value="/content/geometrixx-outdoors/en/user/cart.html">
+                                    <input type="hidden" name="redirect" value="../../../en/user/cart.html">
                                     </input>
-                                    <input type="hidden" name="redirect-product-not-found" value="/content/geometrixx-outdoors/en/user/cart/product-not-found.html">
+                                    <input type="hidden" name="redirect-product-not-found" value="../../../en/user/cart/product-not-found.html">
                                     </input>
-                                    <input type="hidden" name="product-path" value="/content/geometrixx-outdoors/en/equipment/running/fiji-sport/jcr:content/par/product/wmapfs_b-xs">
+                                    <input type="hidden" name="product-path" value="../../../en/equipment/running/fiji-sport/jcr:content/par/product/wmapfs_b-xs">
                                     </input>
                                     <span class="button-group">
                                         <input type="submit" value="Add to Cart" onclick="openShoppingCart(); return false;">
@@ -630,13 +630,13 @@ function openShoppingCart(){
                         <article class="product cq-dd-product-data-reference isHidden" itemscope itemtype="http://schema.org/Product" data-sku="wmapfs.r-S">
                             <div class="product-viewer" itemprop="image">
                                 <div class="parbase image">
-                                    <div id="cq-image-jsp-/content/geometrixx-outdoors/en/equipment/running/fiji-sport/jcr:content/par/product/wmapfs_r-s/image">
+                                    <div id="cq-image-jsp-/en/equipment/running/fiji-sport/jcr:content/par/product/wmapfs_r-s/image">
                                         <img title="Fiji Sport" alt="Fiji Sport" class="cq-dd-image" src="fiji-sport/_jcr_content/par/product/wmapfs_r-s/image.img.jpg/geometrixx-outdoors/-/page_product/par/product/image/cq_ck_1370955439603.jpg">
                                     </div>
                                     <script type="text/javascript">
     (function() {
         var imageDiv = document.getElementById("cq\x2Dimage\x2Djsp\x2D\x2Fcontent\x2Fgeometrixx\x2Doutdoors\x2Fen\x2Fequipment\x2Frunning\x2Ffiji\x2Dsport\x2Fjcr\x3Acontent\x2Fpar\x2Fproduct\x2Fwmapfs_r\x2Ds\x2Fimage");
-        var imageEvars = '{ imageLink: "", imageAsset: "/content/dam/geometrixx-outdoors/products/shorts/Fiji Red.jpg", imageTitle: "Fiji\x20Sport" }';
+        var imageEvars = '{ imageLink: "", imageAsset: "/dam/geometrixx-outdoors/products/shorts/Fiji Red.jpg", imageTitle: "Fiji\x20Sport" }';
         var tagNodes = imageDiv.getElementsByTagName('A');
         for (var i = 0; i < tagNodes.length; i++) {
             var link = tagNodes.item(i); 
@@ -680,7 +680,7 @@ function openShoppingCart(){
                                     </li>
                                 </ul>
                             </section>
-                            <form class="product-form" method="POST" alt="/content/geometrixx-outdoors/en/equipment/running/fiji-sport.commerce.addcartentry.html-onsubmit=return validateProductQuantity('product-quantity-1423875310243') &amp;&amp; trackCartAdd(this)">
+                            <form class="product-form" method="POST" alt="/en/equipment/running/fiji-sport.commerce.addcartentry.html-onsubmit=return validateProductQuantity('product-quantity-1423875310243') &amp;&amp; trackCartAdd(this)">
                                 <div class="product-size-quantity">
                                     <section class="product-size">
                                         <h3>
@@ -693,7 +693,7 @@ function openShoppingCart(){
                                                         S
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-S-1423875310399" value="S" checked="checked" data-price="$32.00" data-sku="wmapfs.r-S" data-path="/content/geometrixx-outdoors/en/equipment/running/fiji-sport/jcr:content/par/product/wmapfs_r-s" data-title="Fiji Sport Red" data-description="Women's Running Shorts">
+                                                <input type="radio" name="product-size" id="size-S-1423875310399" value="S" checked="checked" data-price="$32.00" data-sku="wmapfs.r-S" data-path="/en/equipment/running/fiji-sport/jcr:content/par/product/wmapfs_r-s" data-title="Fiji Sport Red" data-description="Women's Running Shorts">
                                                 </input>
                                             </li>
                                             <li>
@@ -702,7 +702,7 @@ function openShoppingCart(){
                                                         M
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-M-1423875310399" value="M" data-price="$32.00" data-sku="wmapfs.r-M" data-path="/content/geometrixx-outdoors/en/equipment/running/fiji-sport/jcr:content/par/product/wmapfs_r-m" data-title="Fiji Sport Red" data-description="Women's Running Shorts">
+                                                <input type="radio" name="product-size" id="size-M-1423875310399" value="M" data-price="$32.00" data-sku="wmapfs.r-M" data-path="/en/equipment/running/fiji-sport/jcr:content/par/product/wmapfs_r-m" data-title="Fiji Sport Red" data-description="Women's Running Shorts">
                                                 </input>
                                             </li>
                                             <li>
@@ -711,7 +711,7 @@ function openShoppingCart(){
                                                         L
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-L-1423875310399" value="L" data-price="$32.00" data-sku="wmapfs.r-L" data-path="/content/geometrixx-outdoors/en/equipment/running/fiji-sport/jcr:content/par/product/wmapfs_r-l" data-title="Fiji Sport Red" data-description="Women's Running Shorts">
+                                                <input type="radio" name="product-size" id="size-L-1423875310399" value="L" data-price="$32.00" data-sku="wmapfs.r-L" data-path="/en/equipment/running/fiji-sport/jcr:content/par/product/wmapfs_r-l" data-title="Fiji Sport Red" data-description="Women's Running Shorts">
                                                 </input>
                                             </li>
                                         </ul>
@@ -726,11 +726,11 @@ function openShoppingCart(){
                                     </section>
                                 </div>
                                 <section class="product-submit">
-                                    <input type="hidden" name="redirect" value="/content/geometrixx-outdoors/en/user/cart.html">
+                                    <input type="hidden" name="redirect" value="../../../en/user/cart.html">
                                     </input>
-                                    <input type="hidden" name="redirect-product-not-found" value="/content/geometrixx-outdoors/en/user/cart/product-not-found.html">
+                                    <input type="hidden" name="redirect-product-not-found" value="../../../en/user/cart/product-not-found.html">
                                     </input>
-                                    <input type="hidden" name="product-path" value="/content/geometrixx-outdoors/en/equipment/running/fiji-sport/jcr:content/par/product/wmapfs_r-s">
+                                    <input type="hidden" name="product-path" value="../../../en/equipment/running/fiji-sport/jcr:content/par/product/wmapfs_r-s">
                                     </input>
                                     <span class="button-group">
                                         <input type="submit" value="Add to Cart" onclick="openShoppingCart(); return false;">
@@ -790,7 +790,7 @@ function openShoppingCart(){
     });
                                     </script>
                                     <div id="twitter-share-content-geometrixx-outdoors-en-equipment-running-fiji-sport-twitter_share" class="cq-social-twitter-widgets-div">
-                                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://localhost:4503/content/geometrixx-outdoors/en/equipment/running/fiji-sport.html" data-count="none">
+                                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://localhost:4503/en/equipment/running/fiji-sport.html" data-count="none">
                                             Tweet
                                         </a>
                                     </div>
@@ -819,7 +819,7 @@ function openShoppingCart(){
                             </ul>
                         </header>
                         <div class="tabctrl-container">
-                            <section id="par_tabs-0" class="tabctrl-content" data-path="/content/geometrixx-outdoors/en/equipment/running/fiji-sport/_jcr_content/par/tabs/tab-0">
+                            <section id="par_tabs-0" class="tabctrl-content" data-path="/en/equipment/running/fiji-sport/_jcr_content/par/tabs/tab-0">
                                 <h2 class="tabctrl-title">
                                     Product Summary
                                 </h2>
@@ -827,7 +827,7 @@ function openShoppingCart(){
                                     Soft stretchy cotton-based fabric allows great freedom of movement as well as breathability. Available in a variety of colors
                                 </p>
                             </section>
-                            <section id="par_tabs-1" class="tabctrl-content" data-path="/content/geometrixx-outdoors/en/equipment/running/fiji-sport/_jcr_content/par/tabs/tab-1">
+                            <section id="par_tabs-1" class="tabctrl-content" data-path="/en/equipment/running/fiji-sport/_jcr_content/par/tabs/tab-1">
                                 <h2 class="tabctrl-title">
                                     Features
                                 </h2>

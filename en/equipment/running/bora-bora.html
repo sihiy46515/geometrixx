@@ -46,7 +46,7 @@ var category = url.substring(url.indexOf("en")+3,url.lastIndexOf("/")).replace(/
 // targetPageParams helper function goes here
 // 
 function openShoppingCart(){
-    window.location='/en/user/cart.html?productId='+entityId;
+    window.location='../../../en/user/cart.html?productId='+entityId;
 }
         </script>
         <!--Preconnect and DNS-Prefetch to improve page load time-->
@@ -107,7 +107,7 @@ function openShoppingCart(){
                 <div class="page-systemnav">
                     <div class="sys-nav-wrapper">
                         <div class="search">
-                            <form class="search-form" action="../../../content/geometrixx-outdoors/en/toolbar/search.html" method="get">
+                            <form class="search-form" action="../../../en/toolbar/search.html" method="get">
                                 <p class="search-field">
                                     <label for="search-field" style="display: none">
                                         Search:
@@ -131,7 +131,7 @@ function openShoppingCart(){
         <div class="cq-hovercart-inner">
             <h1>{{title}}</h1>
             {{#unless cartEmpty}}
-                <a class="cq-hovercart-checkout" href="../../../content/geometrixx-outdoors/en/user/checkout.html">Checkout ➙</a>
+                <a class="cq-hovercart-checkout" href="../../../en/user/checkout.html">Checkout ➙</a>
             <table>
                 {{#each entries}}
                 <tr data-product-page="{{this.page}}">
@@ -222,8 +222,8 @@ function openShoppingCart(){
                                                                 <div class="text section">
                                                                     If you already have an account you can sign in below.
                                                                 </div>
-                                                                <form method="POST" action="../../../content/geometrixx-outdoors/en/equipment/running/bora-bora/j_security_check" id="sociallogin" name="sociallogin" enctype="multipart/form-data" onsubmit="return cq5forms_validate_sociallogin();">
-                                                                    <input type="hidden" name="resource" value="/content/geometrixx-outdoors/en/equipment/running/bora-bora.html">
+                                                                <form method="POST" action="../../../en/equipment/running/bora-bora/j_security_check" id="sociallogin" name="sociallogin" enctype="multipart/form-data" onsubmit="return cq5forms_validate_sociallogin();">
+                                                                    <input type="hidden" name="resource" value="../../../en/equipment/running/bora-bora.html">
                                                                     <input type="hidden" name="_charset_" value="UTF-8">
                                                                     </input>
                                                                     <p class="login_username_group">
@@ -493,13 +493,13 @@ function openShoppingCart(){
                         <article class="product cq-dd-product-data-reference " itemscope itemtype="http://schema.org/Product" data-sku="wmapbb">
                             <div class="product-viewer" itemprop="image">
                                 <div class="parbase image">
-                                    <div id="cq-image-jsp-/content/geometrixx-outdoors/en/equipment/running/bora-bora/jcr:content/par/product/image">
+                                    <div id="cq-image-jsp-/en/equipment/running/bora-bora/jcr:content/par/product/image">
                                         <img title="Bora Bora Sport" alt="Bora Bora Sport" class="cq-dd-image" src="bora-bora/_jcr_content/par/product/image.img.jpg/geometrixx-outdoors/-/page_product/par/product/image/cq_ck_1370955439596.jpg">
                                     </div>
                                     <script type="text/javascript">
     (function() {
         var imageDiv = document.getElementById("cq\x2Dimage\x2Djsp\x2D\x2Fcontent\x2Fgeometrixx\x2Doutdoors\x2Fen\x2Fequipment\x2Frunning\x2Fbora\x2Dbora\x2Fjcr\x3Acontent\x2Fpar\x2Fproduct\x2Fimage");
-        var imageEvars = '{ imageLink: "", imageAsset: "/content/dam/geometrixx-outdoors/products/shirt/Bora Bora.jpg", imageTitle: "Bora\x20Bora\x20Sport" }';
+        var imageEvars = '{ imageLink: "", imageAsset: "/dam/geometrixx-outdoors/products/shirt/Bora Bora.jpg", imageTitle: "Bora\x20Bora\x20Sport" }';
         var tagNodes = imageDiv.getElementsByTagName('A');
         for (var i = 0; i < tagNodes.length; i++) {
             var link = tagNodes.item(i); 
@@ -528,7 +528,7 @@ function openShoppingCart(){
                                     Item #wmapbb
                                 </p>
                             </div>
-                            <form class="product-form" method="POST" alt="/content/geometrixx-outdoors/en/equipment/running/bora-bora.commerce.addcartentry.html-onsubmit=return validateProductQuantity('product-quantity-1423875309292') &amp;&amp; trackCartAdd(this)">
+                            <form class="product-form" method="POST" alt="/en/equipment/running/bora-bora.commerce.addcartentry.html-onsubmit=return validateProductQuantity('product-quantity-1423875309292') &amp;&amp; trackCartAdd(this)">
                                 <div class="product-size-quantity">
                                     <section class="product-size">
                                         <h3>
@@ -541,7 +541,7 @@ function openShoppingCart(){
                                                         XS
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-XS-1423875309292" value="XS" data-price="$38.00" data-sku="wmapbb-XS" data-path="/content/geometrixx-outdoors/en/equipment/running/bora-bora/jcr:content/par/product/wmapbb-XS" data-title="Bora Bora" data-description="Women's Fitness Top">
+                                                <input type="radio" name="product-size" id="size-XS-1423875309292" value="XS" data-price="$38.00" data-sku="wmapbb-XS" data-path="/en/equipment/running/bora-bora/jcr:content/par/product/wmapbb-XS" data-title="Bora Bora" data-description="Women's Fitness Top">
                                                 </input>
                                             </li>
                                             <li>
@@ -550,7 +550,7 @@ function openShoppingCart(){
                                                         S
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-S-1423875309292" value="S" data-price="$38.00" data-sku="wmapbb-S" data-path="/content/geometrixx-outdoors/en/equipment/running/bora-bora/jcr:content/par/product/wmapbb-S" data-title="Bora Bora" data-description="Women's Fitness Top">
+                                                <input type="radio" name="product-size" id="size-S-1423875309292" value="S" data-price="$38.00" data-sku="wmapbb-S" data-path="/en/equipment/running/bora-bora/jcr:content/par/product/wmapbb-S" data-title="Bora Bora" data-description="Women's Fitness Top">
                                                 </input>
                                             </li>
                                             <li>
@@ -559,7 +559,7 @@ function openShoppingCart(){
                                                         M
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-M-1423875309292" value="M" data-price="$38.00" data-sku="wmapbb-M" data-path="/content/geometrixx-outdoors/en/equipment/running/bora-bora/jcr:content/par/product/wmapbb-M" data-title="Bora Bora" data-description="Women's Fitness Top">
+                                                <input type="radio" name="product-size" id="size-M-1423875309292" value="M" data-price="$38.00" data-sku="wmapbb-M" data-path="/en/equipment/running/bora-bora/jcr:content/par/product/wmapbb-M" data-title="Bora Bora" data-description="Women's Fitness Top">
                                                 </input>
                                             </li>
                                             <li>
@@ -568,7 +568,7 @@ function openShoppingCart(){
                                                         L
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-L-1423875309292" value="L" data-price="$38.00" data-sku="wmapbb-L" data-path="/content/geometrixx-outdoors/en/equipment/running/bora-bora/jcr:content/par/product/wmapbb-L" data-title="Bora Bora" data-description="Women's Fitness Top">
+                                                <input type="radio" name="product-size" id="size-L-1423875309292" value="L" data-price="$38.00" data-sku="wmapbb-L" data-path="/en/equipment/running/bora-bora/jcr:content/par/product/wmapbb-L" data-title="Bora Bora" data-description="Women's Fitness Top">
                                                 </input>
                                             </li>
                                             <li>
@@ -577,7 +577,7 @@ function openShoppingCart(){
                                                         XL
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-XL-1423875309307" value="XL" data-price="$38.00" data-sku="wmapbb-XL" data-path="/content/geometrixx-outdoors/en/equipment/running/bora-bora/jcr:content/par/product/wmapbb-XL" data-title="Bora Bora" data-description="Women's Fitness Top">
+                                                <input type="radio" name="product-size" id="size-XL-1423875309307" value="XL" data-price="$38.00" data-sku="wmapbb-XL" data-path="/en/equipment/running/bora-bora/jcr:content/par/product/wmapbb-XL" data-title="Bora Bora" data-description="Women's Fitness Top">
                                                 </input>
                                             </li>
                                         </ul>
@@ -592,11 +592,11 @@ function openShoppingCart(){
                                     </section>
                                 </div>
                                 <section class="product-submit">
-                                    <input type="hidden" name="redirect" value="/content/geometrixx-outdoors/en/user/cart.html">
+                                    <input type="hidden" name="redirect" value="../../../en/user/cart.html">
                                     </input>
-                                    <input type="hidden" name="redirect-product-not-found" value="/content/geometrixx-outdoors/en/user/cart/product-not-found.html">
+                                    <input type="hidden" name="redirect-product-not-found" value="../../../en/user/cart/product-not-found.html">
                                     </input>
-                                    <input type="hidden" name="product-path" value="/content/geometrixx-outdoors/en/equipment/running/bora-bora/jcr:content/par/product">
+                                    <input type="hidden" name="product-path" value="../../../en/equipment/running/bora-bora/jcr:content/par/product">
                                     </input>
                                     <span class="button-group">
                                         <input type="submit" value="Add to Cart" onclick="openShoppingCart(); return false;">
@@ -656,7 +656,7 @@ function openShoppingCart(){
     });
                                     </script>
                                     <div id="twitter-share-content-geometrixx-outdoors-en-equipment-running-bora-bora-twitter_share" class="cq-social-twitter-widgets-div">
-                                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://localhost:4503/content/geometrixx-outdoors/en/equipment/running/bora-bora.html" data-count="none">
+                                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://localhost:4503/en/equipment/running/bora-bora.html" data-count="none">
                                             Tweet
                                         </a>
                                     </div>
@@ -685,7 +685,7 @@ function openShoppingCart(){
                             </ul>
                         </header>
                         <div class="tabctrl-container">
-                            <section id="par_tabs-0" class="tabctrl-content" data-path="/content/geometrixx-outdoors/en/equipment/running/bora-bora/_jcr_content/par/tabs/tab-0">
+                            <section id="par_tabs-0" class="tabctrl-content" data-path="/en/equipment/running/bora-bora/_jcr_content/par/tabs/tab-0">
                                 <h2 class="tabctrl-title">
                                     Product Summary
                                 </h2>
@@ -695,7 +695,7 @@ function openShoppingCart(){
                                     </br>
                                 </p>
                             </section>
-                            <section id="par_tabs-1" class="tabctrl-content" data-path="/content/geometrixx-outdoors/en/equipment/running/bora-bora/_jcr_content/par/tabs/tab-1">
+                            <section id="par_tabs-1" class="tabctrl-content" data-path="/en/equipment/running/bora-bora/_jcr_content/par/tabs/tab-1">
                                 <h2 class="tabctrl-title">
                                     Features
                                 </h2>

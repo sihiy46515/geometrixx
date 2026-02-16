@@ -126,7 +126,7 @@
                 <div class="page-systemnav">
                     <div class="sys-nav-wrapper">
                         <div class="search">
-                            <form class="search-form" action="../../content/geometrixx-outdoors/en/toolbar/search.html" method="get">
+                            <form class="search-form" action="../../en/toolbar/search.html" method="get">
                                 <p class="search-field">
                                     <label for="search-field" style="display: none">
                                         Search:
@@ -150,7 +150,7 @@
         <div class="cq-hovercart-inner">
             <h1>{{title}}</h1>
             {{#unless cartEmpty}}
-                <a class="cq-hovercart-checkout" href="../../content/geometrixx-outdoors/en/user/checkout.html">Checkout ➙</a>
+                <a class="cq-hovercart-checkout" href="../../en/user/checkout.html">Checkout ➙</a>
             <table>
                 {{#each entries}}
                 <tr data-product-page="{{this.page}}">
@@ -208,8 +208,8 @@
                                                                 <div class="text section">
                                                                     If you already have an account you can sign in below.
                                                                 </div>
-                                                                <form method="POST" action="../../content/geometrixx-outdoors/en/user/checkout/j_security_check" id="sociallogin" name="sociallogin" enctype="multipart/form-data" onsubmit="return cq5forms_validate_sociallogin();">
-                                                                    <input type="hidden" name="resource" value="/content/geometrixx-outdoors/en/user/checkout.html">
+                                                                <form method="POST" action="../../en/user/checkout/j_security_check" id="sociallogin" name="sociallogin" enctype="multipart/form-data" onsubmit="return cq5forms_validate_sociallogin();">
+                                                                    <input type="hidden" name="resource" value="../../en/user/checkout.html">
                                                                     <input type="hidden" name="_charset_" value="UTF-8">
                                                                     </input>
                                                                     <p class="login_username_group">
@@ -422,10 +422,10 @@ if (typeof(shipping_address_fields_precheck) != "undefined" && typeof(billing_ad
     return true;
   }
                         </script>
-                        <form method="POST" action="../../content/geometrixx-outdoors/en/user/checkout.html" id="checkout" name="checkout" enctype="multipart/form-data">
+                        <form method="POST" action="../../en/user/checkout.html" id="checkout" name="checkout" enctype="multipart/form-data">
                             <input type="hidden" name=":formid" value="checkout">
                             </input>
-                            <input type="hidden" name=":formstart" value="/content/geometrixx-outdoors/en/user/checkout/jcr:content/par/checkout_form">
+                            <input type="hidden" name=":formstart" value="../../en/user/checkout/jcr:content/par/checkout_form">
                             </input>
                             <input type="hidden" name="_charset_" value="UTF-8">
                             </input>
@@ -442,7 +442,7 @@ if (typeof(shipping_address_fields_precheck) != "undefined" && typeof(billing_ad
                                     </div>
                                     <div class="addressbook section">
                                         <link rel="stylesheet" href="../../clientlibs/foundation/jquery-ui/themes/default.css" type="text/css">
-                                        <div class="addressbook" data-resource-path="/content/geometrixx-outdoors/en/user/checkout/jcr:content/par/addressbook">
+                                        <div class="addressbook" data-resource-path="/en/user/checkout/jcr:content/par/addressbook">
                                             <div class="addressbook-title">
                                             </div>
                                             <span class="addressbook-sign-in">
@@ -649,7 +649,7 @@ if (typeof(shipping_address_fields_precheck) != "undefined" && typeof(billing_ad
                                         </h3>
                                     </div>
                                     <div class="addressbook section">
-                                        <div class="addressbook" data-resource-path="/content/geometrixx-outdoors/en/user/checkout/jcr:content/par/addressbook_0">
+                                        <div class="addressbook" data-resource-path="/en/user/checkout/jcr:content/par/addressbook_0">
                                             <div class="addressbook-title">
                                             </div>
                                             <span class="addressbook-sign-in">
@@ -943,7 +943,7 @@ if (typeof(shipping_address_fields_precheck) != "undefined" && typeof(billing_ad
                                 </div>
                                 <div class="parsys_column colctrl-2c-c1">
                                     <div class="parbase image section">
-                                        <div id="cq-image-jsp-/content/geometrixx-outdoors/en/user/checkout/jcr:content/par/shipping_schedule">
+                                        <div id="cq-image-jsp-/en/user/checkout/jcr:content/par/shipping_schedule">
                                             <img title="" alt="file" class="cq-dd-image" src="checkout/_jcr_content/par/shipping_schedule.img.png">
                                         </div>
                                         <script type="text/javascript">
@@ -959,7 +959,7 @@ if (typeof(shipping_address_fields_precheck) != "undefined" && typeof(billing_ad
                                         </script>
                                     </div>
                                     <div class="parbase image section">
-                                        <div id="cq-image-jsp-/content/geometrixx-outdoors/en/user/checkout/jcr:content/par/shipping_companies">
+                                        <div id="cq-image-jsp-/en/user/checkout/jcr:content/par/shipping_companies">
                                             <img title="" alt="file" class="cq-dd-image" src="checkout/_jcr_content/par/shipping_companies.img.png">
                                         </div>
                                         <script type="text/javascript">
@@ -989,7 +989,7 @@ if (typeof(shipping_address_fields_precheck) != "undefined" && typeof(billing_ad
                                         </div>
                                     </div>
                                     <div class="form_rightcol">
-                                        <input type="button" id="order-btn" class="form_button_submit cq-checkout" name="next" value="Continue" onclick="window.location.replace('/en/user/order.html')">
+                                        <input type="button" id="order-btn" class="form_button_submit cq-checkout" name="next" value="Continue" onclick="window.location.replace('../../en/user/order.html')">
                                     </div>
                                 </div>
                                 <div class="form_row_description">
@@ -1037,13 +1037,13 @@ if (typeof(shipping_address_fields_precheck) != "undefined" && typeof(billing_ad
                             </div>
                         </div>
                         <div class="parbase image section">
-                            <div id="cq-image-jsp-/content/geometrixx-outdoors/en/user/checkout/jcr:content/sidebar/divider1">
+                            <div id="cq-image-jsp-/en/user/checkout/jcr:content/sidebar/divider1">
                                 <img title="grey" alt="grey" class="cq-dd-image" src="checkout/_jcr_content/sidebar/divider1.img.png/1349266699343.png">
                             </div>
                             <script type="text/javascript">
     (function() {
         var imageDiv = document.getElementById("cq\x2Dimage\x2Djsp\x2D\x2Fcontent\x2Fgeometrixx\x2Doutdoors\x2Fen\x2Fuser\x2Fcheckout\x2Fjcr\x3Acontent\x2Fsidebar\x2Fdivider1");
-        var imageEvars = '{ imageLink: "", imageAsset: "/content/dam/geometrixx-outdoors/colors/grey.png", imageTitle: "grey" }';
+        var imageEvars = '{ imageLink: "", imageAsset: "/dam/geometrixx-outdoors/colors/grey.png", imageTitle: "grey" }';
         var tagNodes = imageDiv.getElementsByTagName('A');
         for (var i = 0; i < tagNodes.length; i++) {
             var link = tagNodes.item(i); 
@@ -1055,8 +1055,8 @@ if (typeof(shipping_address_fields_precheck) != "undefined" && typeof(billing_ad
                         <div class="vouchers parbase section">
                             <div id="cq-vouchers-_content_geometrixx-outdoors_en_user_checkout_jcr_content_sidebar_vouchers">
                                 <p>
-                                    <form method="post" action="../../content/geometrixx-outdoors/en/user/checkout/_jcr_content/sidebar/vouchers.add.html">
-                                        <input type="hidden" name="redirect" value="/content/geometrixx-outdoors/en/user/checkout.html">
+                                    <form method="post" action="../../en/user/checkout/_jcr_content/sidebar/vouchers.add.html">
+                                        <input type="hidden" name="redirect" value="../../en/user/checkout.html">
                                         </input>
                                         <input type="text" name="code" id="cq-voucher-code-1423875303422" placeholder="Coupon code">
                                         </input>
@@ -1067,13 +1067,13 @@ if (typeof(shipping_address_fields_precheck) != "undefined" && typeof(billing_ad
                             </div>
                         </div>
                         <div class="parbase image section">
-                            <div id="cq-image-jsp-/content/geometrixx-outdoors/en/user/checkout/jcr:content/sidebar/divider2">
+                            <div id="cq-image-jsp-/en/user/checkout/jcr:content/sidebar/divider2">
                                 <img title="grey" alt="grey" class="cq-dd-image" src="checkout/_jcr_content/sidebar/divider2.img.png/1349266769608.png">
                             </div>
                             <script type="text/javascript">
     (function() {
         var imageDiv = document.getElementById("cq\x2Dimage\x2Djsp\x2D\x2Fcontent\x2Fgeometrixx\x2Doutdoors\x2Fen\x2Fuser\x2Fcheckout\x2Fjcr\x3Acontent\x2Fsidebar\x2Fdivider2");
-        var imageEvars = '{ imageLink: "", imageAsset: "/content/dam/geometrixx-outdoors/colors/grey.png", imageTitle: "grey" }';
+        var imageEvars = '{ imageLink: "", imageAsset: "/dam/geometrixx-outdoors/colors/grey.png", imageTitle: "grey" }';
         var tagNodes = imageDiv.getElementsByTagName('A');
         for (var i = 0; i < tagNodes.length; i++) {
             var link = tagNodes.item(i); 
@@ -1129,7 +1129,7 @@ http://chart.apis.google.com/chart?chtt=checkout.html+%2893ms%29&cht=bhs&chxt=x&
         <div class="servicecomponents cloudservices">
         </div>
         <script type="text/javascript">
-    $("#order-btn").attr("onclick","window.location ='/en/user/order.html?productId="+productId+"'")
+    $("#order-btn").attr("onclick","window.location='../../en/user/order.html?productId="+productId+"'")
     $(document).ready(function(){
         $("#item-total").html("$"+entity.value)
         $("#item-subtotal").html("$"+entity.value)

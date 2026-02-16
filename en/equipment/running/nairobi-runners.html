@@ -46,7 +46,7 @@ var category = url.substring(url.indexOf("en")+3,url.lastIndexOf("/")).replace(/
 // targetPageParams helper function goes here
 // 
 function openShoppingCart(){
-    window.location='/en/user/cart.html?productId='+entityId;
+    window.location='../../../en/user/cart.html?productId='+entityId;
 }
         </script>
         <!--Preconnect and DNS-Prefetch to improve page load time-->
@@ -107,7 +107,7 @@ function openShoppingCart(){
                 <div class="page-systemnav">
                     <div class="sys-nav-wrapper">
                         <div class="search">
-                            <form class="search-form" action="../../../content/geometrixx-outdoors/en/toolbar/search.html" method="get">
+                            <form class="search-form" action="../../../en/toolbar/search.html" method="get">
                                 <p class="search-field">
                                     <label for="search-field" style="display: none">
                                         Search:
@@ -131,7 +131,7 @@ function openShoppingCart(){
         <div class="cq-hovercart-inner">
             <h1>{{title}}</h1>
             {{#unless cartEmpty}}
-                <a class="cq-hovercart-checkout" href="../../../content/geometrixx-outdoors/en/user/checkout.html">Checkout ➙</a>
+                <a class="cq-hovercart-checkout" href="../../../en/user/checkout.html">Checkout ➙</a>
             <table>
                 {{#each entries}}
                 <tr data-product-page="{{this.page}}">
@@ -222,8 +222,8 @@ function openShoppingCart(){
                                                                 <div class="text section">
                                                                     If you already have an account you can sign in below.
                                                                 </div>
-                                                                <form method="POST" action="../../../content/geometrixx-outdoors/en/equipment/running/nairobi-runners/j_security_check" id="sociallogin" name="sociallogin" enctype="multipart/form-data" onsubmit="return cq5forms_validate_sociallogin();">
-                                                                    <input type="hidden" name="resource" value="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners.html">
+                                                                <form method="POST" action="../../../en/equipment/running/nairobi-runners/j_security_check" id="sociallogin" name="sociallogin" enctype="multipart/form-data" onsubmit="return cq5forms_validate_sociallogin();">
+                                                                    <input type="hidden" name="resource" value="../../../en/equipment/running/nairobi-runners.html">
                                                                     <input type="hidden" name="_charset_" value="UTF-8">
                                                                     </input>
                                                                     <p class="login_username_group">
@@ -493,13 +493,13 @@ function openShoppingCart(){
                         <article class="product cq-dd-product-data-reference " itemscope itemtype="http://schema.org/Product" data-sku="eqsmnr.b-7">
                             <div class="product-viewer" itemprop="image">
                                 <div class="parbase image">
-                                    <div id="cq-image-jsp-/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_b-7/image">
+                                    <div id="cq-image-jsp-/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_b-7/image">
                                         <img title="Nairobi Blue" alt="Nairobi Blue" class="cq-dd-image" src="nairobi-runners/_jcr_content/par/product/eqsmnr_b-7/image.img.jpg/geometrixx-outdoors/-/page_product/par/product/image/nairobi-runners.jpg">
                                     </div>
                                     <script type="text/javascript">
     (function() {
         var imageDiv = document.getElementById("cq\x2Dimage\x2Djsp\x2D\x2Fcontent\x2Fgeometrixx\x2Doutdoors\x2Fen\x2Fequipment\x2Frunning\x2Fnairobi\x2Drunners\x2Fjcr\x3Acontent\x2Fpar\x2Fproduct\x2Feqsmnr_b\x2D7\x2Fimage");
-        var imageEvars = '{ imageLink: "", imageAsset: "/content/dam/geometrixx-outdoors/products/footwear/Nairobi Blue.jpg", imageTitle: "Nairobi\x20Blue" }';
+        var imageEvars = '{ imageLink: "", imageAsset: "/dam/geometrixx-outdoors/products/footwear/Nairobi Blue.jpg", imageTitle: "Nairobi\x20Blue" }';
         var tagNodes = imageDiv.getElementsByTagName('A');
         for (var i = 0; i < tagNodes.length; i++) {
             var link = tagNodes.item(i); 
@@ -547,7 +547,7 @@ function openShoppingCart(){
                                     </li>
                                 </ul>
                             </section>
-                            <form class="product-form" method="POST" alt="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners.commerce.addcartentry.html-onsubmit=return validateProductQuantity('product-quantity-1423875313678') &amp;&amp; trackCartAdd(this)">
+                            <form class="product-form" method="POST" alt="/en/equipment/running/nairobi-runners.commerce.addcartentry.html-onsubmit=return validateProductQuantity('product-quantity-1423875313678') &amp;&amp; trackCartAdd(this)">
                                 <div class="product-size-quantity">
                                     <section class="product-size">
                                         <h3>
@@ -560,7 +560,7 @@ function openShoppingCart(){
                                                         7
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-7-1423875313706" value="7" checked="checked" data-price="$75.00" data-sku="eqsmnr.b-7" data-path="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_b-7" data-title="Nairobi Runners Blue" data-description="Men's Sport Footwear">
+                                                <input type="radio" name="product-size" id="size-7-1423875313706" value="7" checked="checked" data-price="$75.00" data-sku="eqsmnr.b-7" data-path="/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_b-7" data-title="Nairobi Runners Blue" data-description="Men's Sport Footwear">
                                                 </input>
                                             </li>
                                             <li>
@@ -569,7 +569,7 @@ function openShoppingCart(){
                                                         7.5
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-7.5-1423875313707" value="7.5" data-price="$75.00" data-sku="eqsmnr.b-7.5" data-path="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_b-7_5" data-title="Nairobi Runners Blue" data-description="Men's Sport Footwear">
+                                                <input type="radio" name="product-size" id="size-7.5-1423875313707" value="7.5" data-price="$75.00" data-sku="eqsmnr.b-7.5" data-path="/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_b-7_5" data-title="Nairobi Runners Blue" data-description="Men's Sport Footwear">
                                                 </input>
                                             </li>
                                             <li>
@@ -578,7 +578,7 @@ function openShoppingCart(){
                                                         8
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-8-1423875313710" value="8" data-price="$75.00" data-sku="eqsmnr.b-8" data-path="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_b-8" data-title="Nairobi Runners Blue" data-description="Men's Sport Footwear">
+                                                <input type="radio" name="product-size" id="size-8-1423875313710" value="8" data-price="$75.00" data-sku="eqsmnr.b-8" data-path="/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_b-8" data-title="Nairobi Runners Blue" data-description="Men's Sport Footwear">
                                                 </input>
                                             </li>
                                             <li>
@@ -587,7 +587,7 @@ function openShoppingCart(){
                                                         8.5
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-8.5-1423875313711" value="8.5" data-price="$75.00" data-sku="eqsmnr.b-8.5" data-path="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_b-8_5" data-title="Nairobi Runners Blue" data-description="Men's Sport Footwear">
+                                                <input type="radio" name="product-size" id="size-8.5-1423875313711" value="8.5" data-price="$75.00" data-sku="eqsmnr.b-8.5" data-path="/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_b-8_5" data-title="Nairobi Runners Blue" data-description="Men's Sport Footwear">
                                                 </input>
                                             </li>
                                             <li>
@@ -596,7 +596,7 @@ function openShoppingCart(){
                                                         9
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-9-1423875313712" value="9" data-price="$75.00" data-sku="eqsmnr.b-9" data-path="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_b-9" data-title="Nairobi Runners Blue" data-description="Men's Sport Footwear">
+                                                <input type="radio" name="product-size" id="size-9-1423875313712" value="9" data-price="$75.00" data-sku="eqsmnr.b-9" data-path="/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_b-9" data-title="Nairobi Runners Blue" data-description="Men's Sport Footwear">
                                                 </input>
                                             </li>
                                             <li>
@@ -605,7 +605,7 @@ function openShoppingCart(){
                                                         9.5
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-9.5-1423875313713" value="9.5" data-price="$75.00" data-sku="eqsmnr.b-9.5" data-path="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_b-9_5" data-title="Nairobi Runners Blue" data-description="Men's Sport Footwear">
+                                                <input type="radio" name="product-size" id="size-9.5-1423875313713" value="9.5" data-price="$75.00" data-sku="eqsmnr.b-9.5" data-path="/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_b-9_5" data-title="Nairobi Runners Blue" data-description="Men's Sport Footwear">
                                                 </input>
                                             </li>
                                             <li>
@@ -614,7 +614,7 @@ function openShoppingCart(){
                                                         10
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-10-1423875313713" value="10" data-price="$75.00" data-sku="eqsmnr.b-10" data-path="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_b-10" data-title="Nairobi Runners Blue" data-description="Men's Sport Footwear">
+                                                <input type="radio" name="product-size" id="size-10-1423875313713" value="10" data-price="$75.00" data-sku="eqsmnr.b-10" data-path="/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_b-10" data-title="Nairobi Runners Blue" data-description="Men's Sport Footwear">
                                                 </input>
                                             </li>
                                             <li>
@@ -623,7 +623,7 @@ function openShoppingCart(){
                                                         10.5
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-10.5-1423875313714" value="10.5" data-price="$75.00" data-sku="eqsmnr.b-10.5" data-path="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_b-10_5" data-title="Nairobi Runners Blue" data-description="Men's Sport Footwear">
+                                                <input type="radio" name="product-size" id="size-10.5-1423875313714" value="10.5" data-price="$75.00" data-sku="eqsmnr.b-10.5" data-path="/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_b-10_5" data-title="Nairobi Runners Blue" data-description="Men's Sport Footwear">
                                                 </input>
                                             </li>
                                             <li>
@@ -632,7 +632,7 @@ function openShoppingCart(){
                                                         11
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-11-1423875313715" value="11" data-price="$75.00" data-sku="eqsmnr.b-11" data-path="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_b-11" data-title="Nairobi Runners Blue" data-description="Men's Sport Footwear">
+                                                <input type="radio" name="product-size" id="size-11-1423875313715" value="11" data-price="$75.00" data-sku="eqsmnr.b-11" data-path="/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_b-11" data-title="Nairobi Runners Blue" data-description="Men's Sport Footwear">
                                                 </input>
                                             </li>
                                             <li>
@@ -641,7 +641,7 @@ function openShoppingCart(){
                                                         11.5
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-11.5-1423875313716" value="11.5" data-price="$75.00" data-sku="eqsmnr.b-11.5" data-path="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_b-11_5" data-title="Nairobi Runners Blue" data-description="Men's Sport Footwear">
+                                                <input type="radio" name="product-size" id="size-11.5-1423875313716" value="11.5" data-price="$75.00" data-sku="eqsmnr.b-11.5" data-path="/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_b-11_5" data-title="Nairobi Runners Blue" data-description="Men's Sport Footwear">
                                                 </input>
                                             </li>
                                             <li>
@@ -650,7 +650,7 @@ function openShoppingCart(){
                                                         12
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-12-1423875313717" value="12" data-price="$75.00" data-sku="eqsmnr.b-12" data-path="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_b-12" data-title="Nairobi Runners Blue" data-description="Men's Sport Footwear">
+                                                <input type="radio" name="product-size" id="size-12-1423875313717" value="12" data-price="$75.00" data-sku="eqsmnr.b-12" data-path="/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_b-12" data-title="Nairobi Runners Blue" data-description="Men's Sport Footwear">
                                                 </input>
                                             </li>
                                             <li>
@@ -659,7 +659,7 @@ function openShoppingCart(){
                                                         13
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-13-1423875313718" value="13" data-price="$75.00" data-sku="eqsmnr.b-13" data-path="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_b-13" data-title="Nairobi Runners Blue" data-description="Men's Sport Footwear">
+                                                <input type="radio" name="product-size" id="size-13-1423875313718" value="13" data-price="$75.00" data-sku="eqsmnr.b-13" data-path="/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_b-13" data-title="Nairobi Runners Blue" data-description="Men's Sport Footwear">
                                                 </input>
                                             </li>
                                         </ul>
@@ -674,11 +674,11 @@ function openShoppingCart(){
                                     </section>
                                 </div>
                                 <section class="product-submit">
-                                    <input type="hidden" name="redirect" value="/content/geometrixx-outdoors/en/user/cart.html">
+                                    <input type="hidden" name="redirect" value="../../../en/user/cart.html">
                                     </input>
-                                    <input type="hidden" name="redirect-product-not-found" value="/content/geometrixx-outdoors/en/user/cart/product-not-found.html">
+                                    <input type="hidden" name="redirect-product-not-found" value="../../../en/user/cart/product-not-found.html">
                                     </input>
-                                    <input type="hidden" name="product-path" value="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_b-7">
+                                    <input type="hidden" name="product-path" value="../../../en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_b-7">
                                     </input>
                                     <span class="button-group">
                                         <input type="submit" value="Add to Cart" onclick="openShoppingCart(); return false;">
@@ -700,7 +700,7 @@ function openShoppingCart(){
                                     <script type="text/javascript">
     (function() {
         var imageDiv = document.getElementById("cq\x2Dimage\x2Djsp\x2D\x2Fcontent\x2Fgeometrixx\x2Doutdoors\x2Fen\x2Fequipment\x2Frunning\x2Fnairobi\x2Drunners\x2Fjcr\x3Acontent\x2Fpar\x2Fproduct\x2Feqsmnr_g\x2D7\x2Fimage");
-        var imageEvars = '{ imageLink: "", imageAsset: "/content/dam/geometrixx-outdoors/products/footwear/Nairobi Green.jpg", imageTitle: "Nairobi\x20Runners" }';
+        var imageEvars = '{ imageLink: "", imageAsset: "/dam/geometrixx-outdoors/products/footwear/Nairobi Green.jpg", imageTitle: "Nairobi\x20Runners" }';
         var tagNodes = imageDiv.getElementsByTagName('A');
         for (var i = 0; i < tagNodes.length; i++) {
             var link = tagNodes.item(i); 
@@ -748,7 +748,7 @@ function openShoppingCart(){
                                     </li>
                                 </ul>
                             </section>
-                            <form class="product-form" method="POST" alt="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners.commerce.addcartentry.html-onsubmit=return validateProductQuantity('product-quantity-1423875313758') &amp;&amp; trackCartAdd(this)">
+                            <form class="product-form" method="POST" alt="/en/equipment/running/nairobi-runners.commerce.addcartentry.html-onsubmit=return validateProductQuantity('product-quantity-1423875313758') &amp;&amp; trackCartAdd(this)">
                                 <div class="product-size-quantity">
                                     <section class="product-size">
                                         <h3>
@@ -761,7 +761,7 @@ function openShoppingCart(){
                                                         7
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-7-1423875313786" value="7" checked="checked" data-price="$75.00" data-sku="eqsmnr.g-7" data-path="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_g-7" data-title="Nairobi Runners Green" data-description="Men's Sport Footwear">
+                                                <input type="radio" name="product-size" id="size-7-1423875313786" value="7" checked="checked" data-price="$75.00" data-sku="eqsmnr.g-7" data-path="/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_g-7" data-title="Nairobi Runners Green" data-description="Men's Sport Footwear">
                                                 </input>
                                             </li>
                                             <li>
@@ -770,7 +770,7 @@ function openShoppingCart(){
                                                         7.5
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-7.5-1423875313787" value="7.5" data-price="$75.00" data-sku="eqsmnr.g-7.5" data-path="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_g-7_5" data-title="Nairobi Runners Green" data-description="Men's Sport Footwear">
+                                                <input type="radio" name="product-size" id="size-7.5-1423875313787" value="7.5" data-price="$75.00" data-sku="eqsmnr.g-7.5" data-path="/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_g-7_5" data-title="Nairobi Runners Green" data-description="Men's Sport Footwear">
                                                 </input>
                                             </li>
                                             <li>
@@ -779,7 +779,7 @@ function openShoppingCart(){
                                                         8
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-8-1423875313788" value="8" data-price="$75.00" data-sku="eqsmnr.g-8" data-path="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_g-8" data-title="Nairobi Runners Green" data-description="Men's Sport Footwear">
+                                                <input type="radio" name="product-size" id="size-8-1423875313788" value="8" data-price="$75.00" data-sku="eqsmnr.g-8" data-path="/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_g-8" data-title="Nairobi Runners Green" data-description="Men's Sport Footwear">
                                                 </input>
                                             </li>
                                             <li>
@@ -788,7 +788,7 @@ function openShoppingCart(){
                                                         8.5
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-8.5-1423875313789" value="8.5" data-price="$75.00" data-sku="eqsmnr.g-8.5" data-path="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_g-8_5" data-title="Nairobi Runners Green" data-description="Men's Sport Footwear">
+                                                <input type="radio" name="product-size" id="size-8.5-1423875313789" value="8.5" data-price="$75.00" data-sku="eqsmnr.g-8.5" data-path="/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_g-8_5" data-title="Nairobi Runners Green" data-description="Men's Sport Footwear">
                                                 </input>
                                             </li>
                                             <li>
@@ -797,7 +797,7 @@ function openShoppingCart(){
                                                         9
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-9-1423875313790" value="9" data-price="$75.00" data-sku="eqsmnr.g-9" data-path="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_g-9" data-title="Nairobi Runners Green" data-description="Men's Sport Footwear">
+                                                <input type="radio" name="product-size" id="size-9-1423875313790" value="9" data-price="$75.00" data-sku="eqsmnr.g-9" data-path="/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_g-9" data-title="Nairobi Runners Green" data-description="Men's Sport Footwear">
                                                 </input>
                                             </li>
                                             <li>
@@ -806,7 +806,7 @@ function openShoppingCart(){
                                                         9.5
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-9.5-1423875313790" value="9.5" data-price="$75.00" data-sku="eqsmnr.g-9.5" data-path="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_g-9_5" data-title="Nairobi Runners Green" data-description="Men's Sport Footwear">
+                                                <input type="radio" name="product-size" id="size-9.5-1423875313790" value="9.5" data-price="$75.00" data-sku="eqsmnr.g-9.5" data-path="/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_g-9_5" data-title="Nairobi Runners Green" data-description="Men's Sport Footwear">
                                                 </input>
                                             </li>
                                             <li>
@@ -815,7 +815,7 @@ function openShoppingCart(){
                                                         10
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-10-1423875313791" value="10" data-price="$75.00" data-sku="eqsmnr.g-10" data-path="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_g-10" data-title="Nairobi Runners Green" data-description="Men's Sport Footwear">
+                                                <input type="radio" name="product-size" id="size-10-1423875313791" value="10" data-price="$75.00" data-sku="eqsmnr.g-10" data-path="/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_g-10" data-title="Nairobi Runners Green" data-description="Men's Sport Footwear">
                                                 </input>
                                             </li>
                                             <li>
@@ -824,7 +824,7 @@ function openShoppingCart(){
                                                         10.5
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-10.5-1423875313793" value="10.5" data-price="$75.00" data-sku="eqsmnr.g-10.5" data-path="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_g-10_5" data-title="Nairobi Runners Green" data-description="Men's Sport Footwear">
+                                                <input type="radio" name="product-size" id="size-10.5-1423875313793" value="10.5" data-price="$75.00" data-sku="eqsmnr.g-10.5" data-path="/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_g-10_5" data-title="Nairobi Runners Green" data-description="Men's Sport Footwear">
                                                 </input>
                                             </li>
                                             <li>
@@ -833,7 +833,7 @@ function openShoppingCart(){
                                                         11
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-11-1423875313793" value="11" data-price="$75.00" data-sku="eqsmnr.g-11" data-path="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_g-11" data-title="Nairobi Runners Green" data-description="Men's Sport Footwear">
+                                                <input type="radio" name="product-size" id="size-11-1423875313793" value="11" data-price="$75.00" data-sku="eqsmnr.g-11" data-path="/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_g-11" data-title="Nairobi Runners Green" data-description="Men's Sport Footwear">
                                                 </input>
                                             </li>
                                             <li>
@@ -842,7 +842,7 @@ function openShoppingCart(){
                                                         11.5
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-11.5-1423875313794" value="11.5" data-price="$75.00" data-sku="eqsmnr.g-11.5" data-path="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_g-11_5" data-title="Nairobi Runners Green" data-description="Men's Sport Footwear">
+                                                <input type="radio" name="product-size" id="size-11.5-1423875313794" value="11.5" data-price="$75.00" data-sku="eqsmnr.g-11.5" data-path="/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_g-11_5" data-title="Nairobi Runners Green" data-description="Men's Sport Footwear">
                                                 </input>
                                             </li>
                                             <li>
@@ -851,7 +851,7 @@ function openShoppingCart(){
                                                         12
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-12-1423875313795" value="12" data-price="$75.00" data-sku="eqsmnr.g-12" data-path="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_g-12" data-title="Nairobi Runners Green" data-description="Men's Sport Footwear">
+                                                <input type="radio" name="product-size" id="size-12-1423875313795" value="12" data-price="$75.00" data-sku="eqsmnr.g-12" data-path="/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_g-12" data-title="Nairobi Runners Green" data-description="Men's Sport Footwear">
                                                 </input>
                                             </li>
                                             <li>
@@ -860,7 +860,7 @@ function openShoppingCart(){
                                                         13
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-13-1423875313796" value="13" data-price="$75.00" data-sku="eqsmnr.g-13" data-path="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_g-13" data-title="Nairobi Runners Green" data-description="Men's Sport Footwear">
+                                                <input type="radio" name="product-size" id="size-13-1423875313796" value="13" data-price="$75.00" data-sku="eqsmnr.g-13" data-path="/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_g-13" data-title="Nairobi Runners Green" data-description="Men's Sport Footwear">
                                                 </input>
                                             </li>
                                         </ul>
@@ -875,11 +875,11 @@ function openShoppingCart(){
                                     </section>
                                 </div>
                                 <section class="product-submit">
-                                    <input type="hidden" name="redirect" value="/content/geometrixx-outdoors/en/user/cart.html">
+                                    <input type="hidden" name="redirect" value="../../../en/user/cart.html">
                                     </input>
-                                    <input type="hidden" name="redirect-product-not-found" value="/content/geometrixx-outdoors/en/user/cart/product-not-found.html">
+                                    <input type="hidden" name="redirect-product-not-found" value="../../../en/user/cart/product-not-found.html">
                                     </input>
-                                    <input type="hidden" name="product-path" value="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_g-7">
+                                    <input type="hidden" name="product-path" value="../../../en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_g-7">
                                     </input>
                                     <span class="button-group">
                                         <input type="submit" value="Add to Cart" onclick="openShoppingCart(); return false;">
@@ -901,7 +901,7 @@ function openShoppingCart(){
                                     <script type="text/javascript">
     (function() {
         var imageDiv = document.getElementById("cq\x2Dimage\x2Djsp\x2D\x2Fcontent\x2Fgeometrixx\x2Doutdoors\x2Fen\x2Fequipment\x2Frunning\x2Fnairobi\x2Drunners\x2Fjcr\x3Acontent\x2Fpar\x2Fproduct\x2Feqsmnr_p\x2D5\x2Fimage");
-        var imageEvars = '{ imageLink: "", imageAsset: "/content/dam/geometrixx-outdoors/products/footwear/Nairobi Pink.jpg", imageTitle: "Nairobi\x20Runners" }';
+        var imageEvars = '{ imageLink: "", imageAsset: "/dam/geometrixx-outdoors/products/footwear/Nairobi Pink.jpg", imageTitle: "Nairobi\x20Runners" }';
         var tagNodes = imageDiv.getElementsByTagName('A');
         for (var i = 0; i < tagNodes.length; i++) {
             var link = tagNodes.item(i); 
@@ -949,7 +949,7 @@ function openShoppingCart(){
                                     </li>
                                 </ul>
                             </section>
-                            <form class="product-form" method="POST" alt="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners.commerce.addcartentry.html-onsubmit=return validateProductQuantity('product-quantity-1423875313807') &amp;&amp; trackCartAdd(this)">
+                            <form class="product-form" method="POST" alt="/en/equipment/running/nairobi-runners.commerce.addcartentry.html-onsubmit=return validateProductQuantity('product-quantity-1423875313807') &amp;&amp; trackCartAdd(this)">
                                 <div class="product-size-quantity">
                                     <section class="product-size">
                                         <h3>
@@ -962,7 +962,7 @@ function openShoppingCart(){
                                                         5
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-5-1423875314102" value="5" checked="checked" data-price="$75.00" data-sku="eqsmnr.p-5" data-path="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_p-5" data-title="Nairobi Runners Pink" data-description="Men's Sport Footwear">
+                                                <input type="radio" name="product-size" id="size-5-1423875314102" value="5" checked="checked" data-price="$75.00" data-sku="eqsmnr.p-5" data-path="/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_p-5" data-title="Nairobi Runners Pink" data-description="Men's Sport Footwear">
                                                 </input>
                                             </li>
                                             <li>
@@ -971,7 +971,7 @@ function openShoppingCart(){
                                                         5.5
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-5.5-1423875314106" value="5.5" data-price="$75.00" data-sku="eqsmnr.p-5.5" data-path="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_p-5_5" data-title="Nairobi Runners Pink" data-description="Men's Sport Footwear">
+                                                <input type="radio" name="product-size" id="size-5.5-1423875314106" value="5.5" data-price="$75.00" data-sku="eqsmnr.p-5.5" data-path="/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_p-5_5" data-title="Nairobi Runners Pink" data-description="Men's Sport Footwear">
                                                 </input>
                                             </li>
                                             <li>
@@ -980,7 +980,7 @@ function openShoppingCart(){
                                                         6
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-6-1423875314107" value="6" data-price="$75.00" data-sku="eqsmnr.p-6" data-path="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_p-6" data-title="Nairobi Runners Pink" data-description="Men's Sport Footwear">
+                                                <input type="radio" name="product-size" id="size-6-1423875314107" value="6" data-price="$75.00" data-sku="eqsmnr.p-6" data-path="/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_p-6" data-title="Nairobi Runners Pink" data-description="Men's Sport Footwear">
                                                 </input>
                                             </li>
                                             <li>
@@ -989,7 +989,7 @@ function openShoppingCart(){
                                                         6.5
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-6.5-1423875314107" value="6.5" data-price="$75.00" data-sku="eqsmnr.p-6.5" data-path="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_p-6_5" data-title="Nairobi Runners Pink" data-description="Men's Sport Footwear">
+                                                <input type="radio" name="product-size" id="size-6.5-1423875314107" value="6.5" data-price="$75.00" data-sku="eqsmnr.p-6.5" data-path="/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_p-6_5" data-title="Nairobi Runners Pink" data-description="Men's Sport Footwear">
                                                 </input>
                                             </li>
                                             <li>
@@ -998,7 +998,7 @@ function openShoppingCart(){
                                                         7
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-7-1423875314108" value="7" data-price="$75.00" data-sku="eqsmnr.p-7" data-path="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_p-7" data-title="Nairobi Runners Pink" data-description="Men's Sport Footwear">
+                                                <input type="radio" name="product-size" id="size-7-1423875314108" value="7" data-price="$75.00" data-sku="eqsmnr.p-7" data-path="/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_p-7" data-title="Nairobi Runners Pink" data-description="Men's Sport Footwear">
                                                 </input>
                                             </li>
                                             <li>
@@ -1007,7 +1007,7 @@ function openShoppingCart(){
                                                         7.5
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-7.5-1423875314109" value="7.5" data-price="$75.00" data-sku="eqsmnr.p-7.5" data-path="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_p-7_5" data-title="Nairobi Runners Pink" data-description="Men's Sport Footwear">
+                                                <input type="radio" name="product-size" id="size-7.5-1423875314109" value="7.5" data-price="$75.00" data-sku="eqsmnr.p-7.5" data-path="/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_p-7_5" data-title="Nairobi Runners Pink" data-description="Men's Sport Footwear">
                                                 </input>
                                             </li>
                                             <li>
@@ -1016,7 +1016,7 @@ function openShoppingCart(){
                                                         8
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-8-1423875314110" value="8" data-price="$75.00" data-sku="eqsmnr.p-8" data-path="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_p-8" data-title="Nairobi Runners Pink" data-description="Men's Sport Footwear">
+                                                <input type="radio" name="product-size" id="size-8-1423875314110" value="8" data-price="$75.00" data-sku="eqsmnr.p-8" data-path="/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_p-8" data-title="Nairobi Runners Pink" data-description="Men's Sport Footwear">
                                                 </input>
                                             </li>
                                             <li>
@@ -1025,7 +1025,7 @@ function openShoppingCart(){
                                                         8.5
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-8.5-1423875314111" value="8.5" data-price="$75.00" data-sku="eqsmnr.p-8.5" data-path="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_p-8_5" data-title="Nairobi Runners Pink" data-description="Men's Sport Footwear">
+                                                <input type="radio" name="product-size" id="size-8.5-1423875314111" value="8.5" data-price="$75.00" data-sku="eqsmnr.p-8.5" data-path="/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_p-8_5" data-title="Nairobi Runners Pink" data-description="Men's Sport Footwear">
                                                 </input>
                                             </li>
                                             <li>
@@ -1034,7 +1034,7 @@ function openShoppingCart(){
                                                         9
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-9-1423875314111" value="9" data-price="$75.00" data-sku="eqsmnr.p-9" data-path="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_p-9" data-title="Nairobi Runners Pink" data-description="Men's Sport Footwear">
+                                                <input type="radio" name="product-size" id="size-9-1423875314111" value="9" data-price="$75.00" data-sku="eqsmnr.p-9" data-path="/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_p-9" data-title="Nairobi Runners Pink" data-description="Men's Sport Footwear">
                                                 </input>
                                             </li>
                                             <li>
@@ -1043,7 +1043,7 @@ function openShoppingCart(){
                                                         9.5
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-9.5-1423875314112" value="9.5" data-price="$75.00" data-sku="eqsmnr.p-9.5" data-path="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_p-9_5" data-title="Nairobi Runners Pink" data-description="Men's Sport Footwear">
+                                                <input type="radio" name="product-size" id="size-9.5-1423875314112" value="9.5" data-price="$75.00" data-sku="eqsmnr.p-9.5" data-path="/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_p-9_5" data-title="Nairobi Runners Pink" data-description="Men's Sport Footwear">
                                                 </input>
                                             </li>
                                             <li>
@@ -1052,7 +1052,7 @@ function openShoppingCart(){
                                                         10
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-10-1423875314113" value="10" data-price="$75.00" data-sku="eqsmnr.p-10" data-path="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_p-10" data-title="Nairobi Runners Pink" data-description="Men's Sport Footwear">
+                                                <input type="radio" name="product-size" id="size-10-1423875314113" value="10" data-price="$75.00" data-sku="eqsmnr.p-10" data-path="/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_p-10" data-title="Nairobi Runners Pink" data-description="Men's Sport Footwear">
                                                 </input>
                                             </li>
                                             <li>
@@ -1061,7 +1061,7 @@ function openShoppingCart(){
                                                         10.5
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-10.5-1423875314114" value="10.5" data-price="$75.00" data-sku="eqsmnr.p-10.5" data-path="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_p-10_5" data-title="Nairobi Runners Pink" data-description="Men's Sport Footwear">
+                                                <input type="radio" name="product-size" id="size-10.5-1423875314114" value="10.5" data-price="$75.00" data-sku="eqsmnr.p-10.5" data-path="/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_p-10_5" data-title="Nairobi Runners Pink" data-description="Men's Sport Footwear">
                                                 </input>
                                             </li>
                                             <li>
@@ -1070,7 +1070,7 @@ function openShoppingCart(){
                                                         11
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-11-1423875314116" value="11" data-price="$75.00" data-sku="eqsmnr.p-11" data-path="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_p-11" data-title="Nairobi Runners Pink" data-description="Men's Sport Footwear">
+                                                <input type="radio" name="product-size" id="size-11-1423875314116" value="11" data-price="$75.00" data-sku="eqsmnr.p-11" data-path="/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_p-11" data-title="Nairobi Runners Pink" data-description="Men's Sport Footwear">
                                                 </input>
                                             </li>
                                         </ul>
@@ -1085,11 +1085,11 @@ function openShoppingCart(){
                                     </section>
                                 </div>
                                 <section class="product-submit">
-                                    <input type="hidden" name="redirect" value="/content/geometrixx-outdoors/en/user/cart.html">
+                                    <input type="hidden" name="redirect" value="../../../en/user/cart.html">
                                     </input>
-                                    <input type="hidden" name="redirect-product-not-found" value="/content/geometrixx-outdoors/en/user/cart/product-not-found.html">
+                                    <input type="hidden" name="redirect-product-not-found" value="../../../en/user/cart/product-not-found.html">
                                     </input>
-                                    <input type="hidden" name="product-path" value="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_p-5">
+                                    <input type="hidden" name="product-path" value="../../../en/equipment/running/nairobi-runners/jcr:content/par/product/eqsmnr_p-5">
                                     </input>
                                     <span class="button-group">
                                         <input type="submit" value="Add to Cart" onclick="openShoppingCart(); return false;">
@@ -1149,7 +1149,7 @@ function openShoppingCart(){
     });
                                     </script>
                                     <div id="twitter-share-content-geometrixx-outdoors-en-equipment-running-nairobi-runners-twitter_share" class="cq-social-twitter-widgets-div">
-                                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://localhost:4503/content/geometrixx-outdoors/en/equipment/running/nairobi-runners.html" data-count="none">
+                                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://localhost:4503/en/equipment/running/nairobi-runners.html" data-count="none">
                                             Tweet
                                         </a>
                                     </div>
@@ -1178,7 +1178,7 @@ function openShoppingCart(){
                             </ul>
                         </header>
                         <div class="tabctrl-container">
-                            <section id="par_tabs-0" class="tabctrl-content" data-path="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/_jcr_content/par/tabs/tab-0">
+                            <section id="par_tabs-0" class="tabctrl-content" data-path="/en/equipment/running/nairobi-runners/_jcr_content/par/tabs/tab-0">
                                 <h2 class="tabctrl-title">
                                     Product Summary
                                 </h2>
@@ -1186,7 +1186,7 @@ function openShoppingCart(){
                                     An everyday runner that provides excellent support and comfort. Features the Geometrixx Impacto cushioning system.
                                 </p>
                             </section>
-                            <section id="par_tabs-1" class="tabctrl-content" data-path="/content/geometrixx-outdoors/en/equipment/running/nairobi-runners/_jcr_content/par/tabs/tab-1">
+                            <section id="par_tabs-1" class="tabctrl-content" data-path="/en/equipment/running/nairobi-runners/_jcr_content/par/tabs/tab-1">
                                 <h2 class="tabctrl-title">
                                     Features
                                 </h2>

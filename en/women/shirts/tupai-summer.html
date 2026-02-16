@@ -46,7 +46,7 @@ var category = url.substring(url.indexOf("en")+3,url.lastIndexOf("/")).replace(/
 // targetPageParams helper function goes here
 // 
 function openShoppingCart(){
-    window.location='/en/user/cart.html?productId='+entityId;
+    window.location='../../../en/user/cart.html?productId='+entityId;
 }
         </script>
         <!--Preconnect and DNS-Prefetch to improve page load time-->
@@ -107,7 +107,7 @@ function openShoppingCart(){
                 <div class="page-systemnav">
                     <div class="sys-nav-wrapper">
                         <div class="search">
-                            <form class="search-form" action="../../../content/geometrixx-outdoors/en/toolbar/search.html" method="get">
+                            <form class="search-form" action="../../../en/toolbar/search.html" method="get">
                                 <p class="search-field">
                                     <label for="search-field" style="display: none">
                                         Search:
@@ -131,7 +131,7 @@ function openShoppingCart(){
         <div class="cq-hovercart-inner">
             <h1>{{title}}</h1>
             {{#unless cartEmpty}}
-                <a class="cq-hovercart-checkout" href="../../../content/geometrixx-outdoors/en/user/checkout.html">Checkout ➙</a>
+                <a class="cq-hovercart-checkout" href="../../../en/user/checkout.html">Checkout ➙</a>
             <table>
                 {{#each entries}}
                 <tr data-product-page="{{this.page}}">
@@ -222,8 +222,8 @@ function openShoppingCart(){
                                                                 <div class="text section">
                                                                     If you already have an account you can sign in below.
                                                                 </div>
-                                                                <form method="POST" action="../../../content/geometrixx-outdoors/en/women/shirts/tupai-summer/j_security_check" id="sociallogin" name="sociallogin" enctype="multipart/form-data" onsubmit="return cq5forms_validate_sociallogin();">
-                                                                    <input type="hidden" name="resource" value="/content/geometrixx-outdoors/en/women/shirts/tupai-summer.html">
+                                                                <form method="POST" action="../../../en/women/shirts/tupai-summer/j_security_check" id="sociallogin" name="sociallogin" enctype="multipart/form-data" onsubmit="return cq5forms_validate_sociallogin();">
+                                                                    <input type="hidden" name="resource" value="../../../en/women/shirts/tupai-summer.html">
                                                                     <input type="hidden" name="_charset_" value="UTF-8">
                                                                     </input>
                                                                     <p class="login_username_group">
@@ -493,13 +493,13 @@ function openShoppingCart(){
                         <article class="product cq-dd-product-data-reference " itemscope itemtype="http://schema.org/Product" data-sku="wmaptp">
                             <div class="product-viewer" itemprop="image">
                                 <div class="parbase image">
-                                    <div id="cq-image-jsp-/content/geometrixx-outdoors/en/women/shirts/tupai-summer/jcr:content/par/product/image">
+                                    <div id="cq-image-jsp-/en/women/shirts/tupai-summer/jcr:content/par/product/image">
                                         <img title="Tupai" alt="Tupai" class="cq-dd-image" src="tupai-summer/_jcr_content/par/product/image.img.jpg/geometrixx-outdoors/-/page_product/par/product/image/cq_ck_1370955439601.jpg">
                                     </div>
                                     <script type="text/javascript">
     (function() {
         var imageDiv = document.getElementById("cq\x2Dimage\x2Djsp\x2D\x2Fcontent\x2Fgeometrixx\x2Doutdoors\x2Fen\x2Fwomen\x2Fshirts\x2Ftupai\x2Dsummer\x2Fjcr\x3Acontent\x2Fpar\x2Fproduct\x2Fimage");
-        var imageEvars = '{ imageLink: "", imageAsset: "/content/dam/geometrixx-outdoors/products/shirt/Tupai.jpg", imageTitle: "Tupai" }';
+        var imageEvars = '{ imageLink: "", imageAsset: "/dam/geometrixx-outdoors/products/shirt/Tupai.jpg", imageTitle: "Tupai" }';
         var tagNodes = imageDiv.getElementsByTagName('A');
         for (var i = 0; i < tagNodes.length; i++) {
             var link = tagNodes.item(i); 
@@ -528,7 +528,7 @@ function openShoppingCart(){
                                     Item #wmaptp
                                 </p>
                             </div>
-                            <form class="product-form" method="POST" alt="/content/geometrixx-outdoors/en/women/shirts/tupai-summer.commerce.addcartentry.html-onsubmit=return validateProductQuantity('product-quantity-1423875306292') &amp;&amp; trackCartAdd(this)">
+                            <form class="product-form" method="POST" alt="/en/women/shirts/tupai-summer.commerce.addcartentry.html-onsubmit=return validateProductQuantity('product-quantity-1423875306292') &amp;&amp; trackCartAdd(this)">
                                 <div class="product-size-quantity">
                                     <section class="product-size">
                                         <h3>
@@ -541,7 +541,7 @@ function openShoppingCart(){
                                                         XS
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-XS-1423875306308" value="XS" data-price="$33.00" data-sku="wmaptp-XS" data-path="/content/geometrixx-outdoors/en/women/shirts/tupai-summer/jcr:content/par/product/wmaptp-XS" data-title="Tupai Summer" data-description="Women's Frock">
+                                                <input type="radio" name="product-size" id="size-XS-1423875306308" value="XS" data-price="$33.00" data-sku="wmaptp-XS" data-path="/en/women/shirts/tupai-summer/jcr:content/par/product/wmaptp-XS" data-title="Tupai Summer" data-description="Women's Frock">
                                                 </input>
                                             </li>
                                             <li>
@@ -550,7 +550,7 @@ function openShoppingCart(){
                                                         S
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-S-1423875306308" value="S" data-price="$33.00" data-sku="wmaptp-S" data-path="/content/geometrixx-outdoors/en/women/shirts/tupai-summer/jcr:content/par/product/wmaptp-S" data-title="Tupai Summer" data-description="Women's Frock">
+                                                <input type="radio" name="product-size" id="size-S-1423875306308" value="S" data-price="$33.00" data-sku="wmaptp-S" data-path="/en/women/shirts/tupai-summer/jcr:content/par/product/wmaptp-S" data-title="Tupai Summer" data-description="Women's Frock">
                                                 </input>
                                             </li>
                                             <li>
@@ -559,7 +559,7 @@ function openShoppingCart(){
                                                         M
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-M-1423875306308" value="M" data-price="$33.00" data-sku="wmaptp-M" data-path="/content/geometrixx-outdoors/en/women/shirts/tupai-summer/jcr:content/par/product/wmaptp-M" data-title="Tupai Summer" data-description="Women's Frock">
+                                                <input type="radio" name="product-size" id="size-M-1423875306308" value="M" data-price="$33.00" data-sku="wmaptp-M" data-path="/en/women/shirts/tupai-summer/jcr:content/par/product/wmaptp-M" data-title="Tupai Summer" data-description="Women's Frock">
                                                 </input>
                                             </li>
                                             <li>
@@ -568,7 +568,7 @@ function openShoppingCart(){
                                                         L
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-L-1423875306308" value="L" data-price="$33.00" data-sku="wmaptp-L" data-path="/content/geometrixx-outdoors/en/women/shirts/tupai-summer/jcr:content/par/product/wmaptp-L" data-title="Tupai Summer" data-description="Women's Frock">
+                                                <input type="radio" name="product-size" id="size-L-1423875306308" value="L" data-price="$33.00" data-sku="wmaptp-L" data-path="/en/women/shirts/tupai-summer/jcr:content/par/product/wmaptp-L" data-title="Tupai Summer" data-description="Women's Frock">
                                                 </input>
                                             </li>
                                             <li>
@@ -577,7 +577,7 @@ function openShoppingCart(){
                                                         XL
                                                     </label>
                                                 </span>
-                                                <input type="radio" name="product-size" id="size-XL-1423875306308" value="XL" data-price="$33.00" data-sku="wmaptp-XL" data-path="/content/geometrixx-outdoors/en/women/shirts/tupai-summer/jcr:content/par/product/wmaptp-XL" data-title="Tupai Summer" data-description="Women's Frock">
+                                                <input type="radio" name="product-size" id="size-XL-1423875306308" value="XL" data-price="$33.00" data-sku="wmaptp-XL" data-path="/en/women/shirts/tupai-summer/jcr:content/par/product/wmaptp-XL" data-title="Tupai Summer" data-description="Women's Frock">
                                                 </input>
                                             </li>
                                         </ul>
@@ -592,11 +592,11 @@ function openShoppingCart(){
                                     </section>
                                 </div>
                                 <section class="product-submit">
-                                    <input type="hidden" name="redirect" value="/content/geometrixx-outdoors/en/user/cart.html">
+                                    <input type="hidden" name="redirect" value="../../../en/user/cart.html">
                                     </input>
-                                    <input type="hidden" name="redirect-product-not-found" value="/content/geometrixx-outdoors/en/user/cart/product-not-found.html">
+                                    <input type="hidden" name="redirect-product-not-found" value="../../../en/user/cart/product-not-found.html">
                                     </input>
-                                    <input type="hidden" name="product-path" value="/content/geometrixx-outdoors/en/women/shirts/tupai-summer/jcr:content/par/product">
+                                    <input type="hidden" name="product-path" value="../../../en/women/shirts/tupai-summer/jcr:content/par/product">
                                     </input>
                                     <span class="button-group">
                                         <input type="submit" value="Add to Cart" onclick="openShoppingCart(); return false;">
@@ -656,7 +656,7 @@ function openShoppingCart(){
     });
                                     </script>
                                     <div id="twitter-share-content-geometrixx-outdoors-en-women-shirts-tupai-summer-twitter_share" class="cq-social-twitter-widgets-div">
-                                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://localhost:4503/content/geometrixx-outdoors/en/women/shirts/tupai-summer.html" data-count="none">
+                                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://localhost:4503/en/women/shirts/tupai-summer.html" data-count="none">
                                             Tweet
                                         </a>
                                     </div>
@@ -685,7 +685,7 @@ function openShoppingCart(){
                             </ul>
                         </header>
                         <div class="tabctrl-container">
-                            <section id="par_tabs-0" class="tabctrl-content" data-path="/content/geometrixx-outdoors/en/women/shirts/tupai-summer/_jcr_content/par/tabs/tab-0">
+                            <section id="par_tabs-0" class="tabctrl-content" data-path="/en/women/shirts/tupai-summer/_jcr_content/par/tabs/tab-0">
                                 <h2 class="tabctrl-title">
                                     Product Summary
                                 </h2>
@@ -693,7 +693,7 @@ function openShoppingCart(){
                                     Lightweight cotton in a variety of colors. Perfect for both working out or lounging around at home.
                                 </p>
                             </section>
-                            <section id="par_tabs-1" class="tabctrl-content" data-path="/content/geometrixx-outdoors/en/women/shirts/tupai-summer/_jcr_content/par/tabs/tab-1">
+                            <section id="par_tabs-1" class="tabctrl-content" data-path="/en/women/shirts/tupai-summer/_jcr_content/par/tabs/tab-1">
                                 <h2 class="tabctrl-title">
                                     Features
                                 </h2>
