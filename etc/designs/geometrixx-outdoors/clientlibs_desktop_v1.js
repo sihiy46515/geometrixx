@@ -22959,12 +22959,12 @@ CQ.shared.User = function(infoData) {
 }();
 
 /**
- * The URI to retrieve the user info from (defaults to <code>"/libs/cq/security/userinfo.json"</code>).
+ * The URI to retrieve the user info from (defaults to <code>"/geometrixx/libs/cq/security/userinfo.json"</code>).
  * @static
  * @final
  * @type String
  */
-CQ.shared.User.PROXY_URI = CQ.shared.HTTP.externalize("/libs/cq/security/userinfo" + CQ.shared.HTTP.EXTENSION_JSON);
+CQ.shared.User.PROXY_URI = CQ.shared.HTTP.externalize("/geometrixx/libs/cq/security/userinfo" + CQ.shared.HTTP.EXTENSION_JSON);
 /*
  * Copyright 1997-2010 Day Management AG
  * Barfuesserplatz 6, 4001 Basel, Switzerland
@@ -22983,7 +22983,7 @@ CQ.shared.User.lazyInit();
 
 CQ.shared.I18n.init({
     locale: function() { return CQ.shared.User.getLanguage();},
-    urlPrefix: "/libs/cq/i18n/dict."
+    urlPrefix: "/geometrixx/libs/cq/i18n/dict."
 });
 
 /*
@@ -32649,10 +32649,10 @@ if( !window.CQMobileSlider ) window.CQMobileSlider = {};
 
 window.CQMobileSlider["geometrixx"] = {
     DESKTOP_CSS: [
-        "/etc/designs/${app}/static.css"
+        "/geometrixx/etc/designs/${app}/static.css"
     ],
     MOBILE_CSS: [
-        "/etc/designs/${app}_mobile/static.css"
+        "/geometrixx/etc/designs/${app}_mobile/static.css"
     ],
     DESKTOP_MAIN_ID: "main_bg",
     MOBILE_MAIN_ID: "wrapper"
@@ -32917,11 +32917,11 @@ $(function(){
 
         function getThemeIndex(theme){
             switch(theme){
-                case "/content/communities/content-driven/en":
+                case "/geometrixx/content/communities/content-driven/en":
                     return 1;
-                case "/content/communities/discussion-driven/en":
+                case "/geometrixx/content/communities/discussion-driven/en":
                     return 2;
-                case "/content/communities/event-driven/en":
+                case "/geometrixx/content/communities/event-driven/en":
                     return 3;
             }
         }
@@ -33131,7 +33131,7 @@ $(".search .search-field input").each(function () {
     //get languages from blueprint
     CQ.soco.group.getLanguages = function (path) {
         // fill language map
-        var flagRoot = CQ.HTTP.externalize("/libs/wcm/msm/resources/flags/");
+        var flagRoot = CQ.HTTP.externalize("/geometrixx/libs/wcm/msm/resources/flags/");
         var data = CQ.HTTP.eval(path + ".languages.json");
         var opts = [];
         var i = 0;
@@ -33156,7 +33156,7 @@ $(".search .search-field input").each(function () {
     //get chapters from blueprint
     CQ.soco.group.getChapters = function (path) {
         // fill chapters map
-        var url = "/libs/social/group/content/commands/chapters.json?path=" + path;
+        var url = "/geometrixx/libs/social/group/content/commands/chapters.json?path=" + path;
         var data = CQ.HTTP.eval(url);
         var opts = [];
         var i = 0;
@@ -34314,10 +34314,10 @@ CQ_Analytics.ClientContextUtils = new function() {
                                         var url = "";
                                         if (el.parents(".cq-cc-thumbnail").length == 0 ||
                                             value.toLowerCase().indexOf("http") == 0 ||
-                                            value.indexOf("/libs/wcm/mobile") == 0) {
+                                            value.indexOf("/geometrixx/libs/wcm/mobile") == 0) {
                                             url = value.replace(new RegExp("&amp;", "g"), "&");
                                         } else {
-                                            url = "/etc/clientcontext/shared/thumbnail/content.png";
+                                            url = "/geometrixx/etc/clientcontext/shared/thumbnail/content.png";
                                             url = CQ.shared.HTTP.addParameter(url, "path", CQ_Analytics.Variables.replaceVariables(value));
                                         }
                                         url = CQ_Analytics.Variables.replaceVariables(url);
@@ -34547,7 +34547,7 @@ CQ_Analytics.ClientContextUtils = new function() {
             CQ_Analytics.ClientContextMgr.PATH = ccPath;
             CQ_Analytics.ClientContextMgr.loadConfig(options, true);
 
-            var url = CQ.shared.HTTP.externalize(ccPath + "/content/jcr:content/stores.init.js");
+            var url = CQ.shared.HTTP.externalize(ccPath + "/geometrixx/content/jcr:content/stores.init.js");
             url = CQ.shared.HTTP.addParameter(url, "path", pagePath);
             url = CQ.shared.HTTP.noCaching(url);
             //jquery will do the eval
@@ -35311,7 +35311,7 @@ if (!CQ_Analytics.ClientContextMgr) {
      * @static
      * @type String
      */
-     CQ_Analytics.ClientContextMgr.prototype.CONFIG_PATH = CQ_Analytics.Utils.externalize("/etc/clientcontext/legacy/config.json",true);
+     CQ_Analytics.ClientContextMgr.prototype.CONFIG_PATH = CQ_Analytics.Utils.externalize("/geometrixx/etc/clientcontext/legacy/config.json",true);
 
     //inheritDoc
     CQ_Analytics.ClientContextMgr.prototype.init = function() {
@@ -36018,7 +36018,7 @@ CQ_Analytics.Percentile.matchesPercentiles = function(percentiles) {
  */
 if (!CQ_Analytics.SegmentMgr) {
     CQ_Analytics.SegmentMgr = function() {
-        this.SEGMENTATION_ROOT = "/etc/segmentation";
+        this.SEGMENTATION_ROOT = "/geometrixx/etc/segmentation";
         this.SEGMENT_SELECTOR = ".segment.js";
         this.SEGMENTATION_SCRIPT_LOADER = "cq-segmentation-loader";
 
@@ -40536,13 +40536,13 @@ if (!CQ_Analytics.ProfileDataMgr) {
      * @deprecated
      * Use PROFILE_LOADER
      */
-    CQ_Analytics.ProfileDataMgr.prototype.LOADER_PATH = CQ_Analytics.Utils.externalize("/libs/cq/personalization/components/profileloader/content/load.js", true);
+    CQ_Analytics.ProfileDataMgr.prototype.LOADER_PATH = CQ_Analytics.Utils.externalize("/geometrixx/libs/cq/personalization/components/profileloader/content/load.js", true);
 
     /**
      * @deprecated
      * Use getLoaderURL method
      */
-    CQ_Analytics.ProfileDataMgr.prototype.PROFILE_LOADER = CQ_Analytics.Utils.externalize("/libs/cq/personalization/components/profileloader/content/load.json", true);
+    CQ_Analytics.ProfileDataMgr.prototype.PROFILE_LOADER = CQ_Analytics.Utils.externalize("/geometrixx/libs/cq/personalization/components/profileloader/content/load.json", true);
 
     //inheritDoc
     CQ_Analytics.ProfileDataMgr.prototype.init = function() {
@@ -43092,8 +43092,8 @@ $CQ(document).ready(function() {
     });
 })($CQ);
 // the following MUST BE SET BEFORE ckeditor.js is loaded
-// otherwise Sling's '/content/...' root path will be used
-var CKEDITOR_BASEPATH = '/etc/clientlibs/social/commons/ckeditor/';
+// otherwise Sling's '/geometrixx/content/...' root path will be used
+var CKEDITOR_BASEPATH = '/geometrixx/etc/clientlibs/social/commons/ckeditor/';
 var contextPath = CQ.shared.HTTP.getContextPath();
 if (contextPath !== null && contextPath.length > 0) {
     CKEDITOR_BASEPATH = contextPath + CKEDITOR_BASEPATH;
@@ -44094,7 +44094,7 @@ CKEDITOR.config.wsc_customerId=CKEDITOR.config.wsc_customerId||"1:ua3xw1-2XyGJ3-
                 if ( $( '.date' ).length > 0 ) {
                     $( '.date' ).datepicker( {
                         showOn: 'button',
-                        buttonImage: '/etc/designs/geometrixx-outdoors/images/soco/date-picker.png',
+                        buttonImage: '/geometrixx/etc/designs/geometrixx-outdoors/images/soco/date-picker.png',
                         buttonImageOnly: true
                     } );
                 }
@@ -44239,10 +44239,10 @@ if( !window.CQMobileSlider ) window.CQMobileSlider = {};
 
 window.CQMobileSlider["geometrixx-outdoors"] = {
     DESKTOP_CSS: [
-        "/etc/designs/${app}/clientlibs_desktop_v1.css"
+        "/geometrixx/etc/designs/${app}/clientlibs_desktop_v1.css"
     ],
     MOBILE_CSS: [
-        "/etc/designs/${app}/clientlibs_mobile_v1.css"
+        "/geometrixx/etc/designs/${app}/clientlibs_mobile_v1.css"
     ],
     DESKTOP_MAIN_ID: "main",
     MOBILE_MAIN_ID: "main",

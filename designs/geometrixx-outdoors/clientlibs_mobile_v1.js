@@ -11199,7 +11199,7 @@ Granite.Sling = {
      * 
      * <h3>URI Template of data-i18n-dictionary-src</h3>
      * <p>It expects the variable named <code>locale</code>, which will be fetched from the locale (based on priorities above).
-     * E.g. <code>&lt;html lang="en" data-i18n-dictionary-src="/libs/cq/i18n/dict.{+locale}.json"&gt;</code>.</p>
+     * E.g. <code>&lt;html lang="en" data-i18n-dictionary-src="/geometrixx/libs/cq/i18n/dict.{+locale}.json"&gt;</code>.</p>
      * 
      * @static
      * @singleton
@@ -11219,7 +11219,7 @@ Granite.Sling = {
          * @private
          * @type String
          */
-            urlPrefix = "/libs/cq/i18n/dict.",
+            urlPrefix = "/geometrixx/libs/cq/i18n/dict.",
 
         /**
          * The suffix for the URL used to request dictionaries from the server.
@@ -11297,7 +11297,7 @@ Granite.Sling = {
          * <ul>
          * <li>locale: the current locale (defaults to "en")</li>
          * <li>urlPrefix: the prefix for the URL used to request dictionaries from
-         * the server (defaults to "/libs/cq/i18n/dict.")</li>
+         * the server (defaults to "/geometrixx/libs/cq/i18n/dict.")</li>
          * <li>urlSuffix: the suffix for the URL used to request dictionaries from
          * the server (defaults to ".json")</li>
          * </ul>
@@ -11453,7 +11453,7 @@ Granite.Sling = {
             if (!languages) {
                 try {
                     // use overlay servlet so customers can define /apps/wcm/core/resources/languages
-                    var json = http.eval("/libs/wcm/core/resources/languages.overlay.infinity.json"); // TODO: broken!!!
+                    var json = http.eval("/geometrixx/libs/wcm/core/resources/languages.overlay.infinity.json"); // TODO: broken!!!
                     $.each(json, function(name, lang) {
                         lang.title = self.getVar(lang.language);
                         if (lang.title && lang.country && lang.country != "*") {
@@ -14645,12 +14645,12 @@ CQ.shared.User = function(infoData) {
 }();
 
 /**
- * The URI to retrieve the user info from (defaults to <code>"/libs/cq/security/userinfo.json"</code>).
+ * The URI to retrieve the user info from (defaults to <code>"/geometrixx/libs/cq/security/userinfo.json"</code>).
  * @static
  * @final
  * @type String
  */
-CQ.shared.User.PROXY_URI = CQ.shared.HTTP.externalize("/libs/cq/security/userinfo" + CQ.shared.HTTP.EXTENSION_JSON);
+CQ.shared.User.PROXY_URI = CQ.shared.HTTP.externalize("/geometrixx/libs/cq/security/userinfo" + CQ.shared.HTTP.EXTENSION_JSON);
 /*
  * Copyright 1997-2010 Day Management AG
  * Barfuesserplatz 6, 4001 Basel, Switzerland
@@ -14669,7 +14669,7 @@ CQ.shared.User.lazyInit();
 
 CQ.shared.I18n.init({
     locale: function() { return CQ.shared.User.getLanguage();},
-    urlPrefix: "/libs/cq/i18n/dict."
+    urlPrefix: "/geometrixx/libs/cq/i18n/dict."
 });
 
 /*! jQuery UI - v1.9.2 - 2012-11-23
@@ -33883,10 +33883,10 @@ if( !window.CQMobileSlider ) window.CQMobileSlider = {};
 
 window.CQMobileSlider["geometrixx"] = {
     DESKTOP_CSS: [
-        "/etc/designs/${app}/static.css"
+        "/geometrixx/etc/designs/${app}/static.css"
     ],
     MOBILE_CSS: [
-        "/etc/designs/${app}_mobile/static.css"
+        "/geometrixx/etc/designs/${app}_mobile/static.css"
     ],
     DESKTOP_MAIN_ID: "main_bg",
     MOBILE_MAIN_ID: "wrapper"
@@ -35485,10 +35485,10 @@ CQ_Analytics.ClientContextUtils = new function() {
                                         var url = "";
                                         if (el.parents(".cq-cc-thumbnail").length == 0 ||
                                             value.toLowerCase().indexOf("http") == 0 ||
-                                            value.indexOf("/libs/wcm/mobile") == 0) {
+                                            value.indexOf("/geometrixx/libs/wcm/mobile") == 0) {
                                             url = value.replace(new RegExp("&amp;", "g"), "&");
                                         } else {
-                                            url = "/etc/clientcontext/shared/thumbnail/content.png";
+                                            url = "/geometrixx/etc/clientcontext/shared/thumbnail/content.png";
                                             url = CQ.shared.HTTP.addParameter(url, "path", CQ_Analytics.Variables.replaceVariables(value));
                                         }
                                         url = CQ_Analytics.Variables.replaceVariables(url);
@@ -35718,7 +35718,7 @@ CQ_Analytics.ClientContextUtils = new function() {
             CQ_Analytics.ClientContextMgr.PATH = ccPath;
             CQ_Analytics.ClientContextMgr.loadConfig(options, true);
 
-            var url = CQ.shared.HTTP.externalize(ccPath + "/content/jcr:content/stores.init.js");
+            var url = CQ.shared.HTTP.externalize(ccPath + "/geometrixx/content/jcr:content/stores.init.js");
             url = CQ.shared.HTTP.addParameter(url, "path", pagePath);
             url = CQ.shared.HTTP.noCaching(url);
             //jquery will do the eval
@@ -36482,7 +36482,7 @@ if (!CQ_Analytics.ClientContextMgr) {
      * @static
      * @type String
      */
-     CQ_Analytics.ClientContextMgr.prototype.CONFIG_PATH = CQ_Analytics.Utils.externalize("/etc/clientcontext/legacy/config.json",true);
+     CQ_Analytics.ClientContextMgr.prototype.CONFIG_PATH = CQ_Analytics.Utils.externalize("/geometrixx/etc/clientcontext/legacy/config.json",true);
 
     //inheritDoc
     CQ_Analytics.ClientContextMgr.prototype.init = function() {
@@ -37189,7 +37189,7 @@ CQ_Analytics.Percentile.matchesPercentiles = function(percentiles) {
  */
 if (!CQ_Analytics.SegmentMgr) {
     CQ_Analytics.SegmentMgr = function() {
-        this.SEGMENTATION_ROOT = "/etc/segmentation";
+        this.SEGMENTATION_ROOT = "/geometrixx/etc/segmentation";
         this.SEGMENT_SELECTOR = ".segment.js";
         this.SEGMENTATION_SCRIPT_LOADER = "cq-segmentation-loader";
 
@@ -41707,13 +41707,13 @@ if (!CQ_Analytics.ProfileDataMgr) {
      * @deprecated
      * Use PROFILE_LOADER
      */
-    CQ_Analytics.ProfileDataMgr.prototype.LOADER_PATH = CQ_Analytics.Utils.externalize("/libs/cq/personalization/components/profileloader/content/load.js", true);
+    CQ_Analytics.ProfileDataMgr.prototype.LOADER_PATH = CQ_Analytics.Utils.externalize("/geometrixx/libs/cq/personalization/components/profileloader/content/load.js", true);
 
     /**
      * @deprecated
      * Use getLoaderURL method
      */
-    CQ_Analytics.ProfileDataMgr.prototype.PROFILE_LOADER = CQ_Analytics.Utils.externalize("/libs/cq/personalization/components/profileloader/content/load.json", true);
+    CQ_Analytics.ProfileDataMgr.prototype.PROFILE_LOADER = CQ_Analytics.Utils.externalize("/geometrixx/libs/cq/personalization/components/profileloader/content/load.json", true);
 
     //inheritDoc
     CQ_Analytics.ProfileDataMgr.prototype.init = function() {

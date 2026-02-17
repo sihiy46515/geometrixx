@@ -11199,7 +11199,7 @@ Granite.Sling = {
      * 
      * <h3>URI Template of data-i18n-dictionary-src</h3>
      * <p>It expects the variable named <code>locale</code>, which will be fetched from the locale (based on priorities above).
-     * E.g. <code>&lt;html lang="en" data-i18n-dictionary-src="/libs/cq/i18n/dict.{+locale}.json"&gt;</code>.</p>
+     * E.g. <code>&lt;html lang="en" data-i18n-dictionary-src="/geometrixx/libs/cq/i18n/dict.{+locale}.json"&gt;</code>.</p>
      * 
      * @static
      * @singleton
@@ -11219,7 +11219,7 @@ Granite.Sling = {
          * @private
          * @type String
          */
-            urlPrefix = "/libs/cq/i18n/dict.",
+            urlPrefix = "/geometrixx/libs/cq/i18n/dict.",
 
         /**
          * The suffix for the URL used to request dictionaries from the server.
@@ -11297,7 +11297,7 @@ Granite.Sling = {
          * <ul>
          * <li>locale: the current locale (defaults to "en")</li>
          * <li>urlPrefix: the prefix for the URL used to request dictionaries from
-         * the server (defaults to "/libs/cq/i18n/dict.")</li>
+         * the server (defaults to "/geometrixx/libs/cq/i18n/dict.")</li>
          * <li>urlSuffix: the suffix for the URL used to request dictionaries from
          * the server (defaults to ".json")</li>
          * </ul>
@@ -11453,7 +11453,7 @@ Granite.Sling = {
             if (!languages) {
                 try {
                     // use overlay servlet so customers can define /apps/wcm/core/resources/languages
-                    var json = http.eval("/libs/wcm/core/resources/languages.overlay.infinity.json"); // TODO: broken!!!
+                    var json = http.eval("/geometrixx/libs/wcm/core/resources/languages.overlay.infinity.json"); // TODO: broken!!!
                     $.each(json, function(name, lang) {
                         lang.title = self.getVar(lang.language);
                         if (lang.title && lang.country && lang.country != "*") {
