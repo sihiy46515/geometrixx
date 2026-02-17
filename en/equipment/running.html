@@ -433,6 +433,7 @@ function openShoppingCart(){
                             <script type="text/javascript">
     (function() {
         var imageDiv = document.getElementById("cq\x2Dimage\x2Djsp\x2D\x2Fcontent\x2Fgeometrixx\x2Doutdoors\x2Fen\x2Fequipment\x2Frunning\x2Fjcr\x3Acontent\x2Fpar\x2Fbanner");
+        if (!imageDiv) return;
         var imageEvars = '{ imageLink: "", imageAsset: "/dam/geometrixx-outdoors/banners/runner.jpg", imageTitle: "Hit\x20The\x20Ground\x20Running.\x20\u2013\x20Our\x20annual\x2050\x25\x20sale\x20means\x20you\x20can\x20gear\x20up\x20for\x20you\x20run\x20from\x20head\x20to\x20toe.\x20See\x20what\x27s\x20on\x20sale." }';
         var tagNodes = imageDiv.getElementsByTagName('A');
         for (var i = 0; i < tagNodes.length; i++) {

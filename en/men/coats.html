@@ -433,6 +433,7 @@ function openShoppingCart(){
                             <script type="text/javascript">
     (function() {
         var imageDiv = document.getElementById("cq\x2Dimage\x2Djsp\x2D\x2Fcontent\x2Fgeometrixx\x2Doutdoors\x2Fen\x2Fmen\x2Fcoats\x2Fjcr\x3Acontent\x2Fpar\x2Fbanner");
+        if (!imageDiv) return;
         var imageEvars = '{ imageLink: "", imageAsset: "/dam/geometrixx-outdoors/banners/stay-warm.jpg", imageTitle: "Stay\x20Warm\x20and\x20Stay\x20Stylish.\x20\u2013\x20Cold\x20weather\x20gear\x20that\x20works\x20and\x20looks\x20good.\x20\u2013\x20See\x20What\x27s\x20New." }';
         var tagNodes = imageDiv.getElementsByTagName('A');
         for (var i = 0; i < tagNodes.length; i++) {
