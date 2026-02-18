@@ -93,16 +93,15 @@
         <!-- targetPageParams(), targetPageParamsAll(), Data Providers or targetGlobalSettings() functions to enrich the visitor profile or modify the library settings-->
         <script>
         targetPageParams = function () {
+            var orderTotal=(parseFloat(entity.value)+21.39);
+            var previousTotal = parseFloat(localStorage.getItem("ltv")) || 0;
+            var newTotal = previousTotal + orderTotal;
+            localStorage.setItem("ltv", newTotal);
             return {
-                "a": 1,
-                "b": 2,
                 "pageName": digitalData.page.pageInfo.pageName,
                 "profile": {
-                    "age": 26,
-                    "country": {
-                        "city": "San Francisco"
-                    },
-                    "hasPurchased": true
+                    "hasPurchased": true,
+                    "totalSpent": newTotal
                 }
             };
         };

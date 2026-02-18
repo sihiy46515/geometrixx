@@ -50,7 +50,23 @@
         entity.categoryId = ""
         for (var i = 0; i < items.length; i++) {
             var it = items[i];
-            if (it["eid"] == productId) {
+            if (it["eid"] != productId) {
+                continue;
+            }
+            entity.id = it["eid"];
+            entity.name = it["name"];
+            entity.value = it["value"];
+            entity.thumbnailUrl = it["thumbnailUrl"];
+            entity.pageUrl = it["pageUrl"];
+            entity.categoryId = it["categoryId"];
+            break;
+        }
+        if (entity.id == "") {
+            for (var i = 0; i < items.length; i++) {
+                var it = items[i];
+                if (it["eid"] != "interlakentrek") {
+                    continue;
+                }
                 entity.id = it["eid"];
                 entity.name = it["name"];
                 entity.value = it["value"];
@@ -60,30 +76,11 @@
                 break;
             }
         }
-        if (entity.id == "") {
-            for (var i = 0; i < items.length; i++) {
-                var it = items[i];
-                if (it["eid"] == "interlakentrek") {
-                    entity.id = it["eid"];
-                    entity.name = it["name"];
-                    entity.value = it["value"];
-                    entity.thumbnailUrl = it["thumbnailUrl"];
-                    entity.pageUrl = it["pageUrl"];
-                    entity.categoryId = it["categoryId"];
-                    break;
-                }
-            }
-        }
         // 
         // targetPageParams helper function goes here
         //
-    </script>
-    <!--Preconnect and DNS-Prefetch to improve page load time-->
-    <link rel="preconnect" href="//odltraining.tt.omtrdc.net">
-    <link rel="dns-prefetch" href="//odltraining.tt.omtrdc.net">
-    <!--/Preconnect and DNS-Prefetch-->
-    <!--Data Layer to enable rich data collection and targeting-->
-    <script>
+
+        // Data Layer to enable rich data collection and targeting
         var digitalData = {
             "page": {
                 "pageInfo": {
@@ -91,26 +88,23 @@
                 }
             }
         };
-    </script>
-    <!--/Data Layer-->
-    <!-- targetPageParams(), targetPageParamsAll(), Data Providers or targetGlobalSettings() functions to enrich the visitor profile or modify the library settings-->
-    <script>
+        // Data Layer
+
+        // targetPageParams(), targetPageParamsAll(), Data Providers or targetGlobalSettings() functions to enrich the visitor profile or modify the library settings
         targetPageParams = function () {
+            var cartTotal = entity.value;
             return {
-                "a": 1,
-                "b": 2,
                 "pageName": digitalData.page.pageInfo.pageName,
-                "profile": {
-                    "age": 26,
-                    "country": {
-                        "city": "San Francisco"
-                    },
-                    "addedToCart": true
-                }
+                "cartTotal": cartTotal
             };
         };
+        // targetPageParams()
+
     </script>
-    <!--/targetPageParams()-->
+    <!--Preconnect and DNS-Prefetch to improve page load time-->
+    <link rel="preconnect" href="//odltraining.tt.omtrdc.net">
+    <link rel="dns-prefetch" href="//odltraining.tt.omtrdc.net">
+    <!--/Preconnect and DNS-Prefetch-->
     <script>
         window.targetGlobalSettings = {
             globalMboxName: "target-global-mbox",
