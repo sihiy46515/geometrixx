@@ -12,7 +12,8 @@
         </link>
         <meta name="keywords" content="Winter, Skiing, Scarf">
         </meta>
-        <script>
+        <script src="../../../../../js/demo-auth.js"></script>
+    <script>
         document.documentElement.className+=' js';
         </script>
         <link href="../../../../../designs/geometrixx-outdoors.css" rel="stylesheet" type="text/css">
@@ -67,11 +68,15 @@ function openShoppingCart(){
         <!-- targetPageParams(), targetPageParamsAll(), Data Providers or targetGlobalSettings() functions to enrich the visitor profile or modify the library settings-->
         <script>
         targetPageParams = function () {
+            var u = window.GXAuth ? window.GXAuth.get() : { isSignedIn:false, memberTier:"none" };
             return {
-                "a": 1,
-                "b": 2,
                 "pageName": digitalData.page.pageInfo.pageName,
+                "userSignedIn": u.isSignedIn,
+                "userTier": u.memberTier,
                 "profile": {
+                    "userSignedIn": u.isSignedIn,
+                    "memberTier": u.memberTier,
+                    "isPlatinum": (u.memberTier === "platinum"),
                     "age": 26,
                     "country": {
                         "city": "San Francisco"
@@ -131,7 +136,7 @@ function openShoppingCart(){
         <div class="cq-hovercart-inner">
             <h1>{{title}}</h1>
             {{#unless cartEmpty}}
-                <a class="cq-hovercart-checkout" href="../../../../../en/user/checkout.html">Checkout ➙</a>
+                <a class="cq-hovercart-checkout" href="../../../../user/checkout.html">Checkout ➙</a>
             <table>
                 {{#each entries}}
                 <tr data-product-page="{{this.page}}">
@@ -172,16 +177,18 @@ function openShoppingCart(){
         //listening for this global event - triggered from SocialAuth.js - $CQ.SocialAuth.oauthCallbackComplete
         //any element can subscribe to this event to perform custom functionality post-oauth-callback completion
         //the social login component will listen for it here to perform the appropriate redirect as configured
-        $CQ('.geosociallogin-signin-sociallogin\x2Dcontent\x2Dgeometrixx\x2Doutdoors\x2Den\x2Dseasonal\x2Dwinter\x2Dapparel\x2Dscarves\x2Dhalifax\x2Dwinter\x2Djcr\x2Dcontent\x2Duserinfo\x2Dsociallogin').on('click', function(ev){
+        $CQ('.geosociallogin-signin-sociallogin-content-geometrixx-outdoors-en
+           -seasonal-winter-apparel-scarves-halifax-winter-jcr-content-userinfo-sociallogin').on('click', function(ev){
             ev.preventDefault();
             var config = {"width":630,"height":400,"dialogClass":"sociallogin-dialog"};
-            //console.debug('sociallogin\x2Dcontent\x2Dgeometrixx\x2Doutdoors\x2Den\x2Dseasonal\x2Dwinter\x2Dapparel\x2Dscarves\x2Dhalifax\x2Dwinter\x2Djcr\x2Dcontent\x2Duserinfo\x2Dsociallogin', config);
+            //console.debug('sociallogin-content-geometrixx-outdoors-en
+           -seasonal-winter-apparel-scarves-halifax-winter-jcr-content-userinfo-sociallogin', config);
         });
     });
                                             </script>
-                                            <a href="halifax-winter.html#" class="geosociallogin-signin-sociallogin-content-geometrixx-outdoors-en
+                                            <a href="../../../../user.html" class="geosociallogin-signin-sociallogin-content-geometrixx-outdoors-en
            -seasonal-winter-apparel-scarves-halifax-winter-jcr-content-userinfo-sociallogin">
-                                                Sign In or Register
+                                                                                            Sign In or Register
                                             </a>
                                             <div id="sociallogin-content-geometrixx-outdoors-en-seasonal-winter-apparel-scarves-halifax-winter-jcr-content-userinfo-sociallogin" class="social-login-popup">
                                                 <div class="cqlogin">

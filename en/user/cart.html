@@ -11,6 +11,7 @@
     </link>
     <link rel="shortcut icon" href="../../etc/designs/geometrixx-outdoors/favicon.ico">
     </link>
+    <script src="../../js/demo-auth.js"></script>
     <script>
         document.documentElement.className += ' js';
     </script>
@@ -92,10 +93,18 @@
 
         // targetPageParams(), targetPageParamsAll(), Data Providers or targetGlobalSettings() functions to enrich the visitor profile or modify the library settings
         targetPageParams = function () {
+            var u = window.GXAuth ? window.GXAuth.get() : { isSignedIn: false, memberTier: "none" };
             var cartTotal = entity.value;
             return {
                 "pageName": digitalData.page.pageInfo.pageName,
-                "cartTotal": cartTotal
+                "userSignedIn": u.isSignedIn,
+                "userTier": u.memberTier,
+                "cartTotal": cartTotal,
+                "profile": {
+                    "userSignedIn": u.isSignedIn,
+                    "memberTier": u.memberTier,
+                    "isPlatinum": (u.memberTier === "platinum")
+                }
             };
         };
         // targetPageParams()
@@ -144,234 +153,221 @@
                         <nav>
                             <ul>
                                 <li class="cartpage">
-                                    <a href="cart.html" class="cq-hovercart-link">
-                                        My Cart
-                                    </a>
-                                </li>
-                                <li class="login cq-cc-profile-anonymous">
-                                    <div class="parbase login sociallogin">
-                                        <link rel="stylesheet"
-                                            href="../../etc/clientlibs/social/connect/themes/default.css"
-                                            type="text/css">
-                                        <script type="text/javascript" src="../../clientlibs/social/connect.js">
-                                        </script>
-                                        <a href="cart.html#" class="geosociallogin-signin-sociallogin-content-geometrixx-outdoors-en
+                                    <a href="../user.html" cart.html#" class="geosociallogin-signin-sociallogin-content-geometrixx-outdoors-en
            -user-cart-jcr-content-userinfo-sociallogin">
-                                            Sign In or Register
-                                        </a>
-                                        <div id="sociallogin-content-geometrixx-outdoors-en-user-cart-jcr-content-userinfo-sociallogin"
-                                            class="social-login-popup">
-                                            <div class="cqlogin">
-                                                <div class="parsys_column colctrl-2c">
-                                                    <div class="parsys_column colctrl-2c-c0">
-                                                        <div class="title section">
-                                                            <h2>
-                                                                Member sign in
-                                                            </h2>
-                                                        </div>
-                                                        <div class="parbase login section">
-                                                            <div class="text section">
-                                                                If you already have an account you can sign in below.
-                                                            </div>
-                                                            <form method="POST"
-                                                                action="../../en/user/cart/j_security_check"
-                                                                id="sociallogin" name="sociallogin"
-                                                                enctype="multipart/form-data"
-                                                                onsubmit="return cq5forms_validate_sociallogin();">
-                                                                <input type="hidden" name="resource"
-                                                                    value="../../en/user/cart.html">
-                                                                <input type="hidden" name="_charset_" value="UTF-8">
-                                                                </input>
-                                                                <p class="login_username_group">
-                                                                    <label for="sociallogin_username">
-                                                                        Username
-                                                                    </label>
-                                                                    <input id="sociallogin_username"
-                                                                        class="cqusername form_field form_field_text login_username"
-                                                                        type="text" name="j_username" tabindex="9990">
-                                                                    </input>
-                                                                </p>
-                                                                <p class="login_password_group">
-                                                                    <label for="sociallogin_password">
-                                                                        Password
-                                                                    </label>
-                                                                    <input id="sociallogin_password"
-                                                                        class="form_field form_field_text login_password cqpassword"
-                                                                        type="password" autocomplete="off"
-                                                                        name="j_password" tabindex="9991">
-                                                                    </input>
-                                                                </p>
-                                                                <p class="login_submit_group">
-                                                                    <label for="login_submit">
-                                                                        <input id="login_submit"
-                                                                            class="form_button_submit" type="submit"
-                                                                            value="Sign in" tabindex="9992">
-                                                                        </input>
-                                                                    </label>
-                                                                </p>
-                                                            </form>
-                                                        </div>
+                                        Sign In or Register
+                                    </a>
+                                    <div id="sociallogin-content-geometrixx-outdoors-en-user-cart-jcr-content-userinfo-sociallogin"
+                                        class="social-login-popup">
+                                        <div class="cqlogin">
+                                            <div class="parsys_column colctrl-2c">
+                                                <div class="parsys_column colctrl-2c-c0">
+                                                    <div class="title section">
+                                                        <h2>
+                                                            Member sign in
+                                                        </h2>
                                                     </div>
-                                                    <div class="parsys_column colctrl-2c-c1">
-                                                        <div class="title section">
-                                                            <h2>
-                                                                Create account
-                                                            </h2>
+                                                    <div class="parbase login section">
+                                                        <div class="text section">
+                                                            If you already have an account you can sign in below.
                                                         </div>
-                                                        <div class="text parbase section">
-                                                            <ul>
-                                                                <li>
-                                                                    Get free shipping on all orders of $100 or more
-                                                                </li>
-                                                                <li>
-                                                                    Free returns, always
-                                                                </li>
-                                                                <li>
-                                                                    Express checkout
-                                                                </li>
-                                                                <li>
-                                                                    Save and share your favorite products with your
-                                                                    friends
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="submit section">
-                                                            <div class="form_row">
-                                                                <div class="form_leftcol">
-                                                                    <div class="form_leftcollabel">
-                                                                        <span>
-                                                                        </span>
-                                                                    </div>
-                                                                    <div class="form_leftcolmark">
-                                                                    </div>
+                                                        <form method="POST" action="../../en/user/cart/j_security_check"
+                                                            id="sociallogin" name="sociallogin"
+                                                            enctype="multipart/form-data"
+                                                            onsubmit="return cq5forms_validate_sociallogin();">
+                                                            <input type="hidden" name="resource"
+                                                                value="../../en/user/cart.html">
+                                                            <input type="hidden" name="_charset_" value="UTF-8">
+                                                            </input>
+                                                            <p class="login_username_group">
+                                                                <label for="sociallogin_username">
+                                                                    Username
+                                                                </label>
+                                                                <input id="sociallogin_username"
+                                                                    class="cqusername form_field form_field_text login_username"
+                                                                    type="text" name="j_username" tabindex="9990">
+                                                                </input>
+                                                            </p>
+                                                            <p class="login_password_group">
+                                                                <label for="sociallogin_password">
+                                                                    Password
+                                                                </label>
+                                                                <input id="sociallogin_password"
+                                                                    class="form_field form_field_text login_password cqpassword"
+                                                                    type="password" autocomplete="off" name="j_password"
+                                                                    tabindex="9991">
+                                                                </input>
+                                                            </p>
+                                                            <p class="login_submit_group">
+                                                                <label for="login_submit">
+                                                                    <input id="login_submit" class="form_button_submit"
+                                                                        type="submit" value="Sign in" tabindex="9992">
+                                                                    </input>
+                                                                </label>
+                                                            </p>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                <div class="parsys_column colctrl-2c-c1">
+                                                    <div class="title section">
+                                                        <h2>
+                                                            Create account
+                                                        </h2>
+                                                    </div>
+                                                    <div class="text parbase section">
+                                                        <ul>
+                                                            <li>
+                                                                Get free shipping on all orders of $100 or more
+                                                            </li>
+                                                            <li>
+                                                                Free returns, always
+                                                            </li>
+                                                            <li>
+                                                                Express checkout
+                                                            </li>
+                                                            <li>
+                                                                Save and share your favorite products with your
+                                                                friends
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="submit section">
+                                                        <div class="form_row">
+                                                            <div class="form_leftcol">
+                                                                <div class="form_leftcollabel">
+                                                                    <span>
+                                                                    </span>
                                                                 </div>
-                                                                <div class="form_rightcol">
-                                                                    <form>
-                                                                        <input type="submit" class="form_button_submit"
-                                                                            name="create" value="Create Account">
-                                                                        </input>
-                                                                    </form>
+                                                                <div class="form_leftcolmark">
                                                                 </div>
                                                             </div>
-                                                            <div class="form_row_description">
+                                                            <div class="form_rightcol">
+                                                                <form>
+                                                                    <input type="submit" class="form_button_submit"
+                                                                        name="create" value="Create Account">
+                                                                    </input>
+                                                                </form>
                                                             </div>
+                                                        </div>
+                                                        <div class="form_row_description">
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div style="clear:both">
-                                            </div>
-                                            <div class="submit section">
-                                                <div class="form_row">
-                                                    <div class="form_leftcol">
-                                                        <div class="form_leftcollabel">
-                                                            <span>
-                                                            </span>
-                                                        </div>
-                                                        <div class="form_leftcolmark">
-                                                        </div>
+                                        </div>
+                                        <div style="clear:both">
+                                        </div>
+                                        <div class="submit section">
+                                            <div class="form_row">
+                                                <div class="form_leftcol">
+                                                    <div class="form_leftcollabel">
+                                                        <span>
+                                                        </span>
                                                     </div>
-                                                    <div class="form_rightcol">
-                                                        <input type="submit" tabindex="9993"
-                                                            class="form_button_submit login_facebook" name="create"
-                                                            value="Sign in with Facebook ›" onclick="//console.debug(
+                                                    <div class="form_leftcolmark">
+                                                    </div>
+                                                </div>
+                                                <div class="form_rightcol">
+                                                    <input type="submit" tabindex="9993"
+                                                        class="form_button_submit login_facebook" name="create"
+                                                        value="Sign in with Facebook ›" onclick="//console.debug(
                            'sociallogin\x2Dcontent\x2Dgeometrixx\x2Doutdoors\x2Den\x2Duser\x2Dcart\x2Djcr\x2Dcontent\x2Duserinfo\x2Dsociallogin',
                            '\x2Fetc\x2Fcloudservices\x2Ffacebookconnect\x2Fgeometrixx\x2Doutdoorsfacebookapp',
                            'cb4da2dbc7a22ad11bacb8e39ef92929',
                            '/j_security_check',
                            ''
                        );return false;">
-                                                        </input>
-                                                    </div>
-                                                </div>
-                                                <div class="form_row_description">
+                                                    </input>
                                                 </div>
                                             </div>
-                                            <div class="submit section">
-                                                <div class="form_row">
-                                                    <div class="form_leftcol">
-                                                        <div class="form_leftcollabel">
-                                                            <span>
-                                                            </span>
-                                                        </div>
-                                                        <div class="form_leftcolmark">
-                                                        </div>
+                                            <div class="form_row_description">
+                                            </div>
+                                        </div>
+                                        <div class="submit section">
+                                            <div class="form_row">
+                                                <div class="form_leftcol">
+                                                    <div class="form_leftcollabel">
+                                                        <span>
+                                                        </span>
                                                     </div>
-                                                    <div class="form_rightcol">
-                                                        <input type="submit" tabindex="9994"
-                                                            class="form_button_submit login_twitter" name="create"
-                                                            value="Sign in with Twitter ›" onclick="//console.debug(
+                                                    <div class="form_leftcolmark">
+                                                    </div>
+                                                </div>
+                                                <div class="form_rightcol">
+                                                    <input type="submit" tabindex="9994"
+                                                        class="form_button_submit login_twitter" name="create"
+                                                        value="Sign in with Twitter ›" onclick="//console.debug(
                            'sociallogin\x2Dcontent\x2Dgeometrixx\x2Doutdoors\x2Den\x2Duser\x2Dcart\x2Djcr\x2Dcontent\x2Duserinfo\x2Dsociallogin',
                            '\x2Fetc\x2Fcloudservices\x2Ftwitterconnect\x2Fgeometrixx\x2Doutdoors\x2Dtwitter\x2Dapp',
                            '968485696f92b673e2c44ebbdf097e94',
                            '/j_security_check',
                            ''
                        );return false;">
-                                                        </input>
-                                                    </div>
+                                                    </input>
                                                 </div>
-                                                <div class="form_row_description">
-                                                </div>
+                                            </div>
+                                            <div class="form_row_description">
                                             </div>
                                         </div>
                                     </div>
-                                </li>
-                            </ul>
-                        </nav>
                     </div>
-                </div>
-            </div>
-            <div class="topnav" id="topnav">
-                <div class="nav-wrapper ">
-                    <nav>
-                        <h1>
-                            <a href="../../index.html">
-                                English
-                            </a>
-                        </h1>
-                        <ul>
-                            <li class="topnav-item-3 topnav-last">
-                                <a href="../equipment.html">
-                                    Equipment
-                                </a>
-                            </li>
-                            <li class="topnav-item-1 topnav-first topnav-last">
-                                <a href="../men.html">
-                                    Men's
-                                </a>
-                            </li>
-                            <li class="topnav-item-2 topnav-last">
-                                <a href="../women.html">
-                                    Women's
-                                </a>
-                            </li>
-                            <li class="topnav-item-4 topnav-last">
-                                <a href="#">
-                                    Activities
-                                </a>
-                            </li>
-                            <li class="topnav-item-5 topnav-last">
-                                <a href="#">
-                                    Community
-                                </a>
-                            </li>
-                            <li class="topnav-item-6 topnav-last">
-                                <a href="#">
-                                    Support
-                                </a>
-                            </li>
-                            <li class="topnav-item-7 topnav-last">
-                                <a href="#">
-                                    Brand
-                                </a>
-                            </li>
-                        </ul>
+                    </li>
+                    </ul>
                     </nav>
-                    <div class="topnavshadow">
-                    </div>
                 </div>
             </div>
-        </header>
+    </div>
+    <div class="topnav" id="topnav">
+        <div class="nav-wrapper ">
+            <nav>
+                <h1>
+                    <a href="../../index.html">
+                        English
+                    </a>
+                </h1>
+                <ul>
+                    <li class="topnav-item-3 topnav-last">
+                        <a href="../equipment.html">
+                            Equipment
+                        </a>
+                    </li>
+                    <li class="topnav-item-1 topnav-first topnav-last">
+                        <a href="../men.html">
+                            Men's
+                        </a>
+                    </li>
+                    <li class="topnav-item-2 topnav-last">
+                        <a href="../women.html">
+                            Women's
+                        </a>
+                    </li>
+                    <li class="topnav-item-4 topnav-last">
+                        <a href="#">
+                            Activities
+                        </a>
+                    </li>
+                    <li class="topnav-item-5 topnav-last">
+                        <a href="#">
+                            Community
+                        </a>
+                    </li>
+                    <li class="topnav-item-6 topnav-last">
+                        <a href="#">
+                            Support
+                        </a>
+                    </li>
+                    <li class="topnav-item-7 topnav-last">
+                        <a href="#">
+                            Brand
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="topnavshadow">
+            </div>
+        </div>
+    </div>
+    </header>
     </div>
     <div id="main" class="page-main">
         <div class="page-content cart">

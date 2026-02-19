@@ -11,6 +11,7 @@
     </link>
     <link rel="shortcut icon" href="../../etc/designs/geometrixx-outdoors/favicon.ico">
     </link>
+    <script src="../../js/demo-auth.js"></script>
     <script>
         document.documentElement.className += ' js';
     </script>
@@ -74,6 +75,11 @@
                 }
             }
         }
+        function generateId() {
+            return Date.now().toString(36) + Math.random().toString(36).substring(2);
+        }
+        var orderId = generateId();
+        var orderTotal = "$" + (parseFloat(entity.value) + 21.39);
         // 
         // targetPageParams helper function goes here
         //
@@ -96,11 +102,15 @@
     <!-- targetPageParams(), targetPageParamsAll(), Data Providers or targetGlobalSettings() functions to enrich the visitor profile or modify the library settings-->
     <script>
         targetPageParams = function () {
+            var u = window.GXAuth ? window.GXAuth.get() : { isSignedIn:false, memberTier:"none" };
             return {
-                "a": 1,
-                "b": 2,
                 "pageName": digitalData.page.pageInfo.pageName,
+                "userSignedIn": u.isSignedIn,
+                "userTier": u.memberTier,
                 "profile": {
+                    "userSignedIn": u.isSignedIn,
+                    "memberTier": u.memberTier,
+                    "isPlatinum": (u.memberTier === "platinum"),
                     "age": 26,
                     "country": {
                         "city": "San Francisco"
@@ -110,6 +120,16 @@
         };
     </script>
     <!--/targetPageParams()-->
+    <script type="text/javascript">
+        adobe.target.trackEvent({
+            "mbox": "orderConfirmPage",
+            "params": {
+                "orderId": orderId,
+                "orderTotal": orderTotal,
+                "productPurchasedId": productId
+            }
+        });
+    </script>
     <script>
         window.targetGlobalSettings = {
             globalMboxName: "target-global-mbox",
@@ -154,7 +174,7 @@
         <div class="cq-hovercart-inner">
             <h1>{{title}}</h1>
             {{#unless cartEmpty}}
-                <a class="cq-hovercart-checkout" href="../../en/user/checkout.html">Checkout ➙</a>
+                <a class="cq-hovercart-checkout" href="checkout.html">Checkout ➙</a>
             <table>
                 {{#each entries}}
                 <tr data-product-page="{{this.page}}">
@@ -192,7 +212,21 @@
                                             type="text/css">
                                         <script type="text/javascript" src="../../clientlibs/social/connect.js">
                                         </script>
-                                        <a href="checkout.html#" class="geosociallogin-signin-sociallogin-content-geometrixx-outdoors-en
+                                        <script type="text/javascript">
+                                            $CQ(document).ready(function () {
+                                                //listening for this global event - triggered from SocialAuth.js - $CQ.SocialAuth.oauthCallbackComplete
+                                                //any element can subscribe to this event to perform custom functionality post-oauth-callback completion
+                                                //the social login component will listen for it here to perform the appropriate redirect as configured
+                                                $CQ('.geosociallogin-signin-sociallogin-content-geometrixx-outdoors-en
+                                                    - user - checkout - jcr - content - userinfo - sociallogin').on('click', function(ev){
+            ev.preventDefault();
+                                                var config = { "width": 630, "height": 400, "dialogClass": "sociallogin-dialog" };
+                                                //console.debug('sociallogin-content-geometrixx-outdoors-en
+                                                -user - checkout - jcr - content - userinfo - sociallogin', config);
+                                            });
+    });
+                                        </script>
+                                        <a href="../user.html" class="geosociallogin-signin-sociallogin-content-geometrixx-outdoors-en
            -user-checkout-jcr-content-userinfo-sociallogin">
                                             Sign In or Register
                                         </a>

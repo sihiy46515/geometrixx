@@ -12,7 +12,8 @@
         </link>
         <meta name="keywords" content="Summer, Biking">
         </meta>
-        <script>
+        <script src="../../../js/demo-auth.js"></script>
+    <script>
         document.documentElement.className+=' js';
         </script>
         <link href="../../../designs/geometrixx-outdoors.css" rel="stylesheet" type="text/css">
@@ -53,11 +54,15 @@ function openShoppingCart(){
         <!-- targetPageParams(), targetPageParamsAll(), Data Providers or targetGlobalSettings() functions to enrich the visitor profile or modify the library settings-->
         <script>
         targetPageParams = function () {
+            var u = window.GXAuth ? window.GXAuth.get() : { isSignedIn:false, memberTier:"none" };
             return {
-                "a": 1,
-                "b": 2,
                 "pageName": digitalData.page.pageInfo.pageName,
+                "userSignedIn": u.isSignedIn,
+                "userTier": u.memberTier,
                 "profile": {
+                    "userSignedIn": u.isSignedIn,
+                    "memberTier": u.memberTier,
+                    "isPlatinum": (u.memberTier === "platinum"),
                     "age": 26,
                     "country": {
                         "city": "San Francisco"
@@ -106,16 +111,7 @@ function openShoppingCart(){
                             <nav>
                                 <ul>
                                     <li class="cartpage">
-                                        <a href="../../user/cart.html" class="cq-hovercart-link">
-                                            My Cart
-                                        </a>
-                                    </li>
-                                    <li class="login cq-cc-profile-anonymous">
-                                        <div class="parbase login sociallogin">
-                                            <link rel="stylesheet" href="../../../etc/clientlibs/social/connect/themes/default.css" type="text/css">
-                                            <script type="text/javascript" src="../../../clientlibs/social/connect.js">
-                                            </script>
-                                            <a href="tacna.html#" class="geosociallogin-signin-sociallogin-content-geometrixx-outdoors-en
+                                        <a href="../../user.html"tacna.html#" class="geosociallogin-signin-sociallogin-content-geometrixx-outdoors-en
            -equipment-biking-tacna-jcr-content-userinfo-sociallogin">
                                                 Sign In or Register
                                             </a>

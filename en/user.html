@@ -1,24 +1,26 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <meta charset="utf-8">
-        </meta>
-        <title>
-            User
-        </title>
-        <link rel="canonical" href="user.html">
-        </link>
-        <link rel="shortcut icon" href="../designs/geometrixx-outdoors/favicon.ico">
-        </link>
-        <script>
+
+<head>
+    <meta charset="utf-8">
+    </meta>
+    <title>
+        User
+    </title>
+    <link rel="canonical" href="user.html">
+    </link>
+    <link rel="shortcut icon" href="../designs/geometrixx-outdoors/favicon.ico">
+    </link>
+    <script src="../js/demo-auth.js"></script>
+    <script>
         document.documentElement.className += ' js';
-        </script>
-        <!--Preconnect and DNS-Prefetch to improve page load time-->
-        <link rel="preconnect" href="//odltraining.tt.omtrdc.net">
-        <link rel="dns-prefetch" href="//odltraining.tt.omtrdc.net">
-        <!--/Preconnect and DNS-Prefetch-->
-        <!--Data Layer to enable rich data collection and targeting-->
-        <script>
+    </script>
+    <!--Preconnect and DNS-Prefetch to improve page load time-->
+    <link rel="preconnect" href="//odltraining.tt.omtrdc.net">
+    <link rel="dns-prefetch" href="//odltraining.tt.omtrdc.net">
+    <!--/Preconnect and DNS-Prefetch-->
+    <!--Data Layer to enable rich data collection and targeting-->
+    <script>
         var digitalData = {
             "page": {
                 "pageInfo": {
@@ -26,16 +28,20 @@
                 }
             }
         };
-        </script>
-        <!--/Data Layer-->
-        <!-- targetPageParams(), targetPageParamsAll(), Data Providers or targetGlobalSettings() functions to enrich the visitor profile or modify the library settings-->
-        <script>
+    </script>
+    <!--/Data Layer-->
+    <!-- targetPageParams(), targetPageParamsAll(), Data Providers or targetGlobalSettings() functions to enrich the visitor profile or modify the library settings-->
+    <script>
         targetPageParams = function () {
+            var u = window.GXAuth ? window.GXAuth.get() : { isSignedIn: false, memberTier: "none" };
             return {
-                "a": 1,
-                "b": 2,
                 "pageName": digitalData.page.pageInfo.pageName,
+                "userSignedIn": u.isSignedIn,
+                "userTier": u.memberTier,
                 "profile": {
+                    "userSignedIn": u.isSignedIn,
+                    "memberTier": u.memberTier,
+                    "isPlatinum": (u.memberTier === "platinum"),
                     "age": 26,
                     "country": {
                         "city": "San Francisco"
@@ -43,345 +49,438 @@
                 }
             };
         };
-        </script>
-        <!--/targetPageParams()-->
-        <script>
+    </script>
+    <!--/targetPageParams()-->
+    <script>
         window.targetGlobalSettings = {
             globalMboxName: "target-global-mbox",
             globalMboxAutoCreate: true,
             timeout: 2000
         };
-        </script>
-        <!--Target's JavaScript SDK, at.js-->
-        <script src="../js/at.js">
-        </script>
-        <!--/at.js-->
-        <link href="../designs/geometrixx-outdoors.css" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="../designs/geometrixx-outdoors/clientlibs_desktop_v1.css" type="text/css">
-        <script src="../js/jquery.min.js" type="text/javascript">
-        </script>
-        <link rel="alternate" data-cq-role="site.variant" title="English" hreflang="en" data-bmap-devgroups="browser,oldBrowser,highResolutionDisplay" href="#" data-bmap-currentvar="true">
-        </link>
-        <link rel="alternate" data-cq-role="site.variant" title="English" hreflang="en" data-bmap-devgroups="smartphone,tablet,highResolutionDisplay" href="#">
-        </link>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- DTM HEADER TAG GOES HERE -->
-    </head>
-    <body class="page">
-        <div class="page-header-content">
-            <header>
-                <div class="page-systemnav">
-                    <div class="sys-nav-wrapper">
-                        <div class="search">
-                            <form class="search-form" action="../en/toolbar/search.html" method="get">
-                                <p class="search-field">
-                                    <label for="search-field" style="display: none">
-                                        Search:
-                                    </label>
-                                    <input id="search-field" type="text" name="q" placeholder="Search" value="">
-                                    </input>
-                                </p>
-                                <p class="search-submit">
-                                    <input type="submit">
-                                    </input>
-                                </p>
-                            </form>
-                        </div>
-                        <div class="userinfo">
-                            <nav>
-                                <ul>
-                                    <li class="cartpage">
-                                        <script id="cq-hovercart-template" type="text/x-handlebars-template">
-<div id="cq-hovercart">
-    <div class="cq-hovercart-border">
-        <div class="cq-hovercart-inner">
-            <h1>{{title}}</h1>
-            {{#unless cartEmpty}}
-                <a class="cq-hovercart-checkout" href="../en/user/checkout.html">Checkout ➙</a>
-            <table>
-                {{#each entries}}
-                <tr data-product-page="{{this.page}}">
-                    <td class="cq-hovercart-thumb"><img src="{{this.thumbnail}}" alt="{{this.title}}"/></td>
-                    <td class="cq-hovercart-product-title">
-                        <a href="{{this.page}}">{{this.title}}</a>
-                        {{#if this.promotion}}
-                        <div class="cq-hovercart-promotion">{{{this.promotion.message}}}</div>
-                        {{/if}}
-                    </td>
-                    <td class="cq-hovercart-quantity">{{this.quantity}}</td>
-                    <td class="cq-hovercart-price">{{this.priceFormatted}}</td>
-                </tr>
-                {{/each}}
-                {{#each promotions}}{{#if this.message}}{{#unless this.cartEntry}}
-                <tr>
-                    <td class="cq-hovercart-promotion" colspan="4">{{{this.message}}}</td>
-                </tr>
-                {{/unless}}{{/if}}{{/each}}
-            </table>
-            {{/unless}}
-            <div class="clearfix"></div>
-        </div>
-    </div>
-</div>
+    </script>
+    <script src="../js/jquery.min.js" type="text/javascript"></script>
+    <!--Target's JavaScript SDK, at.js-->
+    <script src="../js/at.js">
+    </script>
+    <!--/at.js-->
+    <link href="../designs/geometrixx-outdoors.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../designs/geometrixx-outdoors/clientlibs_desktop_v1.css" type="text/css">
+    </script>
+    <link rel="alternate" data-cq-role="site.variant" title="English" hreflang="en"
+        data-bmap-devgroups="browser,oldBrowser,highResolutionDisplay" href="#" data-bmap-currentvar="true">
+    </link>
+    <link rel="alternate" data-cq-role="site.variant" title="English" hreflang="en"
+        data-bmap-devgroups="smartphone,tablet,highResolutionDisplay" href="#">
+    </link>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- DTM HEADER TAG GOES HERE -->
+</head>
+
+<body class="page">
+    <div class="page-header-content">
+        <header>
+            <div class="page-systemnav">
+                <div class="sys-nav-wrapper">
+                    <div class="search">
+                        <form class="search-form" action="../en/toolbar/search.html" method="get">
+                            <p class="search-field">
+                                <label for="search-field" style="display: none">
+                                    Search:
+                                </label>
+                                <input id="search-field" type="text" name="q" placeholder="Search" value="">
+                                </input>
+                            </p>
+                            <p class="search-submit">
+                                <input type="submit">
+                                </input>
+                            </p>
+                        </form>
+                    </div>
+                    <div class="userinfo">
+                        <nav>
+                            <ul>
+                                <li class="cartpage">
+                                    <script id="cq-hovercart-template" type="text/x-handlebars-template"><div id="cq-hovercart">
+                                            <div class="cq-hovercart-border">
+                                                <div class="cq-hovercart-inner">
+                                                    <h1>{{title}}</h1>
+                                                    {{#unless cartEmpty}}
+                                                        <a class="cq-hovercart-checkout" href="user/checkout.html">Checkout ➙</a>
+                                                    <table>
+                                                        {{#each entries}}
+                                                        <tr data-product-page="{{this.page}}">
+                                                            <td class="cq-hovercart-thumb"><img src="{{this.thumbnail}}" alt="{{this.title}}"/></td>
+                                                            <td class="cq-hovercart-product-title">
+                                                                <a href="{{this.page}}">{{this.title}}</a>
+                                                                {{#if this.promotion}}
+                                                                <div class="cq-hovercart-promotion">{{{this.promotion.message}}}</div>
+                                                                {{/if}}
+                                                            </td>
+                                                            <td class="cq-hovercart-quantity">{{this.quantity}}</td>
+                                                            <td class="cq-hovercart-price">{{this.priceFormatted}}</td>
+                                                        </tr>
+                                                        {{/each}}
+                                                        {{#each promotions}}{{#if this.message}}{{#unless this.cartEntry}}
+                                                        <tr>
+                                                            <td class="cq-hovercart-promotion" colspan="4">{{{this.message}}}</td>
+                                                        </tr>
+                                                        {{/unless}}{{/if}}{{/each}}
+                                                    </table>
+                                                    {{/unless}}
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                        </div></script>
+                                    <a href="user/cart.html" class="cq-hovercart-link">
+                                        My Cart
+                                    </a>
+                                </li>
+                                <li class="login cq-cc-profile-anonymous">
+                                    <div class="parbase login sociallogin">
+                                        <link rel="stylesheet"
+                                            href="../etc/clientlibs/social/connect/themes/default.css" type="text/css">
+                                        <script type="text/javascript" src="../clientlibs/social/connect.js">
                                         </script>
-                                        <a href="user/cart.html" class="cq-hovercart-link">
-                                            My Cart
+                                        <script type="text/javascript">
+                                            $CQ(document).ready(function () {
+                                                //listening for this global event - triggered from SocialAuth.js - $CQ.SocialAuth.oauthCallbackComplete
+                                                //any element can subscribe to this event to perform custom functionality post-oauth-callback completion
+                                                //the social login component will listen for it here to perform the appropriate redirect as configured
+                                                $CQ('.geosociallogin-signin-sociallogin-content-geometrixx-outdoors-en-user-jcr-content-userinfo-sociallogin').on('click', function (ev) {
+                                                    ev.preventDefault();
+                                                    var config = { "width": 630, "height": 400, "dialogClass": "sociallogin-dialog" };
+                                                    //console.debug('sociallogin-content-geometrixx-outdoors-en-user-jcr-content-userinfo-sociallogin', config);
+                                                });
+                                            });
+                                        </script>
+                                        <a href="user.html"
+                                            class="geosociallogin-signin-sociallogin-content-geometrixx-outdoors-en-user-jcr-content-userinfo-sociallogin">
+                                            Sign In or Register
                                         </a>
-                                    </li>
-                                    <li class="login cq-cc-profile-anonymous">
-                                        <div class="parbase login sociallogin">
-                                            <link rel="stylesheet" href="../clientlibs/social/connect/themes/default.css" type="text/css">
-                                            <script type="text/javascript" src="../clientlibs/social/connect.js">
-                                            </script>
-                                            <a href="user.html#" class="geosociallogin-signin-sociallogin-content-geometrixx-outdoors-en
-           -user-jcr-content-userinfo-sociallogin">
-                                                Sign In or Register
-                                            </a>
-                                            <div id="sociallogin-content-geometrixx-outdoors-en-user-jcr-content-userinfo-sociallogin" class="social-login-popup">
-                                                <div class="cqlogin">
-                                                    <div class="parsys_column colctrl-2c">
-                                                        <div class="parsys_column colctrl-2c-c0">
-                                                            <div class="title section">
-                                                                <h2>
-                                                                    Member sign in
-                                                                </h2>
-                                                            </div>
-                                                            <div class="parbase login section">
-                                                                <script type="text/javascript">
+                                        <div id="sociallogin-content-geometrixx-outdoors-en-user-jcr-content-userinfo-sociallogin"
+                                            class="social-login-popup">
+                                            <div class="cqlogin">
+                                                <div class="parsys_column colctrl-2c">
+                                                    <div class="parsys_column colctrl-2c-c0">
+                                                        <div class="title section">
+                                                            <h2>
+                                                                Member sign in
+                                                            </h2>
+                                                        </div>
+                                                        <div class="parbase login section">
+                                                            <script type="text/javascript">
                                                                 function cq5forms_validate_login() {
                                                                     console.log("some validation will happen here.");
                                                                 }
-                                                                </script>
-                                                                <div class="text section">
-                                                                    If you already have an account you
+                                                            </script>
+                                                            <div class="text section">
+                                                                If you already have an account you
                                                                 can sign in below.
-                                                                </div>
-                                                                <form method="POST" action="../en/user/j_security_check" id="sociallogin" name="sociallogin" enctype="multipart/form-data" onsubmit="return cq5forms_validate_sociallogin();">
-                                                                    <input type="hidden" name="resource" value="../en/user.html">
-                                                                    <input type="hidden" name="_charset_" value="UTF-8">
+                                                            </div>
+                                                            <form method="POST" action="../en/user/j_security_check"
+                                                                id="sociallogin" name="sociallogin"
+                                                                enctype="multipart/form-data"
+                                                                onsubmit="return cq5forms_validate_sociallogin();">
+                                                                <input type="hidden" name="resource"
+                                                                    value="../en/user.html">
+                                                                <input type="hidden" name="_charset_" value="UTF-8">
+                                                                </input>
+                                                                <p class="login_username_group">
+                                                                    <label for="sociallogin_username">
+                                                                        Username
+                                                                    </label>
+                                                                    <input id="sociallogin_username"
+                                                                        class="cqusername form_field form_field_text login_username"
+                                                                        type="text" name="j_username" tabindex="9990">
                                                                     </input>
-                                                                    <p class="login_username_group">
-                                                                        <label for="sociallogin_username">
-                                                                            Username
-                                                                        </label>
-                                                                        <input id="sociallogin_username" class="cqusername form_field form_field_text login_username" type="text" name="j_username" tabindex="9990">
+                                                                </p>
+                                                                <p class="login_password_group">
+                                                                    <label for="sociallogin_password">
+                                                                        Password
+                                                                    </label>
+                                                                    <input id="sociallogin_password"
+                                                                        class="form_field form_field_text login_password cqpassword"
+                                                                        type="password" autocomplete="off"
+                                                                        name="j_password" tabindex="9991">
+                                                                    </input>
+                                                                </p>
+                                                                <p class="login_submit_group">
+                                                                    <label for="login_submit">
+                                                                        <input id="login_submit"
+                                                                            class="form_button_submit" type="submit"
+                                                                            value="Sign in" tabindex="9992">
                                                                         </input>
-                                                                    </p>
-                                                                    <p class="login_password_group">
-                                                                        <label for="sociallogin_password">
-                                                                            Password
-                                                                        </label>
-                                                                        <input id="sociallogin_password" class="form_field form_field_text login_password cqpassword" type="password" autocomplete="off" name="j_password" tabindex="9991">
-                                                                        </input>
-                                                                    </p>
-                                                                    <p class="login_submit_group">
-                                                                        <label for="login_submit">
-                                                                            <input id="login_submit" class="form_button_submit" type="submit" value="Sign in" tabindex="9992">
-                                                                            </input>
-                                                                        </label>
-                                                                    </p>
-                                                                </form>
-                                                            </div>
+                                                                    </label>
+                                                                </p>
+                                                            </form>
                                                         </div>
-                                                        <div class="parsys_column colctrl-2c-c1">
-                                                            <div class="title section">
-                                                                <h2>
-                                                                    Create account
-                                                                </h2>
-                                                            </div>
-                                                            <div class="text parbase section">
-                                                                <ul>
-                                                                    <li>
-                                                                        Get free shipping on all orders of $100 or more
-                                                                    </li>
-                                                                    <li>
-                                                                        Free returns, always
-                                                                    </li>
-                                                                    <li>
-                                                                        Express checkout
-                                                                    </li>
-                                                                    <li>
-                                                                        Save and share your favorite products with your
+                                                    </div>
+                                                    <div class="parsys_column colctrl-2c-c1">
+                                                        <div class="title section">
+                                                            <h2>
+                                                                Create account
+                                                            </h2>
+                                                        </div>
+                                                        <div class="text parbase section">
+                                                            <ul>
+                                                                <li>
+                                                                    Get free shipping on all orders of $100 or more
+                                                                </li>
+                                                                <li>
+                                                                    Free returns, always
+                                                                </li>
+                                                                <li>
+                                                                    Express checkout
+                                                                </li>
+                                                                <li>
+                                                                    Save and share your favorite products with your
                                                                     friends
-                                                                    </li>
-                                                                </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="submit section">
+                                                            <div class="form_row">
+                                                                <div class="form_leftcol">
+                                                                    <div class="form_leftcollabel">
+                                                                        <span>
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="form_leftcolmark">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form_rightcol">
+                                                                    <form>
+                                                                        <input type="submit" class="form_button_submit"
+                                                                            name="create" value="Create Account">
+                                                                        </input>
+                                                                    </form>
+                                                                </div>
                                                             </div>
-                                                            <div class="submit section">
-                                                                <div class="form_row">
-                                                                    <div class="form_leftcol">
-                                                                        <div class="form_leftcollabel">
-                                                                            <span>
-                                                                            </span>
-                                                                        </div>
-                                                                        <div class="form_leftcolmark">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="form_rightcol">
-                                                                        <form>
-                                                                            <input type="submit" class="form_button_submit" name="create" value="Create Account">
-                                                                            </input>
-                                                                        </form>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form_row_description">
-                                                                </div>
+                                                            <div class="form_row_description">
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div style="clear:both">
-                                                </div>
-                                                <div class="submit section">
-                                                    <div class="form_row">
-                                                        <div class="form_leftcol">
-                                                            <div class="form_leftcollabel">
-                                                                <span>
-                                                                </span>
-                                                            </div>
-                                                            <div class="form_leftcolmark">
-                                                            </div>
+                                            </div>
+                                            <div style="clear:both">
+                                            </div>
+                                            <div class="submit section">
+                                                <div class="form_row">
+                                                    <div class="form_leftcol">
+                                                        <div class="form_leftcollabel">
+                                                            <span>
+                                                            </span>
                                                         </div>
-                                                        <div class="form_rightcol">
-                                                            <input type="submit" tabindex="9993" class="form_button_submit login_facebook" name="create" value="Sign in with Facebook ›" onclick="//console.debug(
+                                                        <div class="form_leftcolmark">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_rightcol">
+                                                        <input type="submit" tabindex="9993"
+                                                            class="form_button_submit login_facebook" name="create"
+                                                            value="Sign in with Facebook ›" onclick="//console.debug(
                            'sociallogin\x2Dcontent\x2Dgeometrixx\x2Doutdoors\x2Den\x2Duser\x2Djcr\x2Dcontent\x2Duserinfo\x2Dsociallogin',
                            '\x2FL730-etc\x2Fcloudservices\x2Ffacebookconnect\x2Fgeometrixx\x2Doutdoorsfacebookapp',
                            'cb4da2dbc7a22ad11bacb8e39ef92929',
                            '/j_security_check',
                            ''
                        );return false;">
-                                                            </input>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form_row_description">
+                                                        </input>
                                                     </div>
                                                 </div>
-                                                <div class="submit section">
-                                                    <div class="form_row">
-                                                        <div class="form_leftcol">
-                                                            <div class="form_leftcollabel">
-                                                                <span>
-                                                                </span>
-                                                            </div>
-                                                            <div class="form_leftcolmark">
-                                                            </div>
+                                                <div class="form_row_description">
+                                                </div>
+                                            </div>
+                                            <div class="submit section">
+                                                <div class="form_row">
+                                                    <div class="form_leftcol">
+                                                        <div class="form_leftcollabel">
+                                                            <span>
+                                                            </span>
                                                         </div>
-                                                        <div class="form_rightcol">
-                                                            <input type="submit" tabindex="9994" class="form_button_submit login_twitter" name="create" value="Sign in with Twitter ›" onclick="//console.debug(
+                                                        <div class="form_leftcolmark">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_rightcol">
+                                                        <input type="submit" tabindex="9994"
+                                                            class="form_button_submit login_twitter" name="create"
+                                                            value="Sign in with Twitter ›" onclick="//console.debug(
                            'sociallogin\x2Dcontent\x2Dgeometrixx\x2Doutdoors\x2Den\x2Duser\x2Djcr\x2Dcontent\x2Duserinfo\x2Dsociallogin',
                            '\x2FL730-etc\x2Fcloudservices\x2Ftwitterconnect\x2Fgeometrixx\x2Doutdoors\x2Dtwitter\x2Dapp',
                            '968485696f92b673e2c44ebbdf097e94',
                            '/j_security_check',
                            ''
                        );return false;">
-                                                            </input>
-                                                        </div>
+                                                        </input>
                                                     </div>
-                                                    <div class="form_row_description">
-                                                    </div>
+                                                </div>
+                                                <div class="form_row_description">
                                                 </div>
                                             </div>
                                         </div>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-                <div class="topnav" id="topnav">
-                    <div class="nav-wrapper ">
-                        <nav>
-                            <h1>
-                                <a href="../index.html">
-                                    English
-                                </a>
-                            </h1>
-                            <ul>
-                                <li class="topnav-item-1 topnav-first topnav-last">
-                                    <a href="men.html">
-                                        Men's
-                                    </a>
-                                </li>
-                                <li class="topnav-item-2 topnav-last">
-                                    <a href="women.html">
-                                        Women's
-                                    </a>
-                                </li>
-                                <li class="topnav-item-3 topnav-last">
-                                    <a href="equipment.html">
-                                        Equipment
-                                    </a>
-                                </li>
-                                <li class="topnav-item-4 topnav-last">
-                                    <a href="#">
-                                        Activities
-                                    </a>
-                                </li>
-                                <li class="topnav-item-5 topnav-last">
-                                    <a href="#">
-                                        Community
-                                    </a>
-                                </li>
-                                <li class="topnav-item-6 topnav-last">
-                                    <a href="#">
-                                        Support
-                                    </a>
-                                </li>
-                                <li class="topnav-item-7 topnav-last">
-                                    <a href="#">
-                                        Brand
-                                    </a>
+                                    </div>
                                 </li>
                             </ul>
                         </nav>
-                        <div class="topnavshadow">
-                        </div>
                     </div>
                 </div>
-            </header>
-        </div>
-        <div id="main" class="page-main">
-            <div class="page-content">
-                <div class="breadcrumb">
-                    <ul>
-                        <li class="breadcrumb-item-2 breadcrumb-first">
+            </div>
+            <div class="topnav" id="topnav">
+                <div class="nav-wrapper ">
+                    <nav>
+                        <h1>
                             <a href="../index.html">
                                 English
                             </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="par parsys">
+                        </h1>
+                        <ul>
+                            <li class="topnav-item-1 topnav-first topnav-last">
+                                <a href="men.html">
+                                    Men's
+                                </a>
+                            </li>
+                            <li class="topnav-item-2 topnav-last">
+                                <a href="women.html">
+                                    Women's
+                                </a>
+                            </li>
+                            <li class="topnav-item-3 topnav-last">
+                                <a href="equipment.html">
+                                    Equipment
+                                </a>
+                            </li>
+                            <li class="topnav-item-4 topnav-last">
+                                <a href="#">
+                                    Activities
+                                </a>
+                            </li>
+                            <li class="topnav-item-5 topnav-last">
+                                <a href="#">
+                                    Community
+                                </a>
+                            </li>
+                            <li class="topnav-item-6 topnav-last">
+                                <a href="#">
+                                    Support
+                                </a>
+                            </li>
+                            <li class="topnav-item-7 topnav-last">
+                                <a href="#">
+                                    Brand
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="topnavshadow">
+                    </div>
                 </div>
             </div>
-            <div class="page-footer">
-                <footer>
-                    <nav>
-                        <div class="toolbar">
-                            <a href="toolbar/about-us.html" class="first">
-                                About Us
-                            </a>
-                            <a href="toolbar/privacy-policy.html">
-                                Privacy Policy
-                            </a>
-                            <a href="toolbar/terms-of-use.html">
-                                Terms of Use
-                            </a>
-                        </div>
-                    </nav>
-                    <p class="copyright">
-                        © 2015 Geometrixx Outdoors. All rights reserved.
-                    </p>
-                </footer>
+        </header>
+    </div>
+    <div id="main" class="page-main">
+        <div class="page-content">
+            <div class="breadcrumb">
+                <ul>
+                    <li class="breadcrumb-item-2 breadcrumb-first">
+                        <a href="../index.html">
+                            English
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="par parsys">
+                <div
+                    style="max-width:720px;margin:40px auto;padding:20px;background:#fff;border:1px solid #ddd;border-radius:8px;">
+                    <h2 style="margin-top:0;">Demo Registration (Training)</h2>
+                    <p>This page simulates sign-in / registration for Adobe Target audience testing.</p>
+
+                    <button id="btnRegPlatinum" style="padding:10px 14px;margin-right:10px;">Register as
+                        Platinum</button>
+                    <button id="btnRegRegular" style="padding:10px 14px;margin-right:10px;">Register as Regular</button>
+                    <button id="btnSignOut" style="padding:10px 14px;">Sign out / Reset</button>
+
+                    <p id="demoState" style="margin-top:16px;color:#444;"></p>
+                </div>
+
+                <script src="../js/demo-auth.js"></script>
+                <script>
+                    (function () {
+                        function render() {
+                            var u = GXAuth.get();
+                            document.getElementById("demoState").innerText =
+                                "Signed in: " + u.isSignedIn + " | Tier: " + u.memberTier;
+
+                            var btnPlatinum = document.getElementById("btnRegPlatinum");
+                            var btnRegular = document.getElementById("btnRegRegular");
+                            var btnSignOut = document.getElementById("btnSignOut");
+
+                            if (u.isSignedIn) {
+                                if (btnPlatinum) btnPlatinum.style.display = "none";
+                                if (btnRegular) btnRegular.style.display = "none";
+                                if (btnSignOut) btnSignOut.style.display = "inline-block";
+                            } else {
+                                if (btnPlatinum) btnPlatinum.style.display = "inline-block";
+                                if (btnRegular) btnRegular.style.display = "inline-block";
+                                if (btnSignOut) btnSignOut.style.display = "none";
+                            }
+                        }
+
+                        if (document.getElementById("btnRegPlatinum")) {
+                            document.getElementById("btnRegPlatinum").onclick = function () {
+                                GXAuth.signIn("platinum");
+                                render();
+                                location.href = "../index.html";
+                            };
+                        }
+                        if (document.getElementById("btnRegRegular")) {
+                            document.getElementById("btnRegRegular").onclick = function () {
+                                GXAuth.signIn("none");
+                                render();
+                                location.href = "../index.html";
+                            };
+                        }
+                        if (document.getElementById("btnSignOut")) {
+                            document.getElementById("btnSignOut").onclick = function () {
+                                GXAuth.signOut();
+                                render();
+                                location.href = "../index.html";
+                            };
+                        }
+
+                        render();
+                    })();
+                </script>
             </div>
         </div>
-        <!--
+        <div class="page-footer">
+            <footer>
+                <nav>
+                    <div class="toolbar">
+                        <a href="toolbar/about-us.html" class="first">
+                            About Us
+                        </a>
+                        <a href="toolbar/privacy-policy.html">
+                            Privacy Policy
+                        </a>
+                        <a href="toolbar/terms-of-use.html">
+                            Terms of Use
+                        </a>
+                    </div>
+                </nav>
+                <p class="copyright">
+                    © 2015 Geometrixx Outdoors. All rights reserved.
+                </p>
+            </footer>
+        </div>
+    </div>
+    <!--
 More detailed timing info is available by uncommenting some code in the timing.jsp component
 Timing chart URL:
 http://chart.apis.google.com/chart?chtt=user.html+%2847ms%29&cht=bhs&chxt=x&chco=c6d9fd,4d89f9&chbh=a&chds=0,47,0,47&chxr=0,0,47&chd=t:0,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,31,31,31,47,47,47,47|16,0,0,0,0,0,0,0,0,0,0,0,0,0,15,15,15,0,0,16,0,0,0,0&chly=head.jsp|config.jsp|contexthub%29|contexthub.jsp|init.jsp|mvt_stats.jsp|stats.jsp|servicelibs.jsp|browsermap.jsp|init.jsp|clientcontext_optimize...|search.jsp|template.jsp|hovercart.jsp|sociallogin.jsp|userinfo.jsp|header.jsp|cqlogin.jsp|topnav.jsp|main.jsp|breadcrumb.jsp|parsys.jsp|toolbar.jsp|footer.jsp&chs=600x500
 -->
-        <div class="servicecomponents cloudservices">
-        </div>
-        <script type="text/javascript">
-        </script>
-    </body>
+    <div class="servicecomponents cloudservices">
+    </div>
+    <script type="text/javascript">
+    </script>
+</body>
+
 </html>
