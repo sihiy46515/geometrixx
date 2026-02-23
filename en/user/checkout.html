@@ -97,7 +97,7 @@
     <!-- targetPageParams(), targetPageParamsAll(), Data Providers or targetGlobalSettings() functions to enrich the visitor profile or modify the library settings-->
     <script>
         targetPageParams = function () {
-            var u = window.GXAuth ? window.GXAuth.get() : { isSignedIn:false, memberTier:"none" };
+            var u = window.GXAuth ? window.GXAuth.get() : { isSignedIn: false, memberTier: "none" };
             return {
                 "pageName": digitalData.page.pageInfo.pageName,
                 "userSignedIn": u.isSignedIn,
@@ -112,7 +112,9 @@
                     },
                     "visitedCheckout": true,
                     "geoState": "FL",
-                    "geoCity": "Miami"
+                    "geoCity": "Miami",
+                    "addedToCart": true,
+                    "hasPurchased": false
                 }
             };
         };
@@ -157,65 +159,65 @@
                             <ul>
                                 <li class="cartpage">
                                     <script id="cq-hovercart-template" type="text/x-handlebars-template">
-<div id="cq-hovercart">
-    <div class="cq-hovercart-border">
-        <div class="cq-hovercart-inner">
-            <h1>{{title}}</h1>
-            {{#unless cartEmpty}}
-                <a class="cq-hovercart-checkout" href="checkout.html">Checkout ➙</a>
-            <table>
-                {{#each entries}}
-                <tr data-product-page="{{this.page}}">
-                    <td class="cq-hovercart-thumb"><img src="{{this.thumbnail}}" alt="{{this.title}}"/></td>
-                    <td class="cq-hovercart-product-title">
-                        <a href="{{this.page}}">{{this.title}}</a>
-                        {{#if this.promotion}}
-                        <div class="cq-hovercart-promotion">{{{this.promotion.message}}}</div>
-                        {{/if}}
-                    </td>
-                    <td class="cq-hovercart-quantity">{{this.quantity}}</td>
-                    <td class="cq-hovercart-price">{{this.priceFormatted}}</td>
-                </tr>
-                {{/each}}
-                {{#each promotions}}{{#if this.message}}{{#unless this.cartEntry}}
-                <tr>
-                    <td class="cq-hovercart-promotion" colspan="4">{{{this.message}}}</td>
-                </tr>
-                {{/unless}}{{/if}}{{/each}}
-            </table>
-            {{/unless}}
-            <div class="clearfix"></div>
-        </div>
-    </div>
-</div>
+                                        <div id="cq-hovercart">
+                                            <div class="cq-hovercart-border">
+                                                <div class="cq-hovercart-inner">
+                                                    <h1>{{title}}</h1>
+                                                    {{#unless cartEmpty}}
+                                                        <a class="cq-hovercart-checkout" href="checkout.html">Checkout ➙</a>
+                                                    <table>
+                                                        {{#each entries}}
+                                                        <tr data-product-page="{{this.page}}">
+                                                            <td class="cq-hovercart-thumb"><img src="{{this.thumbnail}}" alt="{{this.title}}"/></td>
+                                                            <td class="cq-hovercart-product-title">
+                                                                <a href="{{this.page}}">{{this.title}}</a>
+                                                                {{#if this.promotion}}
+                                                                <div class="cq-hovercart-promotion">{{{this.promotion.message}}}</div>
+                                                                {{/if}}
+                                                            </td>
+                                                            <td class="cq-hovercart-quantity">{{this.quantity}}</td>
+                                                            <td class="cq-hovercart-price">{{this.priceFormatted}}</td>
+                                                        </tr>
+                                                        {{/each}}
+                                                        {{#each promotions}}{{#if this.message}}{{#unless this.cartEntry}}
+                                                        <tr>
+                                                            <td class="cq-hovercart-promotion" colspan="4">{{{this.message}}}</td>
+                                                        </tr>
+                                                        {{/unless}}{{/if}}{{/each}}
+                                                    </table>
+                                                    {{/unless}}
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         </script>
-                                        <a href="cart.html" class="cq-hovercart-link">
-                                            My Cart
+                                    <a href="cart.html" class="cq-hovercart-link">
+                                        My Cart
+                                    </a>
+                                </li>
+                                <li class="login cq-cc-profile-anonymous">
+                                    <div class="parbase login sociallogin">
+                                        <link rel="stylesheet"
+                                            href="../../etc/clientlibs/social/connect/themes/default.css"
+                                            type="text/css">
+                                        <script type="text/javascript" src="../../clientlibs/social/connect.js">
+                                        </script>
+                                        <script type="text/javascript">
+                                            $CQ(document).ready(function () {
+                                                //listening for this global event - triggered from SocialAuth.js - $CQ.SocialAuth.oauthCallbackComplete
+                                                //any element can subscribe to this event to perform custom functionality post-oauth-callback completion
+                                                //the social login component will listen for it here to perform the appropriate redirect as configured
+                                                $CQ('.geosociallogin-signin-sociallogin-content-geometrixx-outdoors-en-user-checkout-jcr-content-userinfo-sociallogin').on('click', function (ev) {
+                                                    ev.preventDefault();
+                                                    var config = { "width": 630, "height": 400, "dialogClass": "sociallogin-dialog" };
+                                                    //console.debug('sociallogin-content-geometrixx-outdoors-en-user-checkout-jcr-content-userinfo-sociallogin', config);
+                                                });
+                                            });
+                                        </script>
+                                        <a href="../user.html"
+                                            class="geosociallogin-signin-sociallogin-content-geometrixx-outdoors-en-user-checkout-jcr-content-userinfo-sociallogin">
+                                            Sign In or Register
                                         </a>
-                                    </li>
-                                    <li class="login cq-cc-profile-anonymous">
-                                        <div class="parbase login sociallogin">
-                                            <link rel="stylesheet" href="../../etc/clientlibs/social/connect/themes/default.css" type="text/css">
-                                            <script type="text/javascript" src="../../clientlibs/social/connect.js">
-                                            </script>
-                                            <script type="text/javascript">
-    $CQ(document).ready(function () {
-        //listening for this global event - triggered from SocialAuth.js - $CQ.SocialAuth.oauthCallbackComplete
-        //any element can subscribe to this event to perform custom functionality post-oauth-callback completion
-        //the social login component will listen for it here to perform the appropriate redirect as configured
-        $CQ('.geosociallogin-signin-sociallogin-content-geometrixx-outdoors-en
-           -user-checkout-jcr-content-userinfo-sociallogin').on('click', function(ev){
-            ev.preventDefault();
-            var config = {"width":630,"height":400,"dialogClass":"sociallogin-dialog"};
-            //console.debug('sociallogin-content-geometrixx-outdoors-en
-           -user-checkout-jcr-content-userinfo-sociallogin', config);
-        });
-    });
-                                            </script>
-                                            <a href="../user.html" class="geosociallogin-signin-sociallogin-content-geometrixx-outdoors-en
-           -user-checkout-jcr-content-userinfo-sociallogin">
-                                                                                        Sign In or Register
-                                            </a>
                                         <div id="sociallogin-content-geometrixx-outdoors-en-user-checkout-jcr-content-userinfo-sociallogin"
                                             class="social-login-popup">
                                             <div class="cqlogin">

@@ -102,7 +102,7 @@
     <!-- targetPageParams(), targetPageParamsAll(), Data Providers or targetGlobalSettings() functions to enrich the visitor profile or modify the library settings-->
     <script>
         targetPageParams = function () {
-            var u = window.GXAuth ? window.GXAuth.get() : { isSignedIn:false, memberTier:"none" };
+            var u = window.GXAuth ? window.GXAuth.get() : { isSignedIn: false, memberTier: "none" };
             return {
                 "pageName": digitalData.page.pageInfo.pageName,
                 "userSignedIn": u.isSignedIn,
@@ -116,7 +116,9 @@
                         "city": "San Francisco"
                     },
                     "geoState": "FL",
-                    "geoCity": "Miami"
+                    "geoCity": "Miami",
+                    "addedToCart": false,
+                    "hasPurchased": true
                 }
             };
         };
